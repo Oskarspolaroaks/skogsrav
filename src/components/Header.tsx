@@ -24,6 +24,11 @@ export function Header() {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
+            <img 
+              src="/favicon.svg" 
+              alt="Skogsrav logo" 
+              className="w-8 h-8"
+            />
             <span className="font-serif text-2xl font-medium text-navy-deep tracking-tight">
               Skogsrav
             </span>
