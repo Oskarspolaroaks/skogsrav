@@ -15,6 +15,11 @@ export function Footer() {
         >
           {/* Logo */}
           <div className="flex items-center gap-3">
+            <img 
+              src="/favicon.svg" 
+              alt="Skogsrav logo" 
+              className="w-6 h-6 brightness-0 invert"
+            />
             <span className="font-serif text-xl font-medium text-primary-foreground tracking-tight">
               Skogsrav
             </span>
