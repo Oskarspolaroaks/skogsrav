@@ -1,62 +1,119 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "Why Skogsrav", href: "#why-skogsrav" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/services" },
+  { label: "About", href: "/about" },
+  { label: "Process", href: "/#process" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleNavClick = (href: string) => {
+    setMobileMenuOpen(false);
+    
+    // Handle hash navigation
+    if (href.includes('#')) {
+      const hash = href.split('#')[1];
+      const basePath = href.split('#')[0] || '/';
+      
+      if (location.pathname === basePath || (basePath === '/' && location.pathname === '/')) {
+        // Same page, scroll to section
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+  };
+
+  const renderNavLink = (item: typeof navItems[0]) => {
+    const isExternal = item.href.startsWith('/#');
+    const isCurrentPage = location.pathname === item.href;
+    
+    if (isExternal) {
+      return (
+        <Link
+          key={item.label}
+          to={item.href}
+          onClick={() => handleNavClick(item.href)}
+          className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
+        >
+          {item.label}
+        </Link>
+      );
+    }
+    
+    return (
+      <Link
+        key={item.label}
+        to={item.href}
+        className={`text-sm font-medium transition-colors duration-200 ${
+          isCurrentPage 
+            ? 'text-bronze' 
+            : 'text-muted-foreground hover:text-foreground'
+        }`}
+      >
+        {item.label}
+      </Link>
+    );
+  };
 
   return (
     <motion.header
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? 'bg-background/98 backdrop-blur-md border-b border-border shadow-subtle' 
+          : 'bg-background/95 backdrop-blur-sm border-b border-border/50'
+      }`}
     >
       <div className="container mx-auto px-6 lg:px-8">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 group">
             <img 
               src="/favicon.svg" 
               alt="Skogsrav logo" 
-              className="w-8 h-8"
+              className="w-8 h-8 group-hover:scale-105 transition-transform duration-200"
             />
             <span className="font-serif text-2xl font-medium text-navy-deep tracking-tight">
               Skogsrav
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map(renderNavLink)}
           </div>
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button variant="corporate" size="lg">
-              Enquire Now
+            <Button variant="corporate" size="lg" asChild>
+              <Link to="/#contact">Enquire Now</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 -mr-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -78,17 +135,19 @@ export function Header() {
           >
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
+                  to={item.href}
                   className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
-              <Button variant="corporate" size="lg" className="mt-4">
-                Enquire Now
+              <Button variant="corporate" size="lg" className="mt-4" asChild>
+                <Link to="/#contact" onClick={() => setMobileMenuOpen(false)}>
+                  Enquire Now
+                </Link>
               </Button>
             </div>
           </motion.div>
