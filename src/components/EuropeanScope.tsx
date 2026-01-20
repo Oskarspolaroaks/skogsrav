@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import europeNetwork from "@/assets/europe-network.jpg";
 
 export function EuropeanScope() {
   const ref = useRef(null);
@@ -10,114 +11,31 @@ export function EuropeanScope() {
     <section className="py-24 lg:py-32 bg-navy-deep overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div ref={ref} className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-          {/* Left Column - Abstract Europe Visualization */}
+          {/* Left Column - Europe Network Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8 }}
             className="relative mb-16 lg:mb-0"
           >
-            {/* Abstract network visualization representing Europe */}
-            <div className="relative aspect-square max-w-lg mx-auto">
-              {/* Background gradient circle */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-navy-medium/50 to-transparent" />
+            <div className="relative aspect-square max-w-lg mx-auto overflow-hidden rounded-2xl">
+              <img 
+                src={europeNetwork} 
+                alt="European network visualization"
+                className="w-full h-full object-cover"
+              />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/60 via-transparent to-transparent" />
               
-              {/* Abstract connection lines */}
-              <svg
-                viewBox="0 0 400 400"
-                className="w-full h-full"
-                fill="none"
-              >
-                {/* Grid lines suggesting map coordinates */}
-                <defs>
-                  <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="hsl(32 35% 62%)" stopOpacity="0.3" />
-                    <stop offset="50%" stopColor="hsl(32 35% 62%)" stopOpacity="0.1" />
-                    <stop offset="100%" stopColor="hsl(32 35% 62%)" stopOpacity="0.3" />
-                  </linearGradient>
-                </defs>
-                
-                {/* Horizontal flowing lines */}
-                <motion.path
-                  d="M50 150 Q200 130 350 170"
-                  stroke="url(#lineGradient)"
-                  strokeWidth="1"
-                  initial={{ pathLength: 0 }}
-                  animate={isInView ? { pathLength: 1 } : {}}
-                  transition={{ duration: 2, delay: 0.2 }}
-                />
-                <motion.path
-                  d="M30 200 Q180 180 370 220"
-                  stroke="url(#lineGradient)"
-                  strokeWidth="1"
-                  initial={{ pathLength: 0 }}
-                  animate={isInView ? { pathLength: 1 } : {}}
-                  transition={{ duration: 2, delay: 0.4 }}
-                />
-                <motion.path
-                  d="M60 250 Q220 230 340 260"
-                  stroke="url(#lineGradient)"
-                  strokeWidth="1"
-                  initial={{ pathLength: 0 }}
-                  animate={isInView ? { pathLength: 1 } : {}}
-                  transition={{ duration: 2, delay: 0.6 }}
-                />
-                
-                {/* Connection nodes representing key points */}
-                {[
-                  { cx: 280, cy: 140, delay: 0.8 }, // Nordic
-                  { cx: 320, cy: 200, delay: 1.0 }, // Baltic (highlighted)
-                  { cx: 200, cy: 180, delay: 1.2 }, // Central
-                  { cx: 150, cy: 220, delay: 1.4 }, // Western
-                  { cx: 240, cy: 260, delay: 1.6 }, // Southern
-                  { cx: 100, cy: 160, delay: 1.8 }, // UK/Ireland
-                ].map((node, index) => (
-                  <motion.g key={index}>
-                    <motion.circle
-                      cx={node.cx}
-                      cy={node.cy}
-                      r={index === 1 ? 8 : 4}
-                      fill={index === 1 ? "hsl(32 40% 48%)" : "hsl(32 35% 62%)"}
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={isInView ? { opacity: index === 1 ? 1 : 0.6, scale: 1 } : {}}
-                      transition={{ duration: 0.5, delay: node.delay }}
-                    />
-                    {index === 1 && (
-                      <motion.circle
-                        cx={node.cx}
-                        cy={node.cy}
-                        r="16"
-                        stroke="hsl(32 40% 48%)"
-                        strokeWidth="1"
-                        fill="none"
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={isInView ? { opacity: 0.3, scale: 1 } : {}}
-                        transition={{ duration: 0.5, delay: node.delay + 0.2 }}
-                      />
-                    )}
-                  </motion.g>
-                ))}
-                
-                {/* Connection lines between nodes */}
-                <motion.path
-                  d="M320 200 L280 140 M320 200 L200 180 M320 200 L240 260 M200 180 L150 220 M200 180 L100 160"
-                  stroke="hsl(32 35% 62%)"
-                  strokeWidth="0.5"
-                  strokeOpacity="0.3"
-                  initial={{ pathLength: 0 }}
-                  animate={isInView ? { pathLength: 1 } : {}}
-                  transition={{ duration: 1.5, delay: 1.5 }}
-                />
-              </svg>
-              
-              {/* Labels */}
+              {/* Label */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
-                transition={{ duration: 0.5, delay: 2 }}
-                className="absolute top-1/3 right-8 lg:right-4"
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className="absolute bottom-6 left-6"
               >
-                <span className="text-xs font-medium tracking-widest uppercase text-bronze-light">
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-navy-deep/80 backdrop-blur-sm rounded-full text-xs font-medium tracking-widest uppercase text-bronze">
+                  <span className="w-2 h-2 rounded-full bg-bronze animate-pulse" />
                   Baltic HQ
                 </span>
               </motion.div>

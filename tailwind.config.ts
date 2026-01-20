@@ -77,6 +77,10 @@ export default {
           DEFAULT: "hsl(var(--bronze))",
           light: "hsl(var(--bronze-light))",
         },
+        teal: {
+          DEFAULT: "hsl(var(--teal))",
+          light: "hsl(var(--teal-light))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -88,6 +92,7 @@ export default {
         "subtle": "var(--shadow-sm)",
         "elevated": "var(--shadow-md)",
         "prominent": "var(--shadow-lg)",
+        "glow": "var(--shadow-glow)",
       },
       keyframes: {
         "accordion-down": {

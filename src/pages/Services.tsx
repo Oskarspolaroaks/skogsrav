@@ -17,6 +17,8 @@ import {
   ArrowRight 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import servicesHero from "@/assets/services-hero.jpg";
 
 const coreServices = [
   {
@@ -101,10 +103,15 @@ const whatWeDoNot = [
 
 function PageHero() {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-navy-deep overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-navy-deep via-navy-medium to-navy-deep opacity-90" />
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-5">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full border border-primary-foreground/20" />
+    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={servicesHero} 
+          alt="Modern European architecture"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy-deep/85 to-navy-deep/70" />
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -113,9 +120,9 @@ function PageHero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 text-sm font-medium tracking-widest uppercase text-bronze-light mb-4"
+            className="inline-flex items-center gap-3 text-sm font-medium tracking-widest uppercase text-bronze mb-4"
           >
-            <span className="w-8 h-px bg-bronze-light" />
+            <span className="w-10 h-px bg-bronze" />
             Our Services
           </motion.span>
           <motion.h1
@@ -126,13 +133,13 @@ function PageHero() {
           >
             Vehicle Recovery Services
             <br />
-            <span className="text-bronze-light">for European Institutions</span>
+            <span className="text-bronze">for European Institutions</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg md:text-xl text-primary-foreground/70 leading-relaxed"
+            className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed"
           >
             Comprehensive vehicle recovery services designed for leasing companies, 
             rental operators, and financial institutions. Every service is delivered 
