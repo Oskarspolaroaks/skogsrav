@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import skogsravLogo from "@/assets/skogsrav-logo.jpeg";
 
 const footerLinks = [
   { label: "Services", href: "/services" },
@@ -23,15 +24,12 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Link to="/" className="flex items-center gap-3 mb-6">
+            <Link to="/" className="flex items-center mb-6">
               <img 
-                src="/favicon.svg" 
-                alt="Skogsrav logo" 
-                className="w-7 h-7 brightness-0 invert"
+                src={skogsravLogo} 
+                alt="Skogsräv logo" 
+                className="h-7 brightness-0 invert"
               />
-              <span className="font-serif text-xl font-medium text-primary-foreground tracking-tight">
-                Skogsrav
-              </span>
             </Link>
             <p className="text-sm text-primary-foreground/50 leading-relaxed max-w-xs">
               European specialist in vehicle recovery services for leasing companies, 

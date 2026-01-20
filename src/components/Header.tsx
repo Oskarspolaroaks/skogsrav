@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-
+import skogsravLogo from "@/assets/skogsrav-logo.jpeg";
 const navItems = [
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
@@ -88,15 +88,12 @@ export function Header() {
       <div className="container mx-auto px-6 lg:px-8">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center group">
             <img 
-              src="/favicon.svg" 
-              alt="Skogsrav logo" 
-              className="w-8 h-8 group-hover:scale-105 transition-transform duration-200"
+              src={skogsravLogo} 
+              alt="Skogsräv logo" 
+              className="h-8 group-hover:scale-105 transition-transform duration-200"
             />
-            <span className="font-serif text-2xl font-medium text-navy-deep tracking-tight">
-              Skogsrav
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
