@@ -17,7 +17,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         // Skogsrav Brand Variants - Bold Modern
         corporate:
-          "bg-orange text-white font-semibold tracking-wide hover:bg-orange-dark transition-all duration-300 shadow-orange",
+          "bg-gradient-to-r from-orange via-orange-light to-orange text-white font-semibold tracking-wide hover:shadow-[0_0_20px_hsl(24_95%_53%/0.5)] hover:scale-[1.02] transition-all duration-300 shadow-orange",
         "corporate-outline":
           "border-2 border-orange text-orange font-semibold tracking-wide hover:bg-orange hover:text-white transition-all duration-300",
         "corporate-ghost":
