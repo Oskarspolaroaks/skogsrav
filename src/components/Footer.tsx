@@ -13,7 +13,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-16 bg-navy-deep border-t border-navy-medium">
+    <footer className="py-16 bg-background border-t border-border">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-3 gap-12 lg:gap-20 mb-12">
@@ -31,7 +31,7 @@ export function Footer() {
                 className="h-7"
               />
             </Link>
-            <p className="text-sm text-primary-foreground/50 leading-relaxed max-w-xs">
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               European specialist in vehicle recovery services for leasing companies, 
               rental operators, and financial institutions.
             </p>
@@ -44,7 +44,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h4 className="text-sm font-medium tracking-widest uppercase text-primary-foreground/40 mb-6">
+            <h4 className="text-sm font-medium tracking-widest uppercase text-muted-foreground mb-6">
               Navigation
             </h4>
             <nav className="flex flex-col gap-3">
@@ -52,7 +52,7 @@ export function Footer() {
                 <Link
                   key={item.label}
                   to={item.href}
-                  className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {item.label}
                 </Link>
@@ -67,17 +67,17 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h4 className="text-sm font-medium tracking-widest uppercase text-primary-foreground/40 mb-6">
+            <h4 className="text-sm font-medium tracking-widest uppercase text-muted-foreground mb-6">
               Contact
             </h4>
             <div className="space-y-3">
               <a
                 href="mailto:enquiries@skogsrav.lv"
-                className="block text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 enquiries@skogsrav.lv
               </a>
-              <p className="text-sm text-primary-foreground/50">
+              <p className="text-sm text-muted-foreground">
                 Baltic Region, European Operations
               </p>
             </div>
@@ -85,7 +85,7 @@ export function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-navy-medium pt-8">
+        <div className="border-t border-border pt-8">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -93,17 +93,17 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col md:flex-row items-center justify-between gap-4"
           >
-            <div className="text-xs text-primary-foreground/40">
+            <div className="text-xs text-muted-foreground">
               © {currentYear} Skogsrav. All rights reserved.
             </div>
             
             {/* Trust Indicators */}
             <div className="flex items-center gap-6">
-              <span className="text-xs text-primary-foreground/30">
+              <span className="text-xs text-muted-foreground">
                 EU Cross-Border Operations
               </span>
-              <span className="text-xs text-primary-foreground/30">•</span>
-              <span className="text-xs text-primary-foreground/30">
+              <span className="text-xs text-muted-foreground">•</span>
+              <span className="text-xs text-muted-foreground">
                 Compliance-First Partner
               </span>
             </div>

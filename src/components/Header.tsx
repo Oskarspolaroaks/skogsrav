@@ -79,7 +79,7 @@ export function Header() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-navy-deep border-b border-border shadow-subtle"
+      className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border shadow-subtle"
     >
       <div className="container mx-auto px-6 lg:px-8">
         <nav className="flex items-center justify-between h-20">
