@@ -129,7 +129,7 @@ export function Footer() {
             <div className="space-y-3 mb-8">
               <div>
                 <a href="mailto:info@skogsrav.lv" className="text-sm text-foreground hover:text-orange transition-colors">
-                  info@skogsrav.com
+                  hello@skogsrav.com
                 </a>
               </div>
               <div>
