@@ -1,28 +1,24 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { CheckCircle } from "lucide-react";
+import { Check } from "lucide-react";
 
 const differentiators = [
   {
-    title: "Success-Based Fee Model",
-    description:
-      "Clients are invoiced only after a vehicle has been successfully recovered. If the vehicle is not returned, no invoice is issued. This structure reflects our confidence and ensures alignment with your objectives.",
+    title: "Success-Based Fees",
+    description: "No recovery, no invoice. We deliver first.",
   },
   {
-    title: "Baltic Expertise, European Reach",
-    description:
-      "Based in the Baltics with the region's strongest operational experience, we are trusted by European clients to handle complex cases across borders with consistent execution.",
+    title: "Baltic HQ, European Reach",
+    description: "Regional expertise. Continental execution.",
   },
   {
     title: "Minimal Visibility",
-    description:
-      "In most cases, our involvement remains known only to the client. We believe effective vehicle recovery is measured not by visibility, but by outcome.",
+    description: "Only the client knows. That's the point.",
   },
   {
-    title: "Compliance-First Approach",
-    description:
-      "Legal, reputational, and compliance considerations are integral to every case. All actions are carried out in accordance with applicable laws and local requirements.",
+    title: "Compliance-First",
+    description: "Legal. Reputational. Always.",
   },
 ];
 
@@ -31,42 +27,32 @@ export function WhySkogsrav() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="why-skogsrav" className="py-24 lg:py-32 bg-background">
+    <section id="why-skogsrav" className="py-24 lg:py-32 bg-cream">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-20 items-start">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-20 items-center">
           {/* Left Column - Header */}
-          <div className="mb-12 lg:mb-0 lg:sticky lg:top-32">
+          <div className="mb-12 lg:mb-0">
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 text-sm font-medium tracking-widest uppercase text-bronze mb-4"
+              className="inline-flex items-center gap-3 text-sm font-bold tracking-widest uppercase text-orange mb-4"
             >
-              <span className="w-8 h-px bg-bronze" />
-              Why Skogsrav
+              <span className="w-10 h-0.5 bg-orange" />
+              Why Us
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6"
+              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8"
             >
-              Trusted by European Institutions
+              Trusted by
+              <br />
+              <span className="text-orange">European Institutions</span>
             </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg text-muted-foreground leading-relaxed"
-            >
-              Skogsrav is engaged by European institutions that require an 
-              experienced, discreet, and results-driven partner for vehicle 
-              recovery matters — delivered professionally, compliantly, and 
-              without unnecessary attention.
-            </motion.p>
 
             {/* Quote Block */}
             <motion.div
@@ -74,37 +60,37 @@ export function WhySkogsrav() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="mt-10 p-8 bg-navy-deep rounded-lg"
+              className="relative p-8 bg-navy-deep rounded-xl shadow-lg"
             >
-              <blockquote className="font-serif text-xl text-primary-foreground/90 italic leading-relaxed">
-                "We work quietly and methodically. Effective vehicle recovery 
-                is measured not by visibility, but by outcome."
+              <div className="absolute -top-3 left-8 w-8 h-8 bg-orange rounded-full flex items-center justify-center">
+                <span className="text-white text-2xl font-serif">"</span>
+              </div>
+              <blockquote className="font-serif text-xl lg:text-2xl text-white italic leading-relaxed">
+                We work quietly. Outcome over exposure.
               </blockquote>
             </motion.div>
           </div>
 
           {/* Right Column - Differentiators */}
-          <div ref={ref} className="space-y-8">
+          <div ref={ref} className="space-y-4">
             {differentiators.map((item, index) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                initial={{ opacity: 0, x: 30 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group p-6 lg:p-8 bg-card rounded-lg border border-border hover:border-bronze/30 hover:shadow-card transition-all duration-300"
+                className="group flex items-start gap-4 p-6 bg-white rounded-xl border-2 border-transparent hover:border-orange/30 hover:shadow-md transition-all duration-300"
               >
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <CheckCircle className="w-6 h-6 text-bronze mt-1" />
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-lg lg:text-xl font-medium text-foreground mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-orange/10 flex items-center justify-center group-hover:bg-orange group-hover:scale-110 transition-all duration-300">
+                  <Check className="w-5 h-5 text-orange group-hover:text-white transition-colors" />
+                </div>
+                <div>
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {item.description}
+                  </p>
                 </div>
               </motion.div>
             ))}

@@ -15,19 +15,19 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // Skogsrav Brand Variants
+        // Skogsrav Brand Variants - Bold Modern
         corporate:
-          "bg-navy-deep text-primary-foreground font-medium tracking-wide hover:bg-navy-medium transition-colors duration-300",
+          "bg-orange text-white font-semibold tracking-wide hover:bg-orange-dark transition-all duration-300 shadow-orange",
         "corporate-outline":
-          "border-2 border-navy-deep text-navy-deep font-medium tracking-wide hover:bg-navy-deep hover:text-primary-foreground transition-all duration-300",
+          "border-2 border-orange text-orange font-semibold tracking-wide hover:bg-orange hover:text-white transition-all duration-300",
         "corporate-ghost":
-          "text-navy-deep font-medium tracking-wide hover:bg-cream-dark transition-colors duration-300",
+          "text-orange font-semibold tracking-wide hover:bg-orange/10 transition-colors duration-300",
         "corporate-light":
-          "bg-cream text-navy-deep font-medium tracking-wide hover:bg-cream-dark transition-colors duration-300",
+          "bg-cream text-navy-deep font-semibold tracking-wide hover:bg-cream-dark transition-colors duration-300",
         hero:
-          "bg-bronze text-primary-foreground font-medium tracking-wide hover:bg-bronze-light transition-colors duration-300 shadow-elevated",
+          "bg-orange text-white font-bold tracking-wide hover:bg-orange-light transition-all duration-300 shadow-orange",
         "hero-outline":
-          "border-2 border-primary-foreground/30 text-primary-foreground font-medium tracking-wide hover:bg-primary-foreground/10 transition-all duration-300",
+          "border-2 border-white/40 text-white font-semibold tracking-wide hover:bg-white/10 hover:border-white/60 transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",

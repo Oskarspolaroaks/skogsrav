@@ -61,10 +61,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Brand Extensions
+        // Brand Extensions - Bold Palette
         navy: {
           deep: "hsl(var(--navy-deep))",
           medium: "hsl(var(--navy-medium))",
+          light: "hsl(var(--navy-light))",
         },
         slate: {
           warm: "hsl(var(--slate-warm))",
@@ -73,6 +74,14 @@ export default {
           DEFAULT: "hsl(var(--cream))",
           dark: "hsl(var(--cream-dark))",
         },
+        // Primary Accent - Vibrant Orange
+        orange: {
+          DEFAULT: "hsl(var(--orange))",
+          light: "hsl(var(--orange-light))",
+          dark: "hsl(var(--orange-dark))",
+          glow: "hsl(var(--orange-glow))",
+        },
+        // Legacy aliases
         bronze: {
           DEFAULT: "hsl(var(--bronze))",
           light: "hsl(var(--bronze-light))",
@@ -93,6 +102,7 @@ export default {
         "elevated": "var(--shadow-md)",
         "prominent": "var(--shadow-lg)",
         "glow": "var(--shadow-glow)",
+        "orange": "var(--shadow-orange)",
       },
       keyframes: {
         "accordion-down": {
