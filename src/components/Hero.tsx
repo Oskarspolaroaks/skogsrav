@@ -42,8 +42,8 @@ export function Hero() {
           duration: 0.5,
           delay: 0.2
         }} className="mb-8">
-            <span className="section-label">WE ACT. WE DELIVER.<span className="w-12 h-0.5 bg-gradient-to-r from-orange to-orange-light" />
-              Vehicle Recovery Across Europe 
+            <span className="section-label">​<span className="w-12 h-0.5 bg-gradient-to-r from-orange to-orange-light" />
+              ​WE ACT. WE DELIVER. 
             </span>
           </motion.div>
 
