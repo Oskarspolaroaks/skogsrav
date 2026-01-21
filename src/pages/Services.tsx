@@ -5,200 +5,159 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TrustStamps } from "@/components/TrustStamps";
 import { Contact } from "@/components/Contact";
-import { 
-  Globe, 
-  Building2, 
-  Truck, 
-  Eye, 
-  Shield, 
-  MessageSquare,
-  X,
-  CheckCircle,
-  ArrowRight 
-} from "lucide-react";
+import { Globe, Building2, Truck, Eye, Shield, MessageSquare, X, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import servicesHero from "@/assets/services-hero.jpg";
-
-const coreServices = [
-  {
-    icon: Globe,
-    title: "Cross-Border Vehicle Recovery",
-    description:
-      "Coordinated recovery operations across European jurisdictions. We navigate complex legal frameworks, manage multi-country logistics, and ensure compliance at every border crossing.",
-    features: [
-      "Multi-jurisdictional coordination",
-      "Local legal compliance in each market",
-      "Seamless cross-border logistics",
-      "Documentation for all territories",
-    ],
-  },
-  {
-    icon: Building2,
-    title: "Leasing & Rental Asset Recovery",
-    description:
-      "Specialized recovery for leasing companies and rental operators. We understand the unique requirements of asset-backed financing and the importance of preserving customer relationships.",
-    features: [
-      "Portfolio-level case management",
-      "Relationship-preserving approach",
-      "Fleet-specific logistics",
-      "Detailed reporting and documentation",
-    ],
-  },
-  {
-    icon: Truck,
-    title: "Commercial & Fleet Vehicle Recovery",
-    description:
-      "Recovery of commercial vehicles and fleet assets with specialized handling requirements. From light commercial to heavy goods vehicles, we have the capability and equipment.",
-    features: [
-      "Specialized transport equipment",
-      "Commercial vehicle expertise",
-      "Minimal business disruption",
-      "Secure storage coordination",
-    ],
-  },
-];
-
-const operationalPrinciples = [
-  {
-    icon: Eye,
-    title: "Discretion",
-    description:
-      "In most cases, our involvement remains known only to the client. We operate quietly and methodically, avoiding unnecessary attention that could affect relationships or reputation.",
-  },
-  {
-    icon: Shield,
-    title: "Compliance",
-    description:
-      "Every action is carried out in accordance with applicable laws and local requirements. Legal, reputational, and regulatory considerations are integral to our process, not afterthoughts.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Voluntary Resolution First",
-    description:
-      "We communicate directly with the lessee or contractual counterparty, seeking voluntary handover whenever possible. Dialogue and structured communication precede any operational action.",
-  },
-];
-
-const whatWeDoNot = [
-  {
-    icon: X,
-    title: "No Aggressive Repossession",
-    description:
-      "We do not employ aggressive tactics. Our approach is structured, professional, and designed to preserve dignity for all parties involved.",
-  },
-  {
-    icon: X,
-    title: "No Public Confrontation",
-    description:
-      "We avoid situations that could create public visibility or confrontation. Discretion is maintained throughout every engagement.",
-  },
-  {
-    icon: X,
-    title: "No Unnecessary Visibility",
-    description:
-      "We do not seek attention for our work. Effective vehicle recovery is measured by outcome, not by the visibility of the operation.",
-  },
-];
-
+const coreServices = [{
+  icon: Globe,
+  title: "Cross-Border Vehicle Recovery",
+  description: "Coordinated recovery operations across European jurisdictions. We navigate complex legal frameworks, manage multi-country logistics, and ensure compliance at every border crossing.",
+  features: ["Multi-jurisdictional coordination", "Local legal compliance in each market", "Seamless cross-border logistics", "Documentation for all territories"]
+}, {
+  icon: Building2,
+  title: "Leasing & Rental Asset Recovery",
+  description: "Specialized recovery for leasing companies and rental operators. We understand the unique requirements of asset-backed financing and the importance of preserving customer relationships.",
+  features: ["Portfolio-level case management", "Relationship-preserving approach", "Fleet-specific logistics", "Detailed reporting and documentation"]
+}, {
+  icon: Truck,
+  title: "Commercial & Fleet Vehicle Recovery",
+  description: "Recovery of commercial vehicles and fleet assets with specialized handling requirements. From light commercial to heavy goods vehicles, we have the capability and equipment.",
+  features: ["Specialized transport equipment", "Commercial vehicle expertise", "Minimal business disruption", "Secure storage coordination"]
+}];
+const operationalPrinciples = [{
+  icon: Eye,
+  title: "Discretion",
+  description: "In most cases, our involvement remains known only to the client. We operate quietly and methodically, avoiding unnecessary attention that could affect relationships or reputation."
+}, {
+  icon: Shield,
+  title: "Compliance",
+  description: "Every action is carried out in accordance with applicable laws and local requirements. Legal, reputational, and regulatory considerations are integral to our process, not afterthoughts."
+}, {
+  icon: MessageSquare,
+  title: "Voluntary Resolution First",
+  description: "We communicate directly with the lessee or contractual counterparty, seeking voluntary handover whenever possible. Dialogue and structured communication precede any operational action."
+}];
+const whatWeDoNot = [{
+  icon: X,
+  title: "No Aggressive Repossession",
+  description: "We do not employ aggressive tactics. Our approach is structured, professional, and designed to preserve dignity for all parties involved."
+}, {
+  icon: X,
+  title: "No Public Confrontation",
+  description: "We avoid situations that could create public visibility or confrontation. Discretion is maintained throughout every engagement."
+}, {
+  icon: X,
+  title: "No Unnecessary Visibility",
+  description: "We do not seek attention for our work. Effective vehicle recovery is measured by outcome, not by the visibility of the operation."
+}];
 function PageHero() {
-  return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+  return <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img 
-          src={servicesHero} 
-          alt="Modern European architecture"
-          className="w-full h-full object-cover"
-        />
+        <img src={servicesHero} alt="Modern European architecture" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy-deep/85 to-navy-deep/70" />
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl">
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="section-label text-orange mb-4"
-          >
+          <motion.span initial={{
+          opacity: 0
+        }} animate={{
+          opacity: 1
+        }} transition={{
+          duration: 0.5,
+          delay: 0.2
+        }} className="section-label text-orange mb-4">
             <span className="w-12 h-0.5 bg-orange" />
             Our Services
           </motion.span>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="heading-page text-primary-foreground mb-6"
-          >
-            Vehicle Recovery Services
+          <motion.h1 initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: 0.3
+        }} className="heading-page text-primary-foreground mb-6">
+            European cross-border
             <br />
-            <span className="text-orange">for European Institutions</span>
+            <span className="text-orange">vehicle recovery services</span>
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed"
-          >
-            Comprehensive vehicle recovery services designed for leasing companies, 
-            rental operators, and financial institutions. Every service is delivered 
-            with discretion, compliance, and professional execution.
-          </motion.p>
+          <motion.p initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: 0.4
+        }} className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">Comprehensive vehicle recovery services designed for leasing companies, rental operators, and financial institutions. Every service is delivered with discretion and professional execution.</motion.p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
-
 function CoreServices() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <section className="py-24 lg:py-32 bg-background">
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "-100px"
+  });
+  return <section className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mb-16 lg:mb-20">
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="section-label mb-4"
-          >
+          <motion.span initial={{
+          opacity: 0
+        }} whileInView={{
+          opacity: 1
+        }} viewport={{
+          once: true
+        }} className="section-label mb-4">
             <span className="w-10 h-0.5 bg-orange" />
             Core Service Areas
           </motion.span>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="heading-section text-foreground mb-6"
-          >
+          <motion.h2 initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          delay: 0.1
+        }} className="heading-section text-foreground mb-6">
             Comprehensive Recovery Capabilities
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="body-large text-muted-foreground"
-          >
-            Our services address the full spectrum of vehicle recovery requirements 
-            faced by European institutions — from single-vehicle cases to complex 
-            cross-border portfolios.
+          <motion.p initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          delay: 0.2
+        }} className="body-large text-muted-foreground">
+            We support clients across Europe with every type of vehicle recovery, from one-off cases to complex cross-border portfolios.
           </motion.p>
         </div>
 
         <div ref={ref} className="space-y-8">
-          {coreServices.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="group bg-card rounded-lg border border-border hover:border-bronze/30 hover:shadow-elevated transition-all duration-300 overflow-hidden"
-            >
+          {coreServices.map((service, index) => <motion.div key={service.title} initial={{
+          opacity: 0,
+          y: 40
+        }} animate={isInView ? {
+          opacity: 1,
+          y: 0
+        } : {}} transition={{
+          duration: 0.6,
+          delay: index * 0.15
+        }} className="group bg-card rounded-lg border border-border hover:border-bronze/30 hover:shadow-elevated transition-all duration-300 overflow-hidden">
               <div className="lg:grid lg:grid-cols-3 lg:gap-0">
                 {/* Left - Icon and Title */}
                 <div className="p-8 lg:p-10 bg-cream/50 lg:bg-transparent lg:border-r lg:border-border">
@@ -219,60 +178,63 @@ function CoreServices() {
                     Key Capabilities
                   </h4>
                   <div className="grid sm:grid-cols-2 gap-4">
-                    {service.features.map((feature) => (
-                      <div key={feature} className="flex items-start gap-3">
+                    {service.features.map(feature => <div key={feature} className="flex items-start gap-3">
                         <CheckCircle className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
                         <span className="text-foreground font-medium">{feature}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
-
 function OperationalPrinciples() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <section className="py-24 lg:py-32 bg-cream">
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "-100px"
+  });
+  return <section className="py-24 lg:py-32 bg-cream">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mb-16">
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="section-label mb-4"
-          >
+          <motion.span initial={{
+          opacity: 0
+        }} whileInView={{
+          opacity: 1
+        }} viewport={{
+          once: true
+        }} className="section-label mb-4">
             <span className="w-10 h-0.5 bg-orange" />
             Operational Principles
           </motion.span>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="heading-section text-foreground mb-6"
-          >
+          <motion.h2 initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          delay: 0.1
+        }} className="heading-section text-foreground mb-6">
             How Every Case Is Handled
           </motion.h2>
         </div>
 
         <div ref={ref} className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {operationalPrinciples.map((principle, index) => (
-            <motion.div
-              key={principle.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group p-8 lg:p-10 bg-card rounded-lg border border-border hover:border-bronze/30 hover:shadow-elevated transition-all duration-300"
-            >
+          {operationalPrinciples.map((principle, index) => <motion.div key={principle.title} initial={{
+          opacity: 0,
+          y: 30
+        }} animate={isInView ? {
+          opacity: 1,
+          y: 0
+        } : {}} transition={{
+          duration: 0.5,
+          delay: index * 0.1
+        }} className="group p-8 lg:p-10 bg-card rounded-lg border border-border hover:border-bronze/30 hover:shadow-elevated transition-all duration-300">
               <div className="w-14 h-14 rounded-full bg-navy-deep flex items-center justify-center mb-6">
                 <principle.icon className="w-6 h-6 text-orange" />
               </div>
@@ -282,61 +244,70 @@ function OperationalPrinciples() {
               <p className="text-muted-foreground leading-relaxed">
                 {principle.description}
               </p>
-            </motion.div>
-          ))}
+            </motion.div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
-
 function WhatWeDoNot() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <section className="py-24 lg:py-32 bg-navy-deep">
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "-100px"
+  });
+  return <section className="py-24 lg:py-32 bg-navy-deep">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mb-16">
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="section-label text-orange-light mb-4"
-          >
+          <motion.span initial={{
+          opacity: 0
+        }} whileInView={{
+          opacity: 1
+        }} viewport={{
+          once: true
+        }} className="section-label text-orange-light mb-4">
             <span className="w-10 h-0.5 bg-orange-light" />
             Clear Boundaries
           </motion.span>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="heading-section text-primary-foreground mb-6"
-          >
+          <motion.h2 initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          delay: 0.1
+        }} className="heading-section text-primary-foreground mb-6">
             What We Do NOT Do
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="body-large text-primary-foreground/70"
-          >
+          <motion.p initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          delay: 0.2
+        }} className="body-large text-primary-foreground/70">
             Understanding what we avoid is as important as understanding what we do. 
             These boundaries define our approach and protect our clients.
           </motion.p>
         </div>
 
         <div ref={ref} className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {whatWeDoNot.map((item, index) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group p-8 lg:p-10 bg-navy-medium/50 rounded-lg border border-primary-foreground/10 hover:border-bronze/30 transition-all duration-300"
-            >
+          {whatWeDoNot.map((item, index) => <motion.div key={item.title} initial={{
+          opacity: 0,
+          y: 30
+        }} animate={isInView ? {
+          opacity: 1,
+          y: 0
+        } : {}} transition={{
+          duration: 0.5,
+          delay: index * 0.1
+        }} className="group p-8 lg:p-10 bg-navy-medium/50 rounded-lg border border-primary-foreground/10 hover:border-bronze/30 transition-all duration-300">
               <div className="w-14 h-14 rounded-full bg-destructive/10 flex items-center justify-center mb-6">
                 <item.icon className="w-6 h-6 text-destructive" />
               </div>
@@ -346,18 +317,21 @@ function WhatWeDoNot() {
               <p className="text-primary-foreground/60 leading-relaxed">
                 {item.description}
               </p>
-            </motion.div>
-          ))}
+            </motion.div>)}
         </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="mt-16 text-center"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        delay: 0.4
+      }} className="mt-16 text-center">
           <Button variant="hero" size="xl" asChild>
             <a href="#contact">
               Discuss Your Requirements
@@ -366,13 +340,10 @@ function WhatWeDoNot() {
           </Button>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>;
 }
-
 const Services = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       <main>
         <PageHero />
@@ -383,8 +354,6 @@ const Services = () => {
         <Contact />
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Services;
