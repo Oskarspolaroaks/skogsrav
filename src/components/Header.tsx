@@ -88,7 +88,7 @@ export function Header() {
             <img 
               src={skogsravLogo} 
               alt="Skogsräv logo" 
-              className="h-8 group-hover:scale-105 transition-transform duration-200"
+              className="h-10 md:h-12 group-hover:scale-105 transition-transform duration-200"
             />
           </Link>
 
