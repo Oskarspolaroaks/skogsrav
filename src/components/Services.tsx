@@ -83,18 +83,31 @@ export function Services() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ 
+                y: -8, 
+                transition: { duration: 0.3, ease: "easeOut" } 
+              }}
               className="group relative p-8 bg-card rounded-xl border-2 border-border hover:border-orange/50 hover:shadow-lg transition-all duration-300"
             >
               {/* Number indicator */}
-              <div className="absolute top-4 right-4 text-5xl font-bold text-muted/30 font-serif">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                className="absolute top-4 right-4 text-5xl font-bold text-muted/30 font-serif"
+              >
                 0{index + 1}
-              </div>
+              </motion.div>
               
-              <div className="w-14 h-14 rounded-xl bg-orange/10 flex items-center justify-center mb-6 group-hover:bg-orange/20 group-hover:scale-110 transition-all duration-300">
+              <motion.div 
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
+                className="w-14 h-14 rounded-xl bg-orange/10 flex items-center justify-center mb-6 group-hover:bg-orange/20 transition-colors duration-300"
+              >
                 <service.icon className="w-7 h-7 text-orange" />
-              </div>
+              </motion.div>
               
-              <h3 className="heading-card text-foreground mb-3">
+              <h3 className="heading-card text-foreground mb-3 group-hover:text-orange transition-colors duration-300">
                 {service.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">

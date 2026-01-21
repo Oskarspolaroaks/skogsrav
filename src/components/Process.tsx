@@ -81,20 +81,33 @@ export function Process() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative group"
+                whileHover={{ 
+                  y: -5,
+                  transition: { duration: 0.2 }
+                }}
+                className="relative group cursor-default"
               >
                 {/* Step Number Circle */}
-                <div className="relative z-10 mb-6">
+                <motion.div 
+                  whileHover={{ scale: 1.08 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative z-10 mb-6"
+                >
                   <div className="w-32 h-32 lg:w-28 lg:h-28 mx-auto rounded-full border-2 border-orange/30 bg-navy-medium flex items-center justify-center group-hover:border-orange group-hover:shadow-orange transition-all duration-300">
-                    <span className="font-serif text-4xl lg:text-3xl font-bold text-orange">
+                    <motion.span 
+                      initial={{ scale: 0.5, opacity: 0 }}
+                      animate={isInView ? { scale: 1, opacity: 1 } : {}}
+                      transition={{ duration: 0.4, delay: 0.3 + index * 0.1, type: "spring" }}
+                      className="font-serif text-4xl lg:text-3xl font-bold text-orange"
+                    >
                       {step.number}
-                    </span>
+                    </motion.span>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Step Content */}
                 <div className="text-center px-2">
-                  <h3 className="font-serif text-xl lg:text-lg font-bold text-white mb-2">
+                  <h3 className="font-serif text-xl lg:text-lg font-bold text-white mb-2 group-hover:text-orange transition-colors duration-300">
                     {step.title}
                   </h3>
                   <p className="text-white/60 text-sm font-medium leading-relaxed">

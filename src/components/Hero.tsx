@@ -63,16 +63,26 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="heading-hero text-white mb-8 drop-shadow-lg"
           >
-            We Act.
+            <motion.span
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="inline-block"
+            >
+              We Act.
+            </motion.span>
             <br />
-            <span 
-              className="bg-clip-text text-transparent drop-shadow-none"
+            <motion.span 
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.55 }}
+              className="inline-block bg-clip-text text-transparent drop-shadow-none"
               style={{
                 backgroundImage: 'linear-gradient(135deg, hsl(28 90% 58%) 0%, hsl(24 95% 53%) 50%, hsl(20 95% 48%) 100%)'
               }}
             >
               We Deliver.
-            </span>
+            </motion.span>
           </motion.h1>
 
           {/* Short, confident subheadline */}
@@ -124,15 +134,24 @@ export function Hero() {
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.9 + index * 0.1 }}
-                  className="text-center md:text-left group"
+                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ 
+                    duration: 0.5, 
+                    delay: 0.9 + index * 0.12,
+                    type: "spring",
+                    stiffness: 100
+                  }}
+                  whileHover={{ 
+                    scale: 1.05, 
+                    transition: { duration: 0.2 } 
+                  }}
+                  className="text-center md:text-left group cursor-default"
                 >
-                  <div className="text-4xl md:text-5xl font-serif font-bold text-white mb-1 group-hover:text-orange transition-colors">
+                  <div className="text-4xl md:text-5xl font-serif font-bold text-white mb-1 group-hover:text-orange transition-colors duration-300 text-glow-hover">
                     {stat.value}
                   </div>
-                  <div className="text-sm font-medium text-white/50 tracking-wider uppercase">
+                  <div className="text-sm font-bold text-white/50 tracking-wider uppercase group-hover:text-white/70 transition-colors duration-300">
                     {stat.label}
                   </div>
                 </motion.div>
