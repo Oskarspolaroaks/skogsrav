@@ -109,7 +109,7 @@ export function EuropeanScope() {
               {/* Stats overlay */}
               <div className="absolute bottom-6 left-6 right-6 flex justify-between">
                 <div className="bg-white/95 backdrop-blur-sm rounded-lg px-5 py-3 shadow-lg">
-                  <div className="text-3xl font-bold text-orange font-serif">8+</div>
+                  <div className="text-3xl font-bold text-orange font-serif">+</div>
                   <div className="text-xs font-semibold text-foreground uppercase tracking-wide">Markets</div>
                 </div>
                 <div className="bg-white/95 backdrop-blur-sm rounded-lg px-5 py-3 shadow-lg">
