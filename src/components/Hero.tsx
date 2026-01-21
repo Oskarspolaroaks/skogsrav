@@ -7,19 +7,38 @@ import heroImage from "@/assets/hero-frankfurt.jpg";
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image - Sharp on right side */}
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
           alt="European financial district skyline at dusk"
           className="w-full h-full object-cover scale-105"
         />
-        {/* Bold gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/98 via-navy-deep/85 to-navy-deep/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-transparent to-navy-deep/40" />
         
-        {/* Animated accent lines */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-orange to-transparent opacity-60" />
+        {/* Premium left-to-right gradient overlay (85% to 0% opacity) */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to right, hsl(220 50% 8% / 0.88) 0%, hsl(220 50% 8% / 0.82) 25%, hsl(220 50% 8% / 0.55) 50%, hsl(220 50% 8% / 0.25) 70%, transparent 100%)'
+          }}
+        />
+        
+        {/* Subtle top/bottom vignette for depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/50 via-transparent to-navy-deep/60" />
+        
+        {/* Blur overlay on left text area with feathered edge */}
+        <div 
+          className="absolute inset-y-0 left-0 w-[55%]"
+          style={{
+            backdropFilter: 'blur(2px)',
+            WebkitBackdropFilter: 'blur(2px)',
+            maskImage: 'linear-gradient(to right, black 0%, black 60%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to right, black 0%, black 60%, transparent 100%)'
+          }}
+        />
+        
+        {/* Animated accent line */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-orange via-orange-light to-transparent opacity-70" />
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10 pt-32 pb-20">
@@ -37,16 +56,23 @@ export function Hero() {
             </span>
           </motion.div>
 
-          {/* Bold Headline */}
+          {/* Bold Headline - Heavy weight with orange accent */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="font-serif text-5xl md:text-6xl lg:text-8xl font-bold text-white leading-[1.05] mb-8"
+            className="font-serif text-5xl md:text-7xl lg:text-[6.5rem] font-extrabold text-white leading-[1.02] mb-8 tracking-tight drop-shadow-lg"
           >
             We Act.
             <br />
-            <span className="text-gradient-orange">We Deliver.</span>
+            <span 
+              className="bg-clip-text text-transparent drop-shadow-none"
+              style={{
+                backgroundImage: 'linear-gradient(135deg, hsl(28 90% 58%) 0%, hsl(24 95% 53%) 50%, hsl(20 95% 48%) 100%)'
+              }}
+            >
+              We Deliver.
+            </span>
           </motion.h1>
 
           {/* Short, confident subheadline */}
@@ -54,11 +80,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl md:text-2xl text-white/80 max-w-2xl mb-12 leading-relaxed font-light"
+            className="text-xl md:text-2xl text-white/90 max-w-2xl mb-12 leading-relaxed font-normal drop-shadow-md"
           >
             Cross-border vehicle recovery for European institutions.
             <br className="hidden md:block" />
-            <span className="text-orange-light font-medium">Discreet. Compliant. Results-driven.</span>
+            <span className="text-orange font-semibold">Discreet. Compliant. Results-driven.</span>
           </motion.p>
 
           {/* CTAs */}
