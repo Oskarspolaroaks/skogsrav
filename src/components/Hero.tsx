@@ -44,7 +44,7 @@ export function Hero() {
         }} className="mb-8">
             <span className="section-label">
               <span className="w-12 h-0.5 bg-gradient-to-r from-orange to-orange-light" />
-              European Vehicle Recovery
+              Vehicle Recovery Across Europe 
             </span>
           </motion.div>
 
