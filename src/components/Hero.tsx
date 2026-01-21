@@ -50,7 +50,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mb-8"
           >
-            <span className="inline-flex items-center gap-3 text-sm font-semibold tracking-widest uppercase text-orange">
+            <span className="section-label">
               <span className="w-12 h-0.5 bg-gradient-to-r from-orange to-orange-light" />
               European Vehicle Recovery
             </span>
@@ -61,7 +61,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="font-serif text-5xl md:text-7xl lg:text-[6.5rem] font-extrabold text-white leading-[1.02] mb-8 tracking-tight drop-shadow-lg"
+            className="heading-hero text-white mb-8 drop-shadow-lg"
           >
             We Act.
             <br />
@@ -80,11 +80,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl md:text-2xl text-white/90 max-w-2xl mb-12 leading-relaxed font-normal drop-shadow-md"
+            className="body-large text-white/90 max-w-2xl mb-12 drop-shadow-md"
           >
             Cross-border vehicle recovery for European institutions.
             <br className="hidden md:block" />
-            <span className="text-orange font-semibold">Discreet. Compliant. Results-driven.</span>
+            <span className="text-orange font-bold">Discreet. Compliant. Results-driven.</span>
           </motion.p>
 
           {/* CTAs */}

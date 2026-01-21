@@ -44,9 +44,9 @@ export function Process() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-3 text-sm font-bold tracking-widest uppercase text-orange mb-4"
+            className="section-label mb-4"
           >
-            <span className="w-10 h-0.5 bg-orange" />
+            <span className="w-12 h-0.5 bg-orange" />
             How We Work
           </motion.span>
           <motion.h2
@@ -54,7 +54,7 @@ export function Process() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+            className="heading-section text-white mb-6"
           >
             Structured<span className="text-orange">.</span> Efficient<span className="text-orange">.</span>
           </motion.h2>
@@ -63,7 +63,7 @@ export function Process() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl text-white/70 leading-relaxed"
+            className="body-large text-white/70"
           >
             Every case follows a clear methodology. Discretion and compliance at every step.
           </motion.p>
@@ -97,7 +97,7 @@ export function Process() {
                   <h3 className="font-serif text-xl lg:text-lg font-bold text-white mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-white/60 text-sm leading-relaxed">
+                  <p className="text-white/60 text-sm font-medium leading-relaxed">
                     {step.description}
                   </p>
                 </div>

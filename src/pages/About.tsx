@@ -62,26 +62,26 @@ function PageHero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 text-sm font-medium tracking-widest uppercase text-bronze-light mb-4"
+            className="section-label text-orange-light mb-4"
           >
-            <span className="w-8 h-px bg-bronze-light" />
+            <span className="w-10 h-0.5 bg-orange-light" />
             About Skogsrav
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-primary-foreground leading-tight mb-6"
+            className="heading-page text-primary-foreground mb-6"
           >
             How We Think.
             <br />
-            <span className="text-bronze-light">How We Operate.</span>
+            <span className="text-orange-light">How We Operate.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg md:text-xl text-primary-foreground/70 leading-relaxed"
+            className="body-large text-primary-foreground/70"
           >
             Skogsrav operates with a clear understanding that vehicle recovery 
             requires more than operational capability. Every case is handled with 
@@ -105,9 +105,9 @@ function WhoWeWorkWith() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 text-sm font-medium tracking-widest uppercase text-bronze mb-4"
+            className="section-label mb-4"
           >
-            <span className="w-8 h-px bg-bronze" />
+            <span className="w-10 h-0.5 bg-orange" />
             Our Clients
           </motion.span>
           <motion.h2
@@ -115,7 +115,7 @@ function WhoWeWorkWith() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6"
+            className="heading-section text-foreground mb-6"
           >
             Who We Work With
           </motion.h2>
@@ -124,7 +124,7 @@ function WhoWeWorkWith() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-muted-foreground leading-relaxed"
+            className="body-large text-muted-foreground"
           >
             Skogsrav is engaged exclusively by European institutions that require 
             an experienced, discreet partner for vehicle recovery matters.
@@ -140,10 +140,10 @@ function WhoWeWorkWith() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group p-8 lg:p-10 bg-card rounded-lg border border-border hover:border-bronze/30 hover:shadow-elevated transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-lg bg-cream flex items-center justify-center mb-6 group-hover:bg-bronze/10 transition-colors duration-300">
-                <item.icon className="w-6 h-6 text-bronze" />
+              <div className="w-14 h-14 rounded-lg bg-cream flex items-center justify-center mb-6 group-hover:bg-orange/10 transition-colors duration-300">
+                <item.icon className="w-6 h-6 text-orange" />
               </div>
-              <h3 className="font-serif text-xl lg:text-2xl font-medium text-foreground mb-3">
+              <h3 className="heading-card text-foreground mb-3">
                 {item.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -171,9 +171,9 @@ function OurApproach() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 text-sm font-medium tracking-widest uppercase text-bronze mb-4"
+              className="section-label mb-4"
             >
-              <span className="w-8 h-px bg-bronze" />
+              <span className="w-10 h-0.5 bg-orange" />
               Our Philosophy
             </motion.span>
             <motion.h2
@@ -181,7 +181,7 @@ function OurApproach() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-serif text-3xl md:text-4xl font-medium text-foreground mb-6"
+              className="heading-section text-foreground mb-6"
             >
               Principles That Guide Every Case
             </motion.h2>
@@ -215,7 +215,7 @@ function OurApproach() {
                     <Eye className="w-5 h-5 text-bronze" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-xl font-medium text-foreground mb-3">
+                    <h3 className="heading-card text-foreground mb-3">
                       {principle.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
@@ -250,17 +250,17 @@ function BalticFoundation() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 text-sm font-medium tracking-widest uppercase text-bronze mb-4"
+              className="section-label mb-4"
             >
-              <span className="w-8 h-px bg-bronze" />
+              <span className="w-10 h-0.5 bg-orange" />
               Our Foundation
             </motion.span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6">
+            <h2 className="heading-section text-foreground mb-6">
               Baltic Expertise,
               <br />
               European Reach
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="body-large text-muted-foreground mb-6">
               Based in the Baltics, Skogsrav has built the strongest operational 
               experience in the region. This foundation provides the expertise and 
               local knowledge essential for complex vehicle recovery operations.
@@ -296,8 +296,8 @@ function BalticFoundation() {
                   transition={{ delay: 0.3 + index * 0.1 }}
                   className="flex items-start gap-4 p-4 bg-cream rounded-lg"
                 >
-                  <CheckCircle className="w-5 h-5 text-bronze mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">{point}</span>
+                  <CheckCircle className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
+                  <span className="text-foreground font-medium">{point}</span>
                 </motion.div>
               ))}
             </div>

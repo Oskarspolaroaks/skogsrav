@@ -17,9 +17,9 @@ export function Contact() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-3 text-sm font-bold tracking-widest uppercase text-orange mb-4"
+              className="section-label mb-4"
             >
-              <span className="w-10 h-0.5 bg-orange" />
+              <span className="w-12 h-0.5 bg-orange" />
               Contact
             </motion.span>
             <motion.h2
@@ -27,7 +27,7 @@ export function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+              className="heading-section text-white mb-6"
             >
               Start a Case<span className="text-orange">.</span>
             </motion.h2>
@@ -36,7 +36,7 @@ export function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl text-white/70 leading-relaxed mb-10"
+              className="body-large text-white/70 mb-10"
             >
               Confidential enquiries. Professional response.
             </motion.p>
@@ -94,17 +94,17 @@ export function Contact() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="bg-white rounded-2xl p-8 lg:p-10 shadow-lg"
           >
-            <h3 className="font-serif text-2xl lg:text-3xl font-bold text-foreground mb-2">
+            <h3 className="heading-card text-foreground mb-2">
               Request Consultation
             </h3>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-muted-foreground font-medium mb-8">
               All enquiries handled with complete discretion.
             </p>
 
             <form className="space-y-5">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
+                  <label className="block text-sm font-bold text-foreground mb-2">
                     Name
                   </label>
                   <input
@@ -114,7 +114,7 @@ export function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
+                  <label className="block text-sm font-bold text-foreground mb-2">
                     Company
                   </label>
                   <input
@@ -126,7 +126,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">
+                <label className="block text-sm font-bold text-foreground mb-2">
                   Email
                 </label>
                 <input
@@ -137,7 +137,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">
+                <label className="block text-sm font-bold text-foreground mb-2">
                   Message
                 </label>
                 <textarea
