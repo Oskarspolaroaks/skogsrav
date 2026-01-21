@@ -105,7 +105,7 @@ export function Footer() {
               </div>
               <div className="pt-2">
                 <p className="text-xs text-muted-foreground">Operational Scope</p>
-                <p className="text-sm text-foreground">Baltic Region, European Operations</p>
+                <p className="text-sm text-foreground">Europe and Baltics</p>
               </div>
             </div>
           </motion.div>
@@ -138,8 +138,8 @@ export function Footer() {
                 </a>
               </div>
               <div>
-                <a href="https://www.skogsrav.lv" target="_blank" rel="noopener noreferrer" className="text-sm text-foreground hover:text-orange transition-colors">
-                  www.skogsrav.lv
+                <a target="_blank" rel="noopener noreferrer" className="text-sm text-foreground hover:text-orange transition-colors" href="https://www.skogsrav.com">
+                  www.skogsrav.com
                 </a>
               </div>
             </div>
