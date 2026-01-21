@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import skogsravLogo from "@/assets/skogsrav-logo.jpeg";
+import skogsravLogo from "@/assets/skogsrav-logo.svg";
 
 const footerLinks = [
   { label: "Services", href: "/services" },
@@ -28,7 +28,7 @@ export function Footer() {
               <img 
                 src={skogsravLogo} 
                 alt="Skogsräv logo" 
-                className="h-7 brightness-0 invert"
+                className="h-7"
               />
             </Link>
             <p className="text-sm text-primary-foreground/50 leading-relaxed max-w-xs">

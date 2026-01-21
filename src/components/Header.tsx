@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import skogsravLogo from "@/assets/skogsrav-logo.jpeg";
+import skogsravLogo from "@/assets/skogsrav-logo.svg";
 const navItems = [
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
