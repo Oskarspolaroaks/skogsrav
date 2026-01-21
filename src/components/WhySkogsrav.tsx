@@ -79,13 +79,21 @@ export function WhySkogsrav() {
                 initial={{ opacity: 0, x: 30 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group flex items-start gap-4 p-6 bg-white rounded-xl border-2 border-transparent hover:border-orange/30 hover:shadow-md transition-all duration-300"
+                whileHover={{ 
+                  x: 8, 
+                  transition: { duration: 0.2 } 
+                }}
+                className="group flex items-start gap-4 p-6 bg-white rounded-xl border-2 border-transparent hover:border-orange/30 hover:shadow-md transition-all duration-300 cursor-default"
               >
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-orange/10 flex items-center justify-center group-hover:bg-orange group-hover:scale-110 transition-all duration-300">
+                <motion.div 
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex-shrink-0 w-10 h-10 rounded-full bg-orange/10 flex items-center justify-center group-hover:bg-orange transition-all duration-300"
+                >
                   <Check className="w-5 h-5 text-orange group-hover:text-white transition-colors" />
-                </div>
+                </motion.div>
                 <div>
-                  <h3 className="heading-card text-foreground mb-1">
+                  <h3 className="heading-card text-foreground mb-1 group-hover:text-orange transition-colors duration-300">
                     {item.title}
                   </h3>
                   <p className="text-muted-foreground font-medium">

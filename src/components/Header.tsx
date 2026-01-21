@@ -52,7 +52,7 @@ export function Header() {
           key={item.label}
           to={item.href}
           onClick={() => handleNavClick(item.href)}
-          className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors duration-200"
+          className="text-sm font-semibold text-muted-foreground hover:text-orange transition-colors duration-200 link-underline"
         >
           {item.label}
         </Link>
@@ -63,10 +63,10 @@ export function Header() {
       <Link
         key={item.label}
         to={item.href}
-        className={`text-sm font-semibold transition-colors duration-200 ${
+        className={`text-sm font-semibold transition-colors duration-200 link-underline ${
           isCurrentPage 
             ? 'text-orange' 
-            : 'text-muted-foreground hover:text-foreground'
+            : 'text-muted-foreground hover:text-orange'
         }`}
       >
         {item.label}

@@ -63,7 +63,12 @@ export function EuropeanScope() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.3, delay: 0.4 + index * 0.05 }}
-                  className="flex items-center gap-2 text-foreground font-semibold"
+                  whileHover={{ 
+                    x: 5, 
+                    color: "hsl(24 95% 53%)",
+                    transition: { duration: 0.2 } 
+                  }}
+                  className="flex items-center gap-2 text-foreground font-semibold cursor-default"
                 >
                   <MapPin className="w-4 h-4 text-orange flex-shrink-0" />
                   <span>{market}</span>

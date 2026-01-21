@@ -36,15 +36,23 @@ export function TrustStamps() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ 
+                scale: 1.03, 
+                y: -2,
+                transition: { duration: 0.2 } 
+              }}
               className="flex items-center justify-center gap-3 py-4 px-5 rounded-lg border border-white/10 bg-white/5 hover:border-orange/50 hover:bg-orange/10 transition-all duration-300 group cursor-default"
             >
               {/* Icon */}
-              <div className="w-10 h-10 rounded-full bg-orange/20 flex items-center justify-center group-hover:bg-orange/30 transition-colors">
+              <motion.div 
+                whileHover={{ rotate: 10 }}
+                className="w-10 h-10 rounded-full bg-orange/20 flex items-center justify-center group-hover:bg-orange/30 transition-colors"
+              >
                 <stamp.icon className="w-5 h-5 text-orange" />
-              </div>
+              </motion.div>
               
               {/* Text */}
-              <span className="font-bold text-sm lg:text-base text-white tracking-wide">
+              <span className="font-bold text-sm lg:text-base text-white tracking-wide group-hover:text-orange transition-colors duration-300">
                 {stamp.title}
               </span>
             </motion.div>
