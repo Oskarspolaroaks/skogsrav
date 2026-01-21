@@ -3,81 +3,92 @@
 @tailwind utilities;
 
 /* Skogsrav Design System
-   European Professional Services | Quiet Authority
+   European Vehicle Recovery | Bold Modern Authority
    All colors in HSL format
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap');
 
 @layer base {
   :root {
-    /* Modern Premium Color Palette - Teal & Amber */
-    --background: 210 20% 98%;
-    --foreground: 200 25% 10%;
+    /* Bold Modern Color Palette - Deep Navy & Vibrant Orange */
+    --background: 220 15% 97%;
+    --foreground: 220 30% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 200 25% 10%;
+    --card-foreground: 220 30% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 25% 10%;
+    --popover-foreground: 220 30% 10%;
 
-    /* Primary: Deep Teal - Modern Authority */
-    --primary: 195 60% 18%;
-    --primary-foreground: 210 20% 98%;
+    /* Primary: Deep Navy - Authority */
+    --primary: 220 45% 15%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Warm Stone */
-    --secondary: 35 15% 93%;
-    --secondary-foreground: 200 25% 10%;
+    /* Secondary: Cool Slate */
+    --secondary: 220 12% 92%;
+    --secondary-foreground: 220 30% 10%;
 
-    /* Muted: Cool Gray */
-    --muted: 210 12% 90%;
-    --muted-foreground: 200 15% 40%;
+    /* Muted: Neutral Gray */
+    --muted: 220 10% 88%;
+    --muted-foreground: 220 12% 45%;
 
-    /* Accent: Warm Amber - Energy & Trust */
-    --accent: 35 85% 55%;
-    --accent-foreground: 200 25% 10%;
+    /* Accent: Vibrant Orange - Action & Energy */
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 210 15% 88%;
-    --input: 210 15% 88%;
-    --ring: 195 60% 18%;
+    --border: 220 12% 85%;
+    --input: 220 12% 85%;
+    --ring: 24 95% 53%;
 
-    --radius: 0.5rem;
+    --radius: 0.625rem;
 
-    /* Custom Brand Extensions - Modern Palette */
-    --navy-deep: 195 65% 12%;
-    --navy-medium: 195 55% 20%;
-    --slate-warm: 200 15% 35%;
-    --cream: 35 25% 96%;
-    --cream-dark: 35 18% 92%;
-    --bronze: 35 85% 55%;
-    --bronze-light: 35 75% 65%;
+    /* Custom Brand Extensions - Bold Palette */
+    --navy-deep: 220 50% 10%;
+    --navy-medium: 220 45% 18%;
+    --navy-light: 220 40% 25%;
+    --slate-warm: 220 15% 40%;
+    --cream: 40 30% 96%;
+    --cream-dark: 40 20% 92%;
+    
+    /* Orange Scale - Primary Accent */
+    --orange: 24 95% 53%;
+    --orange-light: 28 90% 60%;
+    --orange-dark: 20 95% 45%;
+    --orange-glow: 24 100% 55%;
+    
+    /* Legacy aliases */
+    --bronze: 24 95% 53%;
+    --bronze-light: 28 90% 60%;
     --teal: 195 60% 35%;
     --teal-light: 195 50% 45%;
 
-    /* Gradients - Modern & Vibrant */
-    --gradient-hero: linear-gradient(135deg, hsl(195 65% 12%) 0%, hsl(195 55% 22%) 50%, hsl(200 50% 18%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(210 20% 98%) 0%, hsl(35 15% 95%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(35 12% 98%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(35 85% 55%) 0%, hsl(25 90% 50%) 100%);
+    /* Gradients - Bold & Dynamic */
+    --gradient-hero: linear-gradient(135deg, hsl(220 50% 8%) 0%, hsl(220 45% 15%) 50%, hsl(215 40% 20%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(220 15% 97%) 0%, hsl(40 25% 95%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 10% 98%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(16 98% 48%) 100%);
+    --gradient-orange: linear-gradient(135deg, hsl(28 90% 55%) 0%, hsl(20 95% 50%) 100%);
 
-    /* Shadows - Refined & Modern */
-    --shadow-sm: 0 1px 3px 0 hsl(200 25% 10% / 0.05);
-    --shadow-md: 0 4px 16px -2px hsl(200 25% 10% / 0.08);
-    --shadow-lg: 0 16px 40px -8px hsl(200 25% 10% / 0.12);
-    --shadow-card: 0 4px 12px -2px hsl(200 25% 10% / 0.06), 0 2px 4px -1px hsl(200 25% 10% / 0.03);
-    --shadow-glow: 0 0 30px -5px hsl(35 85% 55% / 0.25);
+    /* Shadows - Bold & Impactful */
+    --shadow-sm: 0 1px 4px 0 hsl(220 30% 10% / 0.06);
+    --shadow-md: 0 6px 20px -4px hsl(220 30% 10% / 0.12);
+    --shadow-lg: 0 20px 50px -12px hsl(220 30% 10% / 0.18);
+    --shadow-card: 0 6px 16px -4px hsl(220 30% 10% / 0.08), 0 2px 6px -2px hsl(220 30% 10% / 0.04);
+    --shadow-glow: 0 0 40px -8px hsl(24 95% 53% / 0.4);
+    --shadow-orange: 0 8px 30px -6px hsl(24 95% 53% / 0.35);
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 195 60% 50%;
+    --sidebar-foreground: 220 20% 25%;
+    --sidebar-primary: 220 45% 15%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 8% 95%;
+    --sidebar-accent-foreground: 220 45% 15%;
+    --sidebar-border: 220 12% 90%;
+    --sidebar-ring: 24 95% 53%;
   }
 
   .dark {
@@ -135,12 +146,25 @@
   }
 
   h1, h2, h3, h4 {
-    @apply font-serif;
+    @apply font-serif font-semibold;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .text-gradient-orange {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(28 90% 55%) 0%, hsl(20 95% 50%) 100%);
+  }
+
+  .border-gradient-orange {
+    border-image: linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(16 98% 48%) 100%) 1;
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 40px -8px hsl(24 95% 53% / 0.4);
   }
 }
