@@ -38,7 +38,7 @@ export function EuropeanScope() {
           }} transition={{
             duration: 0.5,
             delay: 0.1
-          }} className="heading-section text-foreground mb-6">Pan-European.<span className="text-orange">.</span>
+          }} className="heading-section text-foreground mb-6">Pan-European<span className="text-orange">.</span>
             </motion.h2>
             <motion.p initial={{
             opacity: 0,
