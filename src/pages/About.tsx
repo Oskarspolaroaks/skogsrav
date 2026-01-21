@@ -319,8 +319,8 @@ const About = () => {
       <Header />
       <main>
         <PageHero />
-        <AboutIntro />
         <TrustStamps />
+        <AboutIntro />
         <WhoWeWorkWith />
         <OurApproach />
         <BalticFoundation />
