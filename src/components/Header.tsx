@@ -5,14 +5,11 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import skogsravLogo from "@/assets/skogsrav-logo.svg";
 const navItems = [{
-  label: "Services",
-  href: "/services"
-}, {
   label: "About",
   href: "/about"
 }, {
-  label: "Process",
-  href: "/#process"
+  label: "Services",
+  href: "/services"
 }, {
   label: "Contact",
   href: "/#contact"
