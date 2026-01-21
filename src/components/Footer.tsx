@@ -1,54 +1,60 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import skogsravLogo from "@/assets/skogsrav-logo.svg";
-
-const navigationLinks = [
-  { label: "Services", href: "/services" },
-  { label: "About", href: "/about" },
-  { label: "Process", href: "/#process" },
-  { label: "Contact", href: "/#contact" },
-];
-
+const navigationLinks = [{
+  label: "Services",
+  href: "/services"
+}, {
+  label: "About",
+  href: "/about"
+}, {
+  label: "Process",
+  href: "/#process"
+}, {
+  label: "Contact",
+  href: "/#contact"
+}];
 export function Footer() {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-background border-t border-border">
+  return <footer className="bg-background border-t border-border">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           
           {/* Company Information */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="lg:col-span-1"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5
+        }} className="lg:col-span-1">
             <Link to="/" className="inline-block mb-6">
-              <img 
-                src={skogsravLogo} 
-                alt="Skogsräv logo" 
-                className="h-7"
-              />
+              <img alt="Skogsräv logo" className="h-7" src="/lovable-uploads/d8d3e358-a9b9-407c-96d7-33ed692374ca.png" />
             </Link>
             <div className="space-y-2">
               <p className="text-sm font-medium text-foreground">SIA "Skogsrav"</p>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Aristida Briāna iela 18A–10<br />
-                Rīga, LV-1001, Latvia
-              </p>
+              
             </div>
           </motion.div>
 
           {/* Registration & Legal */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.1
+        }}>
             <h4 className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-5">
               Registration
             </h4>
@@ -73,12 +79,18 @@ export function Footer() {
           </motion.div>
 
           {/* Business Activities */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.2
+        }}>
             <h4 className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-5">
               Business Activities
             </h4>
@@ -99,39 +111,34 @@ export function Footer() {
           </motion.div>
 
           {/* Contact & Navigation */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.3
+        }}>
             <h4 className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-5">
               Contact
             </h4>
             <div className="space-y-3 mb-8">
               <div>
-                <a
-                  href="mailto:info@skogsrav.lv"
-                  className="text-sm text-foreground hover:text-orange transition-colors"
-                >
+                <a href="mailto:info@skogsrav.lv" className="text-sm text-foreground hover:text-orange transition-colors">
                   info@skogsrav.lv
                 </a>
               </div>
               <div>
-                <a
-                  href="tel:+37126167827"
-                  className="text-sm text-foreground hover:text-orange transition-colors"
-                >
+                <a href="tel:+37126167827" className="text-sm text-foreground hover:text-orange transition-colors">
                   +371 26167827
                 </a>
               </div>
               <div>
-                <a
-                  href="https://www.skogsrav.lv"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-foreground hover:text-orange transition-colors"
-                >
+                <a href="https://www.skogsrav.lv" target="_blank" rel="noopener noreferrer" className="text-sm text-foreground hover:text-orange transition-colors">
                   www.skogsrav.lv
                 </a>
               </div>
@@ -141,15 +148,9 @@ export function Footer() {
               Navigation
             </h4>
             <nav className="flex flex-col gap-2">
-              {navigationLinks.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.href}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
+              {navigationLinks.map(item => <Link key={item.label} to={item.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   {item.label}
-                </Link>
-              ))}
+                </Link>)}
             </nav>
           </motion.div>
         </div>
@@ -158,13 +159,16 @@ export function Footer() {
       {/* Compliance Notice & Copyright */}
       <div className="border-t border-border">
         <div className="container mx-auto px-6 lg:px-8 py-6">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="space-y-4"
-          >
+          <motion.div initial={{
+          opacity: 0
+        }} whileInView={{
+          opacity: 1
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.4
+        }} className="space-y-4">
             {/* Compliance Notice */}
             <p className="text-xs text-muted-foreground leading-relaxed max-w-4xl">
               Skogsrav operates in accordance with applicable Latvian and EU regulations. 
@@ -188,6 +192,5 @@ export function Footer() {
           </motion.div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
