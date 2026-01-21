@@ -68,9 +68,7 @@ export function Process() {
         }} transition={{
           duration: 0.5,
           delay: 0.2
-        }} className="body-large text-white/70">
-            Every case follows a clear methodology. Discretion and compliance at every step.
-          </motion.p>
+        }} className="body-large text-white/70">Every case follows a clear methodology. Discretion and and efficiency at every step.</motion.p>
         </div>
 
         {/* Process Steps - Horizontal on desktop */}
