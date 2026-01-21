@@ -82,7 +82,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-1">Phone</div>
-                  <span className="text-white font-medium">Available upon request</span>
+                  <span className="text-white font-medium">+371 26167827 </span>
                 </div>
               </div>
 
@@ -92,7 +92,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-1">HQ</div>
-                  <span className="text-white font-medium">Riga & Amsterdam</span>
+                  <span className="text-white font-medium">Riga, Latvia </span>
                 </div>
               </div>
             </motion.div>
