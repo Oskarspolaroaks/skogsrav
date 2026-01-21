@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TrustStamps } from "@/components/TrustStamps";
 import { Contact } from "@/components/Contact";
+import { AboutIntro } from "@/components/AboutIntro";
 import { CheckCircle, Eye, Shield, Users, Target, Lock } from "lucide-react";
 const whoWeWorkWith = [{
   icon: Users,
@@ -318,6 +319,7 @@ const About = () => {
       <Header />
       <main>
         <PageHero />
+        <AboutIntro />
         <TrustStamps />
         <WhoWeWorkWith />
         <OurApproach />
