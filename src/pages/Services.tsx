@@ -5,10 +5,11 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TrustStamps } from "@/components/TrustStamps";
 import { Contact } from "@/components/Contact";
+import { PageHero } from "@/components/PageHero";
 import { Globe, Building2, Truck, Eye, Shield, MessageSquare, X, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import servicesHero from "@/assets/services-hero.jpg";
+import servicesHero from "@/assets/hero-services.jpg";
 const coreServices = [{
   icon: Globe,
   title: "Cross-Border Vehicle Recovery",
@@ -51,54 +52,17 @@ const whatWeDoNot = [{
   title: "No Unnecessary Visibility",
   description: "We do not seek attention for our work. Effective vehicle recovery is measured by outcome, not by the visibility of the operation."
 }];
-function PageHero() {
-  return <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img src={servicesHero} alt="Modern European architecture" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy-deep/85 to-navy-deep/70" />
-      </div>
-
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl">
-          <motion.span initial={{
-          opacity: 0
-        }} animate={{
-          opacity: 1
-        }} transition={{
-          duration: 0.5,
-          delay: 0.2
-        }} className="section-label text-orange mb-4">
-            <span className="w-12 h-0.5 bg-orange" />
-            Our Services
-          </motion.span>
-          <motion.h1 initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.3
-        }} className="heading-page text-primary-foreground mb-6">
-            European cross-border
-            <br />
-            <span className="text-orange">vehicle recovery services</span>
-          </motion.h1>
-          <motion.p initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.4
-        }} className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">Comprehensive vehicle recovery services designed for leasing companies, rental operators, and financial institutions. Every service is delivered with discretion and professional execution.</motion.p>
-        </div>
-      </div>
-    </section>;
+function ServicesPageHero() {
+  return (
+    <PageHero
+      label="Our Services"
+      title="European Cross-Border"
+      titleAccent="Vehicle Recovery Services"
+      description="Comprehensive vehicle recovery services designed for leasing companies, rental operators, and financial institutions. Every service is delivered with discretion and professional execution."
+      backgroundImage={servicesHero}
+      backgroundAlt="European logistics control room with route monitoring"
+    />
+  );
 }
 function CoreServices() {
   const ref = useRef(null);
@@ -346,7 +310,7 @@ const Services = () => {
   return <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <PageHero />
+        <ServicesPageHero />
         <TrustStamps />
         <CoreServices />
         <OperationalPrinciples />

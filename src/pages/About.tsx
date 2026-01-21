@@ -6,7 +6,9 @@ import { Footer } from "@/components/Footer";
 import { TrustStamps } from "@/components/TrustStamps";
 import { Contact } from "@/components/Contact";
 import { AboutIntro } from "@/components/AboutIntro";
+import { PageHero } from "@/components/PageHero";
 import { CheckCircle, Eye, Shield, Users, Target, Lock } from "lucide-react";
+import aboutHero from "@/assets/hero-about.jpg";
 const whoWeWorkWith = [{
   icon: Users,
   title: "Leasing Companies",
@@ -34,57 +36,17 @@ const approachPrinciples = [{
   title: "Outcome Over Exposure",
   description: "We measure success by resolution, not by activity. A vehicle recovered quietly and compliantly is more valuable than one recovered visibly. In most cases, our involvement remains known only to the client — and that is precisely the point."
 }];
-function PageHero() {
-  return <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-navy-deep overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-navy-deep via-navy-medium to-navy-deep opacity-90" />
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-5">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full border border-primary-foreground/20" />
-      </div>
-
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl">
-          <motion.span initial={{
-          opacity: 0
-        }} animate={{
-          opacity: 1
-        }} transition={{
-          duration: 0.5,
-          delay: 0.2
-        }} className="section-label text-orange-light mb-4">
-            <span className="w-10 h-0.5 bg-orange-light" />
-            About Skogsrav
-          </motion.span>
-          <motion.h1 initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.3
-        }} className="heading-page text-primary-foreground mb-6">
-            How We Think.
-            <br />
-            <span className="text-orange-light">How We Operate.</span>
-          </motion.h1>
-          <motion.p initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.4
-        }} className="body-large text-primary-foreground/70">
-            Skogsrav operates with a clear understanding that vehicle recovery 
-            requires more than operational capability. Every case is handled with 
-            the same structured approach, discretion, and compliance focus.
-          </motion.p>
-        </div>
-      </div>
-    </section>;
+function AboutPageHero() {
+  return (
+    <PageHero
+      label="About Skogsräv"
+      title="How We Think."
+      titleAccent="How We Operate."
+      description="Skogsräv operates with a clear understanding that vehicle recovery requires more than operational capability. Every case is handled with the same structured approach, discretion, and compliance focus."
+      backgroundImage={aboutHero}
+      backgroundAlt="European corporate office with city view at night"
+    />
+  );
 }
 function WhoWeWorkWith() {
   const ref = useRef(null);
@@ -318,7 +280,7 @@ const About = () => {
   return <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <PageHero />
+        <AboutPageHero />
         <TrustStamps />
         <AboutIntro />
         <WhoWeWorkWith />
