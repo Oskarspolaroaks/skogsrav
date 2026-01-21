@@ -113,8 +113,8 @@ export function EuropeanScope() {
                   <div className="text-xs font-semibold text-foreground uppercase tracking-wide">Markets</div>
                 </div>
                 <div className="bg-white/95 backdrop-blur-sm rounded-lg px-5 py-3 shadow-lg">
-                  <div className="text-3xl font-bold text-orange font-serif">Results - driven</div>
-                  <div className="text-xs font-semibold text-foreground uppercase tracking-wide">Operations</div>
+                  <div className="text-3xl font-bold text-orange font-serif">2000+ </div>
+                  <div className="text-xs font-semibold text-foreground uppercase tracking-wide">VEHICLES RECOVERED</div>
                 </div>
               </div>
             </div>
