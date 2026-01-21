@@ -98,7 +98,7 @@ export function Hero() {
         }} transition={{
           duration: 0.6,
           delay: 0.4
-        }} className="body-large text-white/90 max-w-2xl mb-12 drop-shadow-md">Pan-European cross-border vehicle recovery solutions.
+        }} className="body-large text-white/90 max-w-2xl mb-12 drop-shadow-md">Pan-European cross-border vehicle recovery solutions. 
 
 
 Discreet. Compliant. Results-driven.<br className="hidden md:block" />
