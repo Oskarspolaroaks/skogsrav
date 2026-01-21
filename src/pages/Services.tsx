@@ -120,20 +120,20 @@ function PageHero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-3 text-sm font-medium tracking-widest uppercase text-bronze mb-4"
+            className="section-label text-orange mb-4"
           >
-            <span className="w-10 h-px bg-bronze" />
+            <span className="w-12 h-0.5 bg-orange" />
             Our Services
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-primary-foreground leading-tight mb-6"
+            className="heading-page text-primary-foreground mb-6"
           >
             Vehicle Recovery Services
             <br />
-            <span className="text-bronze">for European Institutions</span>
+            <span className="text-orange">for European Institutions</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -163,9 +163,9 @@ function CoreServices() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 text-sm font-medium tracking-widest uppercase text-bronze mb-4"
+            className="section-label mb-4"
           >
-            <span className="w-8 h-px bg-bronze" />
+            <span className="w-10 h-0.5 bg-orange" />
             Core Service Areas
           </motion.span>
           <motion.h2
@@ -173,7 +173,7 @@ function CoreServices() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6"
+            className="heading-section text-foreground mb-6"
           >
             Comprehensive Recovery Capabilities
           </motion.h2>
@@ -182,7 +182,7 @@ function CoreServices() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-muted-foreground leading-relaxed"
+            className="body-large text-muted-foreground"
           >
             Our services address the full spectrum of vehicle recovery requirements 
             faced by European institutions — from single-vehicle cases to complex 
@@ -202,10 +202,10 @@ function CoreServices() {
               <div className="lg:grid lg:grid-cols-3 lg:gap-0">
                 {/* Left - Icon and Title */}
                 <div className="p-8 lg:p-10 bg-cream/50 lg:bg-transparent lg:border-r lg:border-border">
-                  <div className="w-16 h-16 rounded-lg bg-navy-deep/5 flex items-center justify-center mb-6 group-hover:bg-bronze/10 transition-colors duration-300">
-                    <service.icon className="w-8 h-8 text-bronze" />
+                  <div className="w-16 h-16 rounded-lg bg-navy-deep/5 flex items-center justify-center mb-6 group-hover:bg-orange/10 transition-colors duration-300">
+                    <service.icon className="w-8 h-8 text-orange" />
                   </div>
-                  <h3 className="font-serif text-2xl lg:text-3xl font-medium text-foreground mb-4">
+                  <h3 className="heading-card text-foreground mb-4">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -221,8 +221,8 @@ function CoreServices() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     {service.features.map((feature) => (
                       <div key={feature} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-bronze mt-0.5 flex-shrink-0" />
-                        <span className="text-foreground">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
+                        <span className="text-foreground font-medium">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -248,9 +248,9 @@ function OperationalPrinciples() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 text-sm font-medium tracking-widest uppercase text-bronze mb-4"
+            className="section-label mb-4"
           >
-            <span className="w-8 h-px bg-bronze" />
+            <span className="w-10 h-0.5 bg-orange" />
             Operational Principles
           </motion.span>
           <motion.h2
@@ -258,7 +258,7 @@ function OperationalPrinciples() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6"
+            className="heading-section text-foreground mb-6"
           >
             How Every Case Is Handled
           </motion.h2>
@@ -274,9 +274,9 @@ function OperationalPrinciples() {
               className="group p-8 lg:p-10 bg-card rounded-lg border border-border hover:border-bronze/30 hover:shadow-elevated transition-all duration-300"
             >
               <div className="w-14 h-14 rounded-full bg-navy-deep flex items-center justify-center mb-6">
-                <principle.icon className="w-6 h-6 text-bronze-light" />
+                <principle.icon className="w-6 h-6 text-orange" />
               </div>
-              <h3 className="font-serif text-xl lg:text-2xl font-medium text-foreground mb-4">
+              <h3 className="heading-card text-foreground mb-4">
                 {principle.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -302,9 +302,9 @@ function WhatWeDoNot() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 text-sm font-medium tracking-widest uppercase text-bronze-light mb-4"
+            className="section-label text-orange-light mb-4"
           >
-            <span className="w-8 h-px bg-bronze-light" />
+            <span className="w-10 h-0.5 bg-orange-light" />
             Clear Boundaries
           </motion.span>
           <motion.h2
@@ -312,7 +312,7 @@ function WhatWeDoNot() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-primary-foreground mb-6"
+            className="heading-section text-primary-foreground mb-6"
           >
             What We Do NOT Do
           </motion.h2>
@@ -321,7 +321,7 @@ function WhatWeDoNot() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-primary-foreground/70 leading-relaxed"
+            className="body-large text-primary-foreground/70"
           >
             Understanding what we avoid is as important as understanding what we do. 
             These boundaries define our approach and protect our clients.
@@ -340,7 +340,7 @@ function WhatWeDoNot() {
               <div className="w-14 h-14 rounded-full bg-destructive/10 flex items-center justify-center mb-6">
                 <item.icon className="w-6 h-6 text-destructive" />
               </div>
-              <h3 className="font-serif text-xl lg:text-2xl font-medium text-primary-foreground mb-4">
+              <h3 className="heading-card text-primary-foreground mb-4">
                 {item.title}
               </h3>
               <p className="text-primary-foreground/60 leading-relaxed">

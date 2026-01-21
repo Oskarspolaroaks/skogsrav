@@ -37,9 +37,9 @@ export function WhySkogsrav() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-3 text-sm font-bold tracking-widest uppercase text-orange mb-4"
+              className="section-label mb-4"
             >
-              <span className="w-10 h-0.5 bg-orange" />
+              <span className="w-12 h-0.5 bg-orange" />
               Why Us
             </motion.span>
             <motion.h2
@@ -47,7 +47,7 @@ export function WhySkogsrav() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8"
+              className="heading-section text-foreground mb-8"
             >
               Trusted by
               <br />
@@ -85,10 +85,10 @@ export function WhySkogsrav() {
                   <Check className="w-5 h-5 text-orange group-hover:text-white transition-colors" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl font-bold text-foreground mb-1">
+                  <h3 className="heading-card text-foreground mb-1">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground font-medium">
                     {item.description}
                   </p>
                 </div>

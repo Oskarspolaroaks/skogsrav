@@ -42,9 +42,9 @@ export function Services() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-3 text-sm font-bold tracking-widest uppercase text-orange mb-4"
+              className="section-label mb-4"
             >
-              <span className="w-10 h-0.5 bg-orange" />
+              <span className="w-12 h-0.5 bg-orange" />
               What We Do
             </motion.span>
             <motion.h2
@@ -52,7 +52,7 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground"
+              className="heading-section text-foreground"
             >
               Vehicle Recovery
               <span className="text-orange">.</span>
@@ -67,7 +67,7 @@ export function Services() {
           >
             <Link 
               to="/services" 
-              className="group inline-flex items-center gap-2 text-lg font-semibold text-foreground hover:text-orange transition-colors"
+              className="group inline-flex items-center gap-2 text-lg font-bold text-foreground hover:text-orange transition-colors"
             >
               View All Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -94,10 +94,10 @@ export function Services() {
                 <service.icon className="w-7 h-7 text-orange" />
               </div>
               
-              <h3 className="font-serif text-xl lg:text-2xl font-bold text-foreground mb-3">
+              <h3 className="heading-card text-foreground mb-3">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">
+              <p className="text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
             </motion.div>

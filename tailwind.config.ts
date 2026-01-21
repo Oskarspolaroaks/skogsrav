@@ -17,6 +17,13 @@ export default {
         sans: ["Inter", "system-ui", "sans-serif"],
         serif: ["Playfair Display", "Georgia", "serif"],
       },
+      fontSize: {
+        // Custom sizes for bold typography
+        'hero': ['6.5rem', { lineHeight: '1.02', letterSpacing: '-0.02em', fontWeight: '800' }],
+        'page': ['3.75rem', { lineHeight: '1.08', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'section': ['3rem', { lineHeight: '1.12', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'card': ['1.5rem', { lineHeight: '1.25', fontWeight: '600' }],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -24,9 +24,9 @@ export function EuropeanScope() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-3 text-sm font-bold tracking-widest uppercase text-orange mb-4"
+              className="section-label mb-4"
             >
-              <span className="w-10 h-0.5 bg-orange" />
+              <span className="w-12 h-0.5 bg-orange" />
               Our Reach
             </motion.span>
             <motion.h2
@@ -34,7 +34,7 @@ export function EuropeanScope() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
+              className="heading-section text-foreground mb-6"
             >
               Pan-European
               <span className="text-orange">.</span>
@@ -44,7 +44,7 @@ export function EuropeanScope() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl text-muted-foreground leading-relaxed mb-10"
+              className="body-large text-muted-foreground mb-10"
             >
               Baltic expertise. Continental capability. Seamless cross-border coordination.
             </motion.p>
@@ -63,7 +63,7 @@ export function EuropeanScope() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.3, delay: 0.4 + index * 0.05 }}
-                  className="flex items-center gap-2 text-foreground font-medium"
+                  className="flex items-center gap-2 text-foreground font-semibold"
                 >
                   <MapPin className="w-4 h-4 text-orange flex-shrink-0" />
                   <span>{market}</span>

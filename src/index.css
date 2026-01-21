@@ -7,7 +7,7 @@
    All colors in HSL format
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800;900&display=swap');
 
 @layer base {
   :root {
@@ -145,8 +145,31 @@
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
-  h1, h2, h3, h4 {
-    @apply font-serif font-semibold;
+  /* Unified Typography System - Bold & Confident */
+  h1 {
+    @apply font-serif font-extrabold tracking-tight leading-[1.05];
+  }
+
+  h2 {
+    @apply font-serif font-bold tracking-tight leading-[1.1];
+  }
+
+  h3 {
+    @apply font-serif font-semibold leading-tight;
+  }
+
+  h4 {
+    @apply font-sans font-semibold tracking-wide uppercase;
+  }
+
+  /* Body text - slightly larger for readability */
+  p {
+    @apply text-base leading-relaxed;
+  }
+
+  /* Navigation text - bolder than body */
+  nav a {
+    @apply font-medium;
   }
 }
 
@@ -166,5 +189,34 @@
 
   .glow-orange {
     box-shadow: 0 0 40px -8px hsl(24 95% 53% / 0.4);
+  }
+
+  /* Typography utility classes for consistency */
+  .heading-hero {
+    @apply font-serif text-5xl md:text-7xl lg:text-[6.5rem] font-extrabold leading-[1.02] tracking-tight;
+  }
+
+  .heading-page {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight;
+  }
+
+  .heading-section {
+    @apply font-serif text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.12];
+  }
+
+  .heading-card {
+    @apply font-serif text-xl lg:text-2xl font-semibold leading-tight;
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-3 text-sm font-bold tracking-widest uppercase text-orange;
+  }
+
+  .body-large {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+
+  .body-medium {
+    @apply text-base leading-relaxed;
   }
 }

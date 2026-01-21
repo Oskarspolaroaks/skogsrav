@@ -44,7 +44,7 @@ export function TrustStamps() {
               </div>
               
               {/* Text */}
-              <span className="font-semibold text-sm lg:text-base text-white tracking-wide">
+              <span className="font-bold text-sm lg:text-base text-white tracking-wide">
                 {stamp.title}
               </span>
             </motion.div>
