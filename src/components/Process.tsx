@@ -55,7 +55,7 @@ export function Process() {
         }} transition={{
           duration: 0.5,
           delay: 0.1
-        }} className="heading-section text-white mb-6">​Structurizd. Efficient. Discreet.<span className="text-orange">.</span>   ​         <span className="text-orange">.</span>
+        }} className="heading-section text-white mb-6">​Structurizd. Discreet. Efficient.    ​         
           </motion.h2>
           <motion.p initial={{
           opacity: 0,
