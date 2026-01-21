@@ -115,7 +115,7 @@ export function Contact() {
               Request Consultation
             </h3>
             <p className="text-muted-foreground font-medium mb-8">
-              All enquiries handled with complete discretion.
+              Reach out — we’re ready to help.  
             </p>
 
             <form className="space-y-5">
