@@ -138,11 +138,11 @@ export function Hero() {
               value: "15+",
               label: "Years"
             }, {
-              value: "12",
+              value: "8+",
               label: "Markets"
             }, {
-              value: "100%",
-              label: "Compliant"
+              value: "2000+",
+              label: "Recovered"
             }, {
               value: "Success",
               label: "Based Fees"
