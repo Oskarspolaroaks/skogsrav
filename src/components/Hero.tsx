@@ -42,8 +42,7 @@ export function Hero() {
           duration: 0.5,
           delay: 0.2
         }} className="mb-8">
-            <span className="section-label">
-              <span className="w-12 h-0.5 bg-gradient-to-r from-orange to-orange-light" />
+            <span className="section-label">WE ACT. WE DELIVER.<span className="w-12 h-0.5 bg-gradient-to-r from-orange to-orange-light" />
               Vehicle Recovery Across Europe 
             </span>
           </motion.div>
@@ -68,9 +67,7 @@ export function Hero() {
           }} transition={{
             duration: 0.6,
             delay: 0.4
-          }} className="inline-block">
-              We Act.
-            </motion.span>
+          }} className="inline-block">Vehicle recovery</motion.span>
             <br />
             <motion.span initial={{
             opacity: 0,
@@ -83,9 +80,7 @@ export function Hero() {
             delay: 0.55
           }} className="inline-block bg-clip-text text-transparent drop-shadow-none" style={{
             backgroundImage: 'linear-gradient(135deg, hsl(28 90% 58%) 0%, hsl(24 95% 53%) 50%, hsl(20 95% 48%) 100%)'
-          }}>
-              We Deliver.
-            </motion.span>
+          }}>Across Europe</motion.span>
           </motion.h1>
 
           {/* Short, confident subheadline */}
