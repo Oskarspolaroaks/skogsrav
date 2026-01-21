@@ -34,7 +34,7 @@ export function Footer() {
           duration: 0.5
         }} className="lg:col-span-1">
             <Link to="/" className="inline-block mb-6">
-              <img alt="Skogsräv logo" className="h-7" src="/lovable-uploads/d8d3e358-a9b9-407c-96d7-33ed692374ca.png" />
+              <img alt="Skogsräv logo" className="h-10 md:h-12" src="/lovable-uploads/d8d3e358-a9b9-407c-96d7-33ed692374ca.png" />
             </Link>
             <div className="space-y-2">
               <p className="text-sm font-medium text-foreground">SIA "Skogsrav"</p>
