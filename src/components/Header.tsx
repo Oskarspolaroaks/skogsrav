@@ -31,15 +31,21 @@ export function Header() {
   const handleNavClick = (href: string) => {
     setMobileMenuOpen(false);
 
-    // Handle hash navigation
+    // Handle hash navigation for same-page anchors
     if (href.includes('#')) {
       const hash = href.split('#')[1];
       const basePath = href.split('#')[0] || '/';
-      if (location.pathname === basePath || basePath === '/' && location.pathname === '/') {
-        // Same page, scroll to section
+      
+      if (location.pathname === basePath || (basePath === '/' && location.pathname === '/')) {
+        // Same page, scroll to section with header offset
         const element = document.getElementById(hash);
         if (element) {
-          element.scrollIntoView({
+          const headerOffset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.scrollY - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
             behavior: 'smooth'
           });
         }
