@@ -53,16 +53,7 @@ const whatWeDoNot = [{
   description: "We do not seek attention for our work. Effective vehicle recovery is measured by outcome, not by the visibility of the operation."
 }];
 function ServicesPageHero() {
-  return (
-    <PageHero
-      label="Our Services"
-      title="European Cross-Border"
-      titleAccent="Vehicle Recovery Services"
-      description="Comprehensive vehicle recovery services designed for leasing companies, rental operators, and financial institutions. Every service is delivered with discretion and professional execution."
-      backgroundImage={servicesHero}
-      backgroundAlt="European logistics control room with route monitoring"
-    />
-  );
+  return <PageHero label="Our Services" title="European Cross-Border" titleAccent="Vehicle Recovery Services" description="Comprehensive vehicle recovery services designed for leasing companies, rental operators, and financial institutions. Every service is delivered with discretion and professional execution." backgroundImage={servicesHero} backgroundAlt="European logistics control room with route monitoring" />;
 }
 function CoreServices() {
   const ref = useRef(null);
@@ -93,9 +84,7 @@ function CoreServices() {
           once: true
         }} transition={{
           delay: 0.1
-        }} className="heading-section text-foreground mb-6">
-            Comprehensive Recovery Capabilities
-          </motion.h2>
+        }} className="heading-section text-foreground mb-6">Comprehensive Recovery Capabilities</motion.h2>
           <motion.p initial={{
           opacity: 0,
           y: 20
@@ -106,9 +95,7 @@ function CoreServices() {
           once: true
         }} transition={{
           delay: 0.2
-        }} className="body-large text-muted-foreground">
-            We support clients across Europe with every type of vehicle recovery, from one-off cases to complex cross-border portfolios.
-          </motion.p>
+        }} className="body-large text-muted-foreground">We specialize in cases where standard internal processes have not delivered results or where reputational considerations are critical. Our approach is structured, calm, and focused on achieving outcomes with minimal visibility.</motion.p>
         </div>
 
         <div ref={ref} className="space-y-8">
