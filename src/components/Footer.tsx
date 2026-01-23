@@ -8,7 +8,7 @@ const navigationLinks = [
   { label: "About", href: "/about" },
   { label: "FAQ", href: "/faq" },
   { label: "Process", href: "/#process" },
-  { label: "Contact", href: "#contact", isContact: true },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function Footer() {
@@ -139,25 +139,15 @@ export function Footer() {
               Navigation
             </h4>
             <nav className="flex flex-col gap-2">
-              {navigationLinks.map((item) =>
-                item.isContact ? (
-                  <button
-                    key={item.label}
-                    onClick={openContactModal}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors text-left"
-                  >
-                    {item.label}
-                  </button>
-                ) : (
-                  <Link
-                    key={item.label}
-                    to={item.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                )
-              )}
+              {navigationLinks.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
             </nav>
           </motion.div>
         </div>
