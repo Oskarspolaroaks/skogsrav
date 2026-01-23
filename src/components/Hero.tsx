@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/europe-operations.jpg";
+import heroImage from "@/assets/hero-vehicle-recovery.jpg";
 export function Hero() {
   return <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image - Sharp on right side */}
