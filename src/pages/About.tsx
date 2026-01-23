@@ -37,16 +37,7 @@ const approachPrinciples = [{
   description: "We measure success by resolution, not by activity. A vehicle recovered quietly and compliantly is more valuable than one recovered visibly. In most cases, our involvement remains known only to the client — and that is precisely the point."
 }];
 function AboutPageHero() {
-  return (
-    <PageHero
-      label="About Skogsräv"
-      title="How We Think."
-      titleAccent="How We Operate."
-      description="Skogsräv operates with a clear understanding that vehicle recovery requires more than operational capability. Every case is handled with the same structured approach, discretion, and compliance focus."
-      backgroundImage={aboutHero}
-      backgroundAlt="European corporate office with city view at night"
-    />
-  );
+  return <PageHero label="About Skogsräv" title="How We Think." titleAccent="How We Operate." description="Skogsräv operates with a clear understanding that vehicle recovery requires more than operational capability. Every case is handled with the same structured approach, discretion, and compliance focus." backgroundImage={aboutHero} backgroundAlt="European corporate office with city view at night" />;
 }
 function WhoWeWorkWith() {
   const ref = useRef(null);
@@ -91,8 +82,7 @@ function WhoWeWorkWith() {
         }} transition={{
           delay: 0.2
         }} className="body-large text-muted-foreground">
-            Skogsrav is engaged exclusively by European institutions that require 
-            an experienced, discreet partner for vehicle recovery matters.
+            Skogsrav supports European leasing, rental, and financial companies that require an experienced, discreet partner for vehicle recovery matters. 
           </motion.p>
         </div>
 
