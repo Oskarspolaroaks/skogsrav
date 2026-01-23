@@ -11,15 +11,15 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import servicesHero from "@/assets/hero-services.jpg";
 const coreServices = [{
-  icon: Globe,
-  title: "Cross-Border Vehicle Recovery",
-  description: "Coordinated recovery operations across European jurisdictions. We navigate complex legal frameworks, manage multi-country logistics, and ensure compliance at every border crossing.",
-  features: ["Multi-jurisdictional coordination", "Local legal compliance in each market", "Seamless cross-border logistics", "Documentation for all territories"]
-}, {
   icon: Building2,
   title: "Leasing & Rental Asset Recovery",
   description: "Specialized recovery for leasing companies and rental operators. We understand the unique requirements of asset-backed financing and the importance of preserving customer relationships.",
   features: ["Portfolio-level case management", "Relationship-preserving approach", "Fleet-specific logistics", "Detailed reporting and documentation"]
+}, {
+  icon: Globe,
+  title: "Cross-Border Vehicle Recovery",
+  description: "Coordinated recovery operations across European jurisdictions. We navigate complex legal frameworks, manage multi-country logistics, and ensure compliance at every border crossing.",
+  features: ["Multi-jurisdictional coordination", "Local legal compliance in each market", "Seamless cross-border logistics", "Documentation for all territories"]
 }, {
   icon: Truck,
   title: "Commercial & Fleet Vehicle Recovery",
