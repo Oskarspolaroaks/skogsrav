@@ -9,6 +9,7 @@ import skogsravLogo from "@/assets/skogsrav-logo.svg";
 const navItems = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "#contact", isContact: true },
 ];
 
