@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, Globe, Building2, FileText, Shield, Clock, Users } from "lucide-react";
+import { Mail, Phone, Shield, Clock, Users, Quote } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -24,7 +24,6 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     toast({
@@ -210,13 +209,30 @@ export default function Contact() {
                 </motion.div>
               </motion.div>
 
-              {/* Company Information - Right Column (2/5) */}
+              {/* Trust & Contact Info - Right Column (2/5) */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="lg:col-span-2 space-y-8"
               >
+                {/* Company Statement */}
+                <div className="bg-gradient-to-br from-navy-deep to-navy-medium rounded-xl p-8 shadow-lg">
+                  <div className="flex items-start gap-4 mb-6">
+                    <Quote className="w-8 h-8 text-orange flex-shrink-0 rotate-180" />
+                  </div>
+                  <blockquote className="font-serif text-lg text-primary-foreground/95 leading-relaxed mb-6">
+                    "We understand that vehicle recovery is not just about retrieving an asset — it's about protecting your business relationships, your reputation, and ensuring full legal compliance at every step."
+                  </blockquote>
+                  <p className="text-primary-foreground/70 text-sm">
+                    Every case is handled with the same level of professionalism, discretion, and structured methodology that institutional clients expect from a trusted European partner.
+                  </p>
+                  <div className="mt-6 pt-6 border-t border-primary-foreground/20">
+                    <p className="text-primary-foreground font-medium">Skogsräv Team</p>
+                    <p className="text-primary-foreground/60 text-sm">European Vehicle Recovery Specialists</p>
+                  </div>
+                </div>
+
                 {/* Direct Contact */}
                 <div className="bg-card border border-border rounded-xl p-8 shadow-sm">
                   <h3 className="heading-card text-foreground mb-6">
@@ -247,79 +263,32 @@ export default function Contact() {
                         <p className="text-foreground font-medium">+371 26167827</p>
                       </div>
                     </a>
-                    <a
-                      href="https://www.skogsrav.lv"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-4 p-4 bg-cream rounded-lg hover:bg-cream-dark transition-colors group"
-                    >
-                      <div className="w-10 h-10 rounded-lg bg-background flex items-center justify-center group-hover:bg-orange/10 transition-colors">
-                        <Globe className="w-5 h-5 text-orange" />
-                      </div>
-                      <div>
-                        <p className="text-xs text-muted-foreground uppercase tracking-wider">Website</p>
-                        <p className="text-foreground font-medium">www.skogsrav.lv</p>
-                      </div>
-                    </a>
                   </div>
                 </div>
 
-                {/* Company Details */}
-                <div className="bg-card border border-border rounded-xl p-8 shadow-sm">
-                  <h3 className="heading-card text-foreground mb-6">
-                    Company Information
+                {/* Why Contact Us */}
+                <div className="bg-cream rounded-xl p-8">
+                  <h3 className="font-semibold text-foreground mb-4">
+                    What to expect
                   </h3>
-                  <div className="space-y-5">
-                    <div className="flex items-start gap-4">
-                      <Building2 className="w-5 h-5 text-orange mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Company Name</p>
-                        <p className="text-foreground font-medium">SIA "Skogsrav"</p>
-                      </div>
-                    </div>
-                    <div className="border-t border-border pt-5">
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Registered Address</p>
-                      <p className="text-foreground">
-                        Aristida Briāna iela 18A–10<br />
-                        Rīga, LV-1001, Latvia
-                      </p>
-                    </div>
-                    <div className="border-t border-border pt-5">
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Registration Number</p>
-                      <p className="text-foreground font-medium">42103071315</p>
-                    </div>
-                    <div className="border-t border-border pt-5">
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">VAT Number</p>
-                      <p className="text-foreground font-medium">LV42103071315</p>
-                    </div>
-                    <div className="border-t border-border pt-5">
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Legal Form</p>
-                      <p className="text-foreground">Limited Liability Company (SIA)</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Business Activities */}
-                <div className="bg-card border border-border rounded-xl p-8 shadow-sm">
-                  <h3 className="heading-card text-foreground mb-6">
-                    Business Activities
-                  </h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-4">
-                      <FileText className="w-5 h-5 text-orange mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="text-foreground font-medium">Legal Services</p>
-                        <p className="text-sm text-muted-foreground">NACE 69.10</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <FileText className="w-5 h-5 text-orange mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="text-foreground font-medium">Debt Collection & Credit Bureau</p>
-                        <p className="text-sm text-muted-foreground">NACE 82.91</p>
-                      </div>
-                    </div>
-                  </div>
+                  <ul className="space-y-3 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange mt-2 flex-shrink-0" />
+                      Initial assessment of your case requirements
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange mt-2 flex-shrink-0" />
+                      Clear explanation of our methodology and approach
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange mt-2 flex-shrink-0" />
+                      Transparent discussion of timelines and success-based pricing
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange mt-2 flex-shrink-0" />
+                      No obligation — just professional guidance
+                    </li>
+                  </ul>
                 </div>
               </motion.div>
             </div>
