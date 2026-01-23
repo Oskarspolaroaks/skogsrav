@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { TrustStamps } from "@/components/TrustStamps";
 import { Button } from "@/components/ui/button";
@@ -69,6 +71,7 @@ export default function FAQ() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       <PageHero
         label="Expert FAQ"
         title="Cross-Border"
@@ -179,6 +182,7 @@ export default function FAQ() {
           })
         }}
       />
+      <Footer />
     </div>
   );
 }
