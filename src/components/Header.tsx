@@ -10,7 +10,7 @@ const navItems = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "#contact", isContact: true },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function Header() {
@@ -35,18 +35,6 @@ export function Header() {
 
   const renderNavLink = (item: typeof navItems[0]) => {
     const isCurrentPage = location.pathname === item.href;
-
-    if (item.isContact) {
-      return (
-        <button
-          key={item.label}
-          onClick={handleContactClick}
-          className="text-sm font-semibold text-muted-foreground hover:text-orange transition-colors duration-200 link-underline"
-        >
-          {item.label}
-        </button>
-      );
-    }
 
     return (
       <Link
@@ -114,26 +102,16 @@ export function Header() {
             className="md:hidden py-6 border-t border-border"
           >
             <div className="flex flex-col gap-4">
-              {navItems.map((item) =>
-                item.isContact ? (
-                  <button
-                    key={item.label}
-                    onClick={handleContactClick}
-                    className="text-base font-semibold text-muted-foreground hover:text-foreground transition-colors py-2 text-left"
-                  >
-                    {item.label}
-                  </button>
-                ) : (
-                  <Link
-                    key={item.label}
-                    to={item.href}
-                    className="text-base font-semibold text-muted-foreground hover:text-foreground transition-colors py-2"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                )
-              )}
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="text-base font-semibold text-muted-foreground hover:text-foreground transition-colors py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
               <Button
                 variant="corporate"
                 size="lg"
