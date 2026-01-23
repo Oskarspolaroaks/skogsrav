@@ -6,6 +6,7 @@ import skogsravLogo from "@/assets/skogsrav-logo.svg";
 const navigationLinks = [
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
+  { label: "FAQ", href: "/faq" },
   { label: "Process", href: "/#process" },
   { label: "Contact", href: "#contact", isContact: true },
 ];
