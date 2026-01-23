@@ -240,7 +240,7 @@ export default function Contact() {
                   </h3>
                   <div className="space-y-4">
                     <a
-                      href="mailto:info@skogsrav.lv"
+                      href="mailto:hello@skogsrav.com"
                       className="flex items-center gap-4 p-4 bg-cream rounded-lg hover:bg-cream-dark transition-colors group"
                     >
                       <div className="w-10 h-10 rounded-lg bg-background flex items-center justify-center group-hover:bg-orange/10 transition-colors">
@@ -248,7 +248,7 @@ export default function Contact() {
                       </div>
                       <div>
                         <p className="text-xs text-muted-foreground uppercase tracking-wider">Email</p>
-                        <p className="text-foreground font-medium">info@skogsrav.lv</p>
+                        <p className="text-foreground font-medium">hello@skogsrav.com</p>
                       </div>
                     </a>
                     <a

@@ -70,7 +70,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-1">Email</div>
-                  <a href="mailto:enquiries@skogsrav.lv" className="text-white font-medium hover:text-orange transition-colors">
+                  <a href="mailto:hello@skogsrav.com" className="text-white font-medium hover:text-orange transition-colors">
                     hello@skogsrav.com
                   </a>
                 </div>
