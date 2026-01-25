@@ -74,7 +74,7 @@ export default function FAQ() {
         }} className="text-center mb-16">
             <div className="section-label mb-6">
               <span className="w-8 h-px bg-orange" />
-              Knowledge Centre
+              Understanding Our Work
             </div>
             <h2 className="heading-section text-foreground mb-6">
               Frequently Asked <span className="text-gradient-orange">Questions</span>
