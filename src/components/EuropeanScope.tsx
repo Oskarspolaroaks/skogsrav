@@ -52,7 +52,7 @@ export function EuropeanScope() {
             duration: 0.5,
             delay: 0.2
           }} className="body-large text-muted-foreground mb-10">
-              Baltic expertise. Continental capability. Seamless cross-border coordination.
+              Extensive experience handling vehicle recovery cases across European markets. 
             </motion.p>
 
             {/* Markets Grid */}
