@@ -22,7 +22,7 @@ const coreServices = [
     icon: Globe,
     title: "Cross-Border Vehicle Recovery",
     description: "Coordinated vehicle recovery operations across Europe, managing complex cross-border cases with a structured and controlled approach.",
-    features: ["Multi-jurisdictional coordination", "Local legal compliance in each market", "Seamless cross-border logistics", "Documentation for all territories"],
+    features: ["Centralized coordination across European markets", "Condition documentation at point of recovery", "Operational continuity across jurisdictions", "Cross-border case planning and execution", "Experience with diverse European market environments", "Territory-specific operational knowledge"],
   },
   {
     icon: Truck,
