@@ -66,11 +66,6 @@ const whatWeDoNot = [
     title: "No Unnecessary Visibility",
     description: "We do not seek attention for our work. Effective vehicle recovery is measured by outcome, not by the visibility of the operation.",
   },
-  {
-    icon: X,
-    title: "No Unexpected Costs",
-    description: "Costs are agreed in advance and linked to successful outcomes. Clients receive transparent reporting with no hidden charges.",
-  },
 ];
 
 function ServicesPageHero() {
