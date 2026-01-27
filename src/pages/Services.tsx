@@ -16,7 +16,7 @@ const coreServices = [
     icon: Building2,
     title: "Leasing & Rental Asset Recovery",
     description: "Specialized recovery for leasing companies and rental operators. We understand the unique requirements of asset-backed financing and the importance of preserving customer relationships.",
-    features: ["Portfolio-level case management", "Relationship-preserving approach", "Fleet-specific logistics", "Detailed reporting and documentation"],
+    features: ["Portfolio-level case management", "Relationship-preserving approach", "Fleet-specific logistics", "Detailed reporting and documentation", "Photo and incident reporting", "End-to-end case traceability", "Condition documentation at takeover", "Scalable operational capacity"],
   },
   {
     icon: Globe,
