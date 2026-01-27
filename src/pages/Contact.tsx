@@ -5,13 +5,53 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Mail, Phone, Shield, Clock, Users, Quote } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
+const countryCodes = [
+  { code: "+371", country: "LV" },
+  { code: "+370", country: "LT" },
+  { code: "+372", country: "EE" },
+  { code: "+48", country: "PL" },
+  { code: "+49", country: "DE" },
+  { code: "+33", country: "FR" },
+  { code: "+31", country: "NL" },
+  { code: "+32", country: "BE" },
+  { code: "+34", country: "ES" },
+  { code: "+39", country: "IT" },
+  { code: "+43", country: "AT" },
+  { code: "+41", country: "CH" },
+  { code: "+44", country: "UK" },
+  { code: "+45", country: "DK" },
+  { code: "+46", country: "SE" },
+  { code: "+47", country: "NO" },
+  { code: "+358", country: "FI" },
+  { code: "+420", country: "CZ" },
+  { code: "+421", country: "SK" },
+  { code: "+36", country: "HU" },
+  { code: "+40", country: "RO" },
+  { code: "+359", country: "BG" },
+  { code: "+30", country: "GR" },
+  { code: "+351", country: "PT" },
+  { code: "+353", country: "IE" },
+  { code: "+352", country: "LU" },
+  { code: "+386", country: "SI" },
+  { code: "+385", country: "HR" },
+  { code: "+1", country: "US" },
+];
+
 export default function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [countryCode, setCountryCode] = useState("+371");
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -141,15 +181,29 @@ export default function Contact() {
                         <Label htmlFor="phone" className="text-foreground font-medium">
                           Phone Number
                         </Label>
-                        <Input
-                          id="phone"
-                          name="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          placeholder="+371 ..."
-                          className="bg-background border-border focus:border-orange focus:ring-orange/20"
-                        />
+                        <div className="flex gap-2">
+                          <Select value={countryCode} onValueChange={setCountryCode}>
+                            <SelectTrigger className="w-[100px] bg-background border-border focus:border-orange focus:ring-orange/20">
+                              <SelectValue />
+                            </SelectTrigger>
+                            <SelectContent className="bg-background border-border max-h-[300px]">
+                              {countryCodes.map((item) => (
+                                <SelectItem key={item.code} value={item.code}>
+                                  {item.country} {item.code}
+                                </SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                          <Input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="Phone number"
+                            className="flex-1 bg-background border-border focus:border-orange focus:ring-orange/20"
+                          />
+                        </div>
                       </div>
                     </div>
 
