@@ -6,10 +6,34 @@ import { Footer } from "@/components/Footer";
 import { TrustStamps } from "@/components/TrustStamps";
 import { Contact } from "@/components/Contact";
 import { PageHero } from "@/components/PageHero";
+import { SEO } from "@/components/SEO";
 import { Globe, Building2, Truck, Eye, Shield, MessageSquare, X, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useContactModal } from "@/contexts/ContactModalContext";
 import servicesHero from "@/assets/hero-services.jpg";
+
+const servicesSEO = {
+  title: "Vehicle Recovery Services Europe | Leasing & Fleet Recovery",
+  description: "Professional vehicle recovery services for leasing companies and fleet operators. Cross-border asset recovery across Europe. Discreet, compliant, success-based fees.",
+  canonical: "/services",
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "European Vehicle Recovery Services",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Skogsräv",
+      "url": "https://skogsrav.com"
+    },
+    "description": "Professional vehicle recovery services for leasing companies, rental operators, and financial institutions across Europe.",
+    "areaServed": "Europe",
+    "serviceType": ["Leasing Asset Recovery", "Cross-Border Vehicle Recovery", "Commercial Fleet Recovery"],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": ["Leasing Companies", "Rental Operators", "Financial Institutions", "Fleet Operators"]
+    }
+  }
+};
 
 const coreServices = [
   {
@@ -292,6 +316,12 @@ function WhatWeDoNot() {
 const Services = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={servicesSEO.title}
+        description={servicesSEO.description}
+        canonical={servicesSEO.canonical}
+        jsonLd={servicesSEO.jsonLd}
+      />
       <Header />
       <main>
         <ServicesPageHero />
