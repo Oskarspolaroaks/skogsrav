@@ -62,7 +62,7 @@ export function Hero() {
             </span>
           </motion.div>
 
-          {/* Bold Headline - SEO optimized H1 with orange accent */}
+          {/* Bold Headline - Heavy weight with orange accent */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="inline-block"
             >
-              European Asset Recovery
+              Vehicle recovery
             </motion.span>
             <br />
             <motion.span
@@ -88,21 +88,21 @@ export function Hero() {
                   "linear-gradient(135deg, hsl(28 90% 58%) 0%, hsl(24 95% 53%) 50%, hsl(20 95% 48%) 100%)",
               }}
             >
-              for Leasing & Rental
+              Across Europe
             </motion.span>
           </motion.h1>
 
-          {/* Short, confident subheadline with keywords */}
+          {/* Short, confident subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="body-large text-white/90 max-w-2xl mb-12 drop-shadow-md"
           >
-            Cross-border vehicle recovery across 8+ European markets.{" "}
+            Pan-European cross-border vehicle recovery solutions.{" "}
             <br className="hidden md:block" />
             <span className="text-orange font-bold">
-              Compliance-first. Success-based fees. Discreet operations.
+              Discreet. Compliant. Results-driven.
             </span>
           </motion.p>
 
