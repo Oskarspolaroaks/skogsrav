@@ -65,7 +65,7 @@ const handler = async (req: Request): Promise<Response> => {
     const phoneDisplay = body.phone ? `${body.countryCode || ""} ${body.phone}`.trim() : "Not provided";
 
     const emailResponse = await resend.emails.send({
-      from: "Skogsräv Contact <contact@skogsrav.com>",
+      from: "Skogsräv Contact <contact@hello.skogsrav.com>",
       to: ["hello@skogsrav.com"],
       reply_to: body.email.trim(),
       subject: `New Enquiry from ${body.name.trim()}`,
