@@ -154,7 +154,7 @@ export default function Contact() {
                 Get in Touch
               </div>
               <h1 className="heading-page text-foreground mb-4">
-                Contact <span className="text-gradient-orange">Skogsräv</span>
+                Contact <span className="text-gradient-orange">Us</span>
               </h1>
               <p className="body-large text-muted-foreground">
                 We’re here to discuss your requirements.
