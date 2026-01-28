@@ -287,9 +287,7 @@ export default function Contact() {
                   <div className="flex items-start gap-4 mb-6">
                     <Quote className="w-8 h-8 text-orange flex-shrink-0 rotate-180" />
                   </div>
-                  <blockquote className="font-serif text-lg text-primary-foreground/95 leading-relaxed mb-6">
-                    "We understand that vehicle recovery is not just about retrieving an asset — it's about protecting your business relationships, your reputation, and ensuring full legal compliance at every step."
-                  </blockquote>
+                  <blockquote className="font-serif text-lg text-primary-foreground/95 leading-relaxed mb-6">"We understand that vehicle recovery is not just about retrieving an asset — it's about protecting your business relationships, your reputation, and ensuring continuity at every step."</blockquote>
                   <p className="text-primary-foreground/70 text-sm">
                     Every case is handled with the same level of professionalism, discretion, and structured methodology that institutional clients expect from a trusted European partner.
                   </p>
