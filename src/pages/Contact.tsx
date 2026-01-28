@@ -6,9 +6,31 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { SEO } from "@/components/SEO";
 import { Mail, Phone, Shield, Clock, Users, Quote } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+
+const contactSEO = {
+  title: "Contact Skogsräv | European Vehicle Recovery Enquiries",
+  description: "Contact Skogsräv for professional vehicle recovery services across Europe. Confidential enquiries for leasing companies, rental operators, and financial institutions.",
+  canonical: "/contact",
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "ProfessionalService",
+      "name": "Skogsräv",
+      "email": "hello@skogsrav.com",
+      "telephone": "+371 26167827",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Riga",
+        "addressCountry": "LV"
+      }
+    }
+  }
+};
 
 const countryCodes = [
   { code: "+371", country: "LV" },
@@ -151,6 +173,12 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={contactSEO.title}
+        description={contactSEO.description}
+        canonical={contactSEO.canonical}
+        jsonLd={contactSEO.jsonLd}
+      />
       <Header />
       
       <main className="pt-20">

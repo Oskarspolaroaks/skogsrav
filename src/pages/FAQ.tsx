@@ -4,9 +4,17 @@ import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { TrustStamps } from "@/components/TrustStamps";
 import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/SEO";
 import { useContactModal } from "@/contexts/ContactModalContext";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroImage from "@/assets/hero-about.jpg";
+
+const faqSEO = {
+  title: "Vehicle Recovery FAQ | Cross-Border Asset Recovery Questions",
+  description: "Expert answers about European vehicle recovery: legal compliance, voluntary handovers, cross-border operations, success-based pricing. For leasing companies and fleet operators.",
+  canonical: "/faq",
+};
+
 const faqItems = [{
   id: "what-is-vehicle-recovery",
   question: "What is vehicle recovery?",
@@ -49,6 +57,11 @@ export default function FAQ() {
     openContactModal
   } = useContactModal();
   return <div className="min-h-screen bg-background">
+      <SEO 
+        title={faqSEO.title}
+        description={faqSEO.description}
+        canonical={faqSEO.canonical}
+      />
       <Header />
       <PageHero label="Expert FAQ" title="Cross-Border" titleAccent="Vehicle Recovery" description="Authoritative answers to critical questions about European vehicle recovery operations, legal compliance, and institutional engagement." backgroundImage={heroImage} backgroundAlt="European vehicle recovery expertise" />
 

@@ -7,8 +7,35 @@ import { TrustStamps } from "@/components/TrustStamps";
 import { Contact } from "@/components/Contact";
 import { AboutIntro } from "@/components/AboutIntro";
 import { PageHero } from "@/components/PageHero";
+import { SEO } from "@/components/SEO";
 import { CheckCircle, Eye, Shield, Users, Target, Lock } from "lucide-react";
 import aboutHero from "@/assets/hero-about.jpg";
+
+const aboutSEO = {
+  title: "About Skogsräv | European Asset Recovery Specialists",
+  description: "Skogsräv provides professional vehicle recovery services across Europe for leasing companies and financial institutions. Baltic expertise, European reach. Licensed operations.",
+  canonical: "/about",
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "ProfessionalService",
+      "name": "Skogsräv",
+      "description": "European asset recovery company specializing in cross-border vehicle recovery for leasing companies, rental fleet operators, and financial institutions.",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Riga, Latvia"
+      },
+      "areaServed": "Europe",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "license",
+        "name": "Detective Activity Licence No. 4/2018"
+      },
+      "knowsAbout": ["Asset Recovery", "Vehicle Recovery", "Cross-Border Operations", "Leasing", "Fleet Management"]
+    }
+  }
+};
 const whoWeWorkWith = [{
   icon: Users,
   title: "Leasing Companies",
@@ -267,7 +294,14 @@ function BalticFoundation() {
     </section>;
 }
 const About = () => {
-  return <div className="min-h-screen bg-background">
+  return (
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title={aboutSEO.title}
+        description={aboutSEO.description}
+        canonical={aboutSEO.canonical}
+        jsonLd={aboutSEO.jsonLd}
+      />
       <Header />
       <main>
         <AboutPageHero />
@@ -279,6 +313,8 @@ const About = () => {
         <Contact />
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default About;
