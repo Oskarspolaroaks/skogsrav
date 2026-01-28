@@ -16,6 +16,12 @@ const servicesSEO = {
   title: "Vehicle Recovery Services Europe | Leasing & Fleet Recovery",
   description: "Professional vehicle recovery services for leasing companies and fleet operators. Cross-border asset recovery across Europe. Discreet, compliant, success-based fees.",
   canonical: "/services",
+  keywords: "vehicle recovery services, leasing asset recovery, fleet recovery Europe, cross-border vehicle recovery, rental vehicle repossession",
+  image: "https://skogsrav.com/og-image.png",
+  breadcrumbs: [
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services" }
+  ],
   jsonLd: {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -320,6 +326,9 @@ const Services = () => {
         title={servicesSEO.title}
         description={servicesSEO.description}
         canonical={servicesSEO.canonical}
+        keywords={servicesSEO.keywords}
+        image={servicesSEO.image}
+        breadcrumbs={servicesSEO.breadcrumbs}
         jsonLd={servicesSEO.jsonLd}
       />
       <Header />

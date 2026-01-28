@@ -1,3 +1,6 @@
+# Skogsrav.com - European Vehicle Recovery
+# https://skogsrav.com
+
 User-agent: Googlebot
 Allow: /
 
@@ -12,3 +15,9 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap location
+Sitemap: https://skogsrav.com/sitemap.xml
+
+# Host directive
+Host: https://skogsrav.com

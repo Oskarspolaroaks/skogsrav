@@ -15,6 +15,12 @@ const contactSEO = {
   title: "Contact Skogsräv | European Vehicle Recovery Enquiries",
   description: "Contact Skogsräv for professional vehicle recovery services across Europe. Confidential enquiries for leasing companies, rental operators, and financial institutions.",
   canonical: "/contact",
+  keywords: "contact Skogsrav, vehicle recovery enquiry, asset recovery contact Europe, leasing recovery services contact",
+  image: "https://skogsrav.com/og-image.png",
+  breadcrumbs: [
+    { name: "Home", url: "/" },
+    { name: "Contact", url: "/contact" }
+  ],
   jsonLd: {
     "@context": "https://schema.org",
     "@type": "ContactPage",
@@ -177,6 +183,9 @@ export default function Contact() {
         title={contactSEO.title}
         description={contactSEO.description}
         canonical={contactSEO.canonical}
+        keywords={contactSEO.keywords}
+        image={contactSEO.image}
+        breadcrumbs={contactSEO.breadcrumbs}
         jsonLd={contactSEO.jsonLd}
       />
       <Header />
