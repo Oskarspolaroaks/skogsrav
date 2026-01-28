@@ -13,6 +13,12 @@ const faqSEO = {
   title: "Vehicle Recovery FAQ | Cross-Border Asset Recovery Questions",
   description: "Expert answers about European vehicle recovery: legal compliance, voluntary handovers, cross-border operations, success-based pricing. For leasing companies and fleet operators.",
   canonical: "/faq",
+  keywords: "vehicle recovery FAQ, asset recovery questions, cross-border recovery legal, voluntary handover, success-based recovery fees",
+  image: "https://skogsrav.com/og-image.png",
+  breadcrumbs: [
+    { name: "Home", url: "/" },
+    { name: "FAQ", url: "/faq" }
+  ],
 };
 
 const faqItems = [{
@@ -61,6 +67,9 @@ export default function FAQ() {
         title={faqSEO.title}
         description={faqSEO.description}
         canonical={faqSEO.canonical}
+        keywords={faqSEO.keywords}
+        image={faqSEO.image}
+        breadcrumbs={faqSEO.breadcrumbs}
       />
       <Header />
       <PageHero label="Expert FAQ" title="Cross-Border" titleAccent="Vehicle Recovery" description="Authoritative answers to critical questions about European vehicle recovery operations, legal compliance, and institutional engagement." backgroundImage={heroImage} backgroundAlt="European vehicle recovery expertise" />

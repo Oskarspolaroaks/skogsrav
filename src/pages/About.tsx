@@ -15,6 +15,12 @@ const aboutSEO = {
   title: "About Skogsräv | European Asset Recovery Specialists",
   description: "Skogsräv provides professional vehicle recovery services across Europe for leasing companies and financial institutions. Baltic expertise, European reach. Licensed operations.",
   canonical: "/about",
+  keywords: "about Skogsrav, European asset recovery company, vehicle recovery specialists, Baltic asset recovery, cross-border recovery experts",
+  image: "https://skogsrav.com/og-image.png",
+  breadcrumbs: [
+    { name: "Home", url: "/" },
+    { name: "About", url: "/about" }
+  ],
   jsonLd: {
     "@context": "https://schema.org",
     "@type": "AboutPage",
@@ -300,6 +306,9 @@ const About = () => {
         title={aboutSEO.title}
         description={aboutSEO.description}
         canonical={aboutSEO.canonical}
+        keywords={aboutSEO.keywords}
+        image={aboutSEO.image}
+        breadcrumbs={aboutSEO.breadcrumbs}
         jsonLd={aboutSEO.jsonLd}
       />
       <Header />
