@@ -256,9 +256,7 @@ export default function Contact() {
               }} className="mt-8 grid sm:grid-cols-3 gap-4">
                   <div className="flex items-start gap-3 p-4 bg-cream rounded-lg">
                     <Users className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">
-                      Services provided to institutional clients only
-                    </p>
+                    <p className="text-sm text-muted-foreground">Services provided to institutional clients only</p>
                   </div>
                   <div className="flex items-start gap-3 p-4 bg-cream rounded-lg">
                     <Shield className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
@@ -268,9 +266,7 @@ export default function Contact() {
                   </div>
                   <div className="flex items-start gap-3 p-4 bg-cream rounded-lg">
                     <Clock className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">
-                      Typical response time: within 24–48 business hours
-                    </p>
+                    <p className="text-sm text-muted-foreground">Typical response time: within 12-24 business hours</p>
                   </div>
                 </motion.div>
               </motion.div>
