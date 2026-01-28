@@ -90,6 +90,10 @@ export function Footer() {
                 <p className="text-xs text-muted-foreground">NACE 82.91</p>
               </div>
               <div className="pt-2">
+                <p className="text-xs text-muted-foreground">Special Permit (Licence)</p>
+                <p className="text-sm text-foreground">Detective Activity: No. 4/2018</p>
+              </div>
+              <div className="pt-2">
                 <p className="text-xs text-muted-foreground">Operational Scope</p>
                 <p className="text-sm text-foreground">Europe and Baltics</p>
               </div>
