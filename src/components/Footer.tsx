@@ -173,9 +173,17 @@ export function Footer() {
 
             {/* Copyright & Legal Links */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
-              <p className="text-xs text-muted-foreground">
-                © {currentYear} SIA "Skogsrav". All rights reserved.
-              </p>
+              <div className="flex items-center gap-4">
+                <p className="text-xs text-muted-foreground">
+                  © {currentYear} SIA "Skogsrav". All rights reserved.
+                </p>
+                <Link 
+                  to="/privacy-policy" 
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </div>
               <div className="flex items-center gap-4 text-xs text-muted-foreground">
                 <span>VAT Registered</span>
                 <span className="hidden sm:inline">·</span>
