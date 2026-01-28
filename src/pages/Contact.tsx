@@ -5,51 +5,102 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Mail, Phone, Shield, Clock, Users, Quote } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-
-const countryCodes = [
-  { code: "+371", country: "LV" },
-  { code: "+370", country: "LT" },
-  { code: "+372", country: "EE" },
-  { code: "+48", country: "PL" },
-  { code: "+49", country: "DE" },
-  { code: "+33", country: "FR" },
-  { code: "+31", country: "NL" },
-  { code: "+32", country: "BE" },
-  { code: "+34", country: "ES" },
-  { code: "+39", country: "IT" },
-  { code: "+43", country: "AT" },
-  { code: "+41", country: "CH" },
-  { code: "+44", country: "UK" },
-  { code: "+45", country: "DK" },
-  { code: "+46", country: "SE" },
-  { code: "+47", country: "NO" },
-  { code: "+358", country: "FI" },
-  { code: "+420", country: "CZ" },
-  { code: "+421", country: "SK" },
-  { code: "+36", country: "HU" },
-  { code: "+40", country: "RO" },
-  { code: "+359", country: "BG" },
-  { code: "+30", country: "GR" },
-  { code: "+351", country: "PT" },
-  { code: "+353", country: "IE" },
-  { code: "+352", country: "LU" },
-  { code: "+386", country: "SI" },
-  { code: "+385", country: "HR" },
-  { code: "+1", country: "US" },
-];
-
+const countryCodes = [{
+  code: "+371",
+  country: "LV"
+}, {
+  code: "+370",
+  country: "LT"
+}, {
+  code: "+372",
+  country: "EE"
+}, {
+  code: "+48",
+  country: "PL"
+}, {
+  code: "+49",
+  country: "DE"
+}, {
+  code: "+33",
+  country: "FR"
+}, {
+  code: "+31",
+  country: "NL"
+}, {
+  code: "+32",
+  country: "BE"
+}, {
+  code: "+34",
+  country: "ES"
+}, {
+  code: "+39",
+  country: "IT"
+}, {
+  code: "+43",
+  country: "AT"
+}, {
+  code: "+41",
+  country: "CH"
+}, {
+  code: "+44",
+  country: "UK"
+}, {
+  code: "+45",
+  country: "DK"
+}, {
+  code: "+46",
+  country: "SE"
+}, {
+  code: "+47",
+  country: "NO"
+}, {
+  code: "+358",
+  country: "FI"
+}, {
+  code: "+420",
+  country: "CZ"
+}, {
+  code: "+421",
+  country: "SK"
+}, {
+  code: "+36",
+  country: "HU"
+}, {
+  code: "+40",
+  country: "RO"
+}, {
+  code: "+359",
+  country: "BG"
+}, {
+  code: "+30",
+  country: "GR"
+}, {
+  code: "+351",
+  country: "PT"
+}, {
+  code: "+353",
+  country: "IE"
+}, {
+  code: "+352",
+  country: "LU"
+}, {
+  code: "+386",
+  country: "SI"
+}, {
+  code: "+385",
+  country: "HR"
+}, {
+  code: "+1",
+  country: "US"
+}];
 export default function Contact() {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [countryCode, setCountryCode] = useState("+371");
   const [formData, setFormData] = useState({
@@ -59,40 +110,45 @@ export default function Contact() {
     phone: "",
     message: ""
   });
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
     toast({
       title: "Message Sent",
-      description: "Thank you for your enquiry. We will respond within 24-48 business hours.",
+      description: "Thank you for your enquiry. We will respond within 24-48 business hours."
     });
-    
-    setFormData({ name: "", company: "", email: "", phone: "", message: "" });
+    setFormData({
+      name: "",
+      company: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
     setIsSubmitting(false);
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       <main className="pt-20">
         {/* Hero Section - Simple & Calm */}
         <section className="py-16 md:py-20 bg-cream border-b border-border">
           <div className="container mx-auto px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="max-w-2xl"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5
+          }} className="max-w-2xl">
               <div className="section-label mb-4">
                 <span className="w-8 h-px bg-orange" />
                 Get in Touch
@@ -101,7 +157,7 @@ export default function Contact() {
                 Contact <span className="text-gradient-orange">Skogsräv</span>
               </h1>
               <p className="body-large text-muted-foreground">
-                Confidential communication for institutional clients
+                We’re here to discuss your requirements.
               </p>
             </motion.div>
           </div>
@@ -113,12 +169,16 @@ export default function Contact() {
             <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
               
               {/* Contact Form - Left Column (3/5) */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="lg:col-span-3"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 30
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.5,
+              delay: 0.1
+            }} className="lg:col-span-3">
                 <div className="bg-card border border-border rounded-xl p-8 md:p-10 shadow-sm">
                   <h2 className="heading-card text-foreground mb-2">
                     Send an Enquiry
@@ -133,31 +193,13 @@ export default function Contact() {
                         <Label htmlFor="name" className="text-foreground font-medium">
                           Full Name *
                         </Label>
-                        <Input
-                          id="name"
-                          name="name"
-                          type="text"
-                          required
-                          value={formData.name}
-                          onChange={handleChange}
-                          placeholder="Your full name"
-                          className="bg-background border-border focus:border-orange focus:ring-orange/20"
-                        />
+                        <Input id="name" name="name" type="text" required value={formData.name} onChange={handleChange} placeholder="Your full name" className="bg-background border-border focus:border-orange focus:ring-orange/20" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="company" className="text-foreground font-medium">
                           Company / Organisation *
                         </Label>
-                        <Input
-                          id="company"
-                          name="company"
-                          type="text"
-                          required
-                          value={formData.company}
-                          onChange={handleChange}
-                          placeholder="Your company name"
-                          className="bg-background border-border focus:border-orange focus:ring-orange/20"
-                        />
+                        <Input id="company" name="company" type="text" required value={formData.company} onChange={handleChange} placeholder="Your company name" className="bg-background border-border focus:border-orange focus:ring-orange/20" />
                       </div>
                     </div>
 
@@ -166,16 +208,7 @@ export default function Contact() {
                         <Label htmlFor="email" className="text-foreground font-medium">
                           Business Email *
                         </Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={handleChange}
-                          placeholder="your.email@company.com"
-                          className="bg-background border-border focus:border-orange focus:ring-orange/20"
-                        />
+                        <Input id="email" name="email" type="email" required value={formData.email} onChange={handleChange} placeholder="your.email@company.com" className="bg-background border-border focus:border-orange focus:ring-orange/20" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="phone" className="text-foreground font-medium">
@@ -187,22 +220,12 @@ export default function Contact() {
                               <SelectValue />
                             </SelectTrigger>
                             <SelectContent className="bg-background border-border max-h-[300px]">
-                              {countryCodes.map((item) => (
-                                <SelectItem key={item.code} value={item.code}>
+                              {countryCodes.map(item => <SelectItem key={item.code} value={item.code}>
                                   {item.country} {item.code}
-                                </SelectItem>
-                              ))}
+                                </SelectItem>)}
                             </SelectContent>
                           </Select>
-                          <Input
-                            id="phone"
-                            name="phone"
-                            type="tel"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            placeholder="Phone number"
-                            className="flex-1 bg-background border-border focus:border-orange focus:ring-orange/20"
-                          />
+                          <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="Phone number" className="flex-1 bg-background border-border focus:border-orange focus:ring-orange/20" />
                         </div>
                       </div>
                     </div>
@@ -211,37 +234,26 @@ export default function Contact() {
                       <Label htmlFor="message" className="text-foreground font-medium">
                         Message *
                       </Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        required
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder="Please describe your requirements or enquiry..."
-                        rows={5}
-                        className="bg-background border-border focus:border-orange focus:ring-orange/20 resize-none"
-                      />
+                      <Textarea id="message" name="message" required value={formData.message} onChange={handleChange} placeholder="Please describe your requirements or enquiry..." rows={5} className="bg-background border-border focus:border-orange focus:ring-orange/20 resize-none" />
                     </div>
 
-                    <Button
-                      type="submit"
-                      variant="corporate"
-                      size="lg"
-                      className="w-full md:w-auto shadow-orange"
-                      disabled={isSubmitting}
-                    >
+                    <Button type="submit" variant="corporate" size="lg" className="w-full md:w-auto shadow-orange" disabled={isSubmitting}>
                       {isSubmitting ? "Sending..." : "Submit Enquiry"}
                     </Button>
                   </form>
                 </div>
 
                 {/* Trust Statements */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  className="mt-8 grid sm:grid-cols-3 gap-4"
-                >
+                <motion.div initial={{
+                opacity: 0,
+                y: 20
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.5,
+                delay: 0.3
+              }} className="mt-8 grid sm:grid-cols-3 gap-4">
                   <div className="flex items-start gap-3 p-4 bg-cream rounded-lg">
                     <Users className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
                     <p className="text-sm text-muted-foreground">
@@ -264,12 +276,16 @@ export default function Contact() {
               </motion.div>
 
               {/* Trust & Contact Info - Right Column (2/5) */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="lg:col-span-2 space-y-8"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 30
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.5,
+              delay: 0.2
+            }} className="lg:col-span-2 space-y-8">
                 {/* Company Statement */}
                 <div className="bg-gradient-to-br from-navy-deep to-navy-medium rounded-xl p-8 shadow-lg">
                   <div className="flex items-start gap-4 mb-6">
@@ -293,10 +309,7 @@ export default function Contact() {
                     Direct Contact
                   </h3>
                   <div className="space-y-4">
-                    <a
-                      href="mailto:hello@skogsrav.com"
-                      className="flex items-center gap-4 p-4 bg-cream rounded-lg hover:bg-cream-dark transition-colors group"
-                    >
+                    <a href="mailto:hello@skogsrav.com" className="flex items-center gap-4 p-4 bg-cream rounded-lg hover:bg-cream-dark transition-colors group">
                       <div className="w-10 h-10 rounded-lg bg-background flex items-center justify-center group-hover:bg-orange/10 transition-colors">
                         <Mail className="w-5 h-5 text-orange" />
                       </div>
@@ -305,10 +318,7 @@ export default function Contact() {
                         <p className="text-foreground font-medium">hello@skogsrav.com</p>
                       </div>
                     </a>
-                    <a
-                      href="tel:+37126167827"
-                      className="flex items-center gap-4 p-4 bg-cream rounded-lg hover:bg-cream-dark transition-colors group"
-                    >
+                    <a href="tel:+37126167827" className="flex items-center gap-4 p-4 bg-cream rounded-lg hover:bg-cream-dark transition-colors group">
                       <div className="w-10 h-10 rounded-lg bg-background flex items-center justify-center group-hover:bg-orange/10 transition-colors">
                         <Phone className="w-5 h-5 text-orange" />
                       </div>
@@ -351,6 +361,5 @@ export default function Contact() {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 }
