@@ -9,7 +9,7 @@ import { AboutIntro } from "@/components/AboutIntro";
 import { PageHero } from "@/components/PageHero";
 import { SEO } from "@/components/SEO";
 import { CheckCircle, Eye, Shield, Users, Target, Lock } from "lucide-react";
-import aboutHero from "@/assets/hero-about.jpg";
+import { storageImages } from "@/lib/storage";
 
 const aboutSEO = {
   title: "About Skogsräv | European Asset Recovery Specialists",
@@ -70,7 +70,7 @@ const approachPrinciples = [{
   description: "We measure success by resolution, not by activity. A vehicle recovered quietly and compliantly is more valuable than one recovered visibly. In most cases, our involvement remains known only to the client — and that is precisely the point."
 }];
 function AboutPageHero() {
-  return <PageHero label="About Skogsräv" title="How We Think." titleAccent="How We Operate." description="Skogsräv operates with a clear understanding that vehicle recovery requires more than operational capability. Every case is handled with the same structured approach, discretion, and compliance focus." backgroundImage={aboutHero} backgroundAlt="European corporate office with city view at night" />;
+  return <PageHero label="About Skogsräv" title="How We Think." titleAccent="How We Operate." description="Skogsräv operates with a clear understanding that vehicle recovery requires more than operational capability. Every case is handled with the same structured approach, discretion, and compliance focus." backgroundImage={storageImages.heroAbout} backgroundAlt="European corporate office with city view at night" />;
 }
 function WhoWeWorkWith() {
   const ref = useRef(null);

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import europeNetwork from "@/assets/europe-network.jpg";
+import { storageImages } from "@/lib/storage";
 import { MapPin } from "lucide-react";
 const markets = ["Germany", "France", "Poland", "Netherlands", "Belgium", "Austria", "Czech Republic", "Baltics"];
 export function EuropeanScope() {
@@ -102,7 +102,7 @@ export function EuropeanScope() {
           delay: 0.2
         }} className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-lg">
-              <img src={europeNetwork} alt="European operational network" className="w-full h-auto object-cover" />
+              <img src={storageImages.europeNetwork} alt="European operational network" className="w-full h-auto object-cover" />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/60 via-transparent to-transparent" />
               

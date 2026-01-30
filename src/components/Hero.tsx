@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useContactModal } from "@/contexts/ContactModalContext";
-import heroImage from "@/assets/hero-vehicle-recovery.jpg";
+import { storageImages } from "@/lib/storage";
 
 export function Hero() {
   const { openContactModal } = useContactModal();
@@ -13,7 +13,7 @@ export function Hero() {
       {/* Background Image - Sharp on right side */}
       <div className="absolute inset-0">
         <img
-          src={heroImage}
+          src={storageImages.heroVehicleRecovery}
           alt="European financial district skyline at dusk"
           className="w-full h-full object-cover scale-105"
         />

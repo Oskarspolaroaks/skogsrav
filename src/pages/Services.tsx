@@ -10,7 +10,7 @@ import { SEO } from "@/components/SEO";
 import { Globe, Building2, Truck, Eye, Shield, MessageSquare, X, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useContactModal } from "@/contexts/ContactModalContext";
-import servicesHero from "@/assets/hero-services.jpg";
+import { storageImages } from "@/lib/storage";
 
 const servicesSEO = {
   title: "Vehicle Recovery Services Europe | Leasing & Fleet Recovery",
@@ -110,7 +110,7 @@ function ServicesPageHero() {
       title="European Cross-Border"
       titleAccent="Vehicle Recovery Services"
       description="Comprehensive vehicle recovery services designed for leasing companies, rental operators, and financial institutions. Every service is delivered with discretion and professional execution."
-      backgroundImage={servicesHero}
+      backgroundImage={storageImages.heroServices}
       backgroundAlt="European logistics control room with route monitoring"
     />
   );
