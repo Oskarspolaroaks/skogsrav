@@ -2,10 +2,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, Phone, MapPin, X } from "lucide-react";
 import { useContactModal } from "@/contexts/ContactModalContext";
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 export function ContactModal() {
   const { isOpen, closeContactModal } = useContactModal();
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    message: "",
+  });
+  const [honeypot, setHoneypot] = useState("");
 
   // Handle ESC key
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
@@ -24,6 +34,93 @@ export function ContactModal() {
       document.body.style.overflow = "unset";
     };
   }, [isOpen, handleKeyDown]);
+
+  // Reset form when modal closes
+  useEffect(() => {
+    if (!isOpen) {
+      setFormData({ name: "", company: "", email: "", message: "" });
+      setHoneypot("");
+    }
+  }, [isOpen]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const validateForm = (): string | null => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.name.trim()) return "Please enter your name.";
+    if (!formData.email.trim()) return "Please enter your email.";
+    if (!emailRegex.test(formData.email.trim())) return "Please enter a valid email address.";
+    if (!formData.message.trim()) return "Please enter a message.";
+    if (formData.message.trim().length < 10) return "Message must be at least 10 characters.";
+    return null;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const validationError = validateForm();
+    if (validationError) {
+      toast({
+        title: "Validation Error",
+        description: validationError,
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+          },
+          body: JSON.stringify({
+            name: formData.name.trim(),
+            company: formData.company.trim(),
+            email: formData.email.trim(),
+            phone: "",
+            countryCode: "",
+            message: formData.message.trim(),
+            website: honeypot,
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast({
+          title: "Message Sent",
+          description: "Thank you. We will contact you shortly.",
+        });
+        setFormData({ name: "", company: "", email: "", message: "" });
+        setHoneypot("");
+        closeContactModal();
+      } else {
+        toast({
+          title: "Unable to Send",
+          description: data.error || "Please try again later.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Unable to Send",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -123,14 +220,33 @@ export function ContactModal() {
                       Reach out — we're ready to help.
                     </p>
 
-                    <form className="space-y-5">
+                    <form onSubmit={handleSubmit} className="space-y-5">
+                      {/* Honeypot field - hidden from users */}
+                      <div className="absolute left-[-9999px]" aria-hidden="true">
+                        <label htmlFor="modal-website">Website</label>
+                        <input
+                          id="modal-website"
+                          name="website"
+                          type="text"
+                          value={honeypot}
+                          onChange={(e) => setHoneypot(e.target.value)}
+                          tabIndex={-1}
+                          autoComplete="off"
+                        />
+                      </div>
+
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
                           <label className="block text-sm font-bold text-foreground mb-2">
-                            Name
+                            Name *
                           </label>
                           <input
                             type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            maxLength={100}
+                            required
                             className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-orange transition-colors"
                             placeholder="Your name"
                           />
@@ -141,6 +257,10 @@ export function ContactModal() {
                           </label>
                           <input
                             type="text"
+                            name="company"
+                            value={formData.company}
+                            onChange={handleChange}
+                            maxLength={200}
                             className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-orange transition-colors"
                             placeholder="Company name"
                           />
@@ -149,10 +269,15 @@ export function ContactModal() {
 
                       <div>
                         <label className="block text-sm font-bold text-foreground mb-2">
-                          Email
+                          Email *
                         </label>
                         <input
                           type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          maxLength={255}
+                          required
                           className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-orange transition-colors"
                           placeholder="your@email.com"
                         />
@@ -160,18 +285,31 @@ export function ContactModal() {
 
                       <div>
                         <label className="block text-sm font-bold text-foreground mb-2">
-                          Message
+                          Message *
                         </label>
                         <textarea
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          maxLength={2000}
+                          required
                           rows={3}
                           className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-orange transition-colors resize-none"
                           placeholder="Briefly describe your requirements..."
                         />
                       </div>
 
-                      <Button variant="corporate" size="xl" className="w-full group shadow-orange">
-                        Send Enquiry
-                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                      <Button 
+                        type="submit"
+                        variant="corporate" 
+                        size="xl" 
+                        className="w-full group shadow-orange"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? "Sending..." : "Send Enquiry"}
+                        {!isSubmitting && (
+                          <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                        )}
                       </Button>
 
                       <p className="text-xs text-muted-foreground text-center">
