@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import lynkCoLogo from "@/assets/partners/lynk-co.png";
 import europcarLogo from "@/assets/partners/europcar.png";
 import avisLogo from "@/assets/partners/avis.svg";
+import vitaCreditLogo from "@/assets/partners/vita-credit.png";
+import mcFinanceLogo from "@/assets/partners/mc-finance.png";
 const partners = [{
   name: "AVIS",
   logo: avisLogo
@@ -11,6 +13,12 @@ const partners = [{
 }, {
   name: "Lynk & Co",
   logo: lynkCoLogo
+}, {
+  name: "Vita Credit",
+  logo: vitaCreditLogo
+}, {
+  name: "MC Finance",
+  logo: mcFinanceLogo
 }];
 export function TrustedPartners() {
   return <section className="py-16 md:py-20 bg-slate-50">
