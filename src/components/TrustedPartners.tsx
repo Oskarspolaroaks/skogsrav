@@ -75,7 +75,7 @@ export function TrustedPartners() {
           duration: 0.4,
           delay: 0.3 + index * 0.1
         }} className="flex items-center justify-center" title={partner.name}>
-              <img src={partner.logo} alt={partner.name} className="h-8 md:h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+              <img src={partner.logo} alt={partner.name} className={`w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 ${partner.name === "MC' Finance" ? "h-12 md:h-16" : "h-8 md:h-10"}`} />
             </motion.div>)}
         </motion.div>
 
