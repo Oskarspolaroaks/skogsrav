@@ -5,7 +5,7 @@ import { Shield, MapPin, Truck, FileCheck, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 const services = [{
   icon: Shield,
-  title: "Discrete Recovery",
+  title: "Discrete Repossession",
   description: "Professional operations with minimal visibility. Voluntary handover prioritized."
 }, {
   icon: MapPin,
@@ -55,7 +55,7 @@ export function Services() {
             duration: 0.5,
             delay: 0.1
           }} className="heading-section text-foreground">
-              Vehicle Recovery
+              Vehicle Repossession
               <span className="text-orange">.</span>
             </motion.h2>
           </div>

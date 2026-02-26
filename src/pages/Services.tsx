@@ -13,10 +13,10 @@ import { useContactModal } from "@/contexts/ContactModalContext";
 import { storageImages } from "@/lib/storage";
 
 const servicesSEO = {
-  title: "Vehicle Recovery Services Europe | Leasing & Fleet Recovery",
-  description: "Professional vehicle recovery services for leasing companies and fleet operators. Cross-border asset recovery across Europe. Discreet, compliant, success-based fees.",
+  title: "Vehicle Repossession Services Europe | Leasing & Fleet Repossession",
+  description: "Professional vehicle repossession services for leasing companies and fleet operators. Cross-border asset repossession across Europe. Discreet, compliant, success-based fees.",
   canonical: "/services",
-  keywords: "vehicle recovery services, leasing asset recovery, fleet recovery Europe, cross-border vehicle recovery, rental vehicle repossession",
+  keywords: "vehicle repossession services, leasing asset repossession, fleet repossession Europe, cross-border vehicle repossession, rental vehicle repossession",
   image: "https://skogsrav.com/og-image.png",
   breadcrumbs: [
     { name: "Home", url: "/" },
@@ -25,15 +25,15 @@ const servicesSEO = {
   jsonLd: {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "European Vehicle Recovery Services",
+    "name": "European Vehicle Repossession Services",
     "provider": {
       "@type": "ProfessionalService",
       "name": "Skogsräv",
       "url": "https://skogsrav.com"
     },
-    "description": "Professional vehicle recovery services for leasing companies, rental operators, and financial institutions across Europe.",
+    "description": "Professional vehicle repossession services for leasing companies, rental operators, and financial institutions across Europe.",
     "areaServed": "Europe",
-    "serviceType": ["Leasing Asset Recovery", "Cross-Border Vehicle Recovery", "Commercial Fleet Recovery"],
+    "serviceType": ["Leasing Asset Repossession", "Cross-Border Vehicle Repossession", "Commercial Fleet Repossession"],
     "audience": {
       "@type": "Audience",
       "audienceType": ["Leasing Companies", "Rental Operators", "Financial Institutions", "Fleet Operators"]
@@ -44,20 +44,20 @@ const servicesSEO = {
 const coreServices = [
   {
     icon: Building2,
-    title: "Leasing & Rental Asset Recovery",
-    description: "Specialized recovery for leasing companies and rental operators. We understand the unique requirements of asset-backed financing and the importance of preserving customer relationships.",
+    title: "Leasing & Rental Asset Repossession",
+    description: "Specialized repossession for leasing companies and rental operators. We understand the unique requirements of asset-backed financing and the importance of preserving customer relationships.",
     features: ["Portfolio-level case management", "Relationship-preserving approach", "Fleet-specific logistics", "Detailed reporting and documentation", "Photo and incident reporting", "End-to-end case traceability", "Condition documentation at takeover", "Scalable operational capacity"],
   },
   {
     icon: Globe,
-    title: "Cross-Border Vehicle Recovery",
-    description: "Coordinated vehicle recovery operations across Europe, managing complex cross-border cases with a structured and controlled approach.",
-    features: ["Centralized coordination across European markets", "Condition documentation at point of recovery", "Operational continuity across jurisdictions", "Cross-border case planning and execution", "Experience with diverse European market environments", "Territory-specific operational knowledge"],
+    title: "Cross-Border Vehicle Repossession",
+    description: "Coordinated vehicle repossession operations across Europe, managing complex cross-border cases with a structured and controlled approach.",
+    features: ["Centralized coordination across European markets", "Condition documentation at point of repossession", "Operational continuity across jurisdictions", "Cross-border case planning and execution", "Experience with diverse European market environments", "Territory-specific operational knowledge"],
   },
   {
     icon: Truck,
-    title: "Commercial & Fleet Vehicle Recovery",
-    description: "Recovery of commercial vehicles and fleet assets with specialized handling requirements. From light commercial to heavy goods vehicles, we have the capability and equipment.",
+    title: "Commercial & Fleet Vehicle Repossession",
+    description: "Repossession of commercial vehicles and fleet assets with specialized handling requirements. From light commercial to heavy goods vehicles, we have the capability and equipment.",
     features: ["Specialized transport equipment", "Commercial vehicle expertise", "Minimal business disruption", "Secure storage coordination"],
   },
 ];
@@ -94,7 +94,7 @@ const whatWeDoNot = [
   {
     icon: X,
     title: "No Unnecessary Visibility",
-    description: "We do not seek attention for our work. Effective vehicle recovery is measured by outcome, not by the visibility of the operation.",
+    description: "We do not seek attention for our work. Effective vehicle repossession is measured by outcome, not by the visibility of the operation.",
   },
   {
     icon: X,
@@ -108,8 +108,8 @@ function ServicesPageHero() {
     <PageHero
       label="Our Services"
       title="European Cross-Border"
-      titleAccent="Vehicle Recovery Services"
-      description="Comprehensive vehicle recovery services designed for leasing companies, rental operators, and financial institutions. Every service is delivered with discretion and professional execution."
+      titleAccent="Vehicle Repossession Services"
+      description="Comprehensive vehicle repossession services designed for leasing companies, rental operators, and financial institutions. Every service is delivered with discretion and professional execution."
       backgroundImage={storageImages.heroServices}
       backgroundAlt="European logistics control room with route monitoring"
     />
@@ -140,7 +140,7 @@ function CoreServices() {
             transition={{ delay: 0.1 }}
             className="heading-section text-foreground mb-6"
           >
-            Comprehensive Recovery Capabilities
+            Comprehensive Repossession Capabilities
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

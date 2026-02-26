@@ -12,10 +12,10 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const contactSEO = {
-  title: "Contact Skogsräv | European Vehicle Recovery Enquiries",
-  description: "Contact Skogsräv for professional vehicle recovery services across Europe. Confidential enquiries for leasing companies, rental operators, and financial institutions.",
+  title: "Contact Skogsräv | European Vehicle Repossession Enquiries",
+  description: "Contact Skogsräv for professional vehicle repossession services across Europe. Confidential enquiries for leasing companies, rental operators, and financial institutions.",
   canonical: "/contact",
-  keywords: "contact Skogsrav, vehicle recovery enquiry, asset recovery contact Europe, leasing recovery services contact",
+  keywords: "contact Skogsrav, vehicle repossession enquiry, asset repossession contact Europe, leasing repossession services contact",
   image: "https://skogsrav.com/og-image.png",
   breadcrumbs: [
     { name: "Home", url: "/" },
@@ -81,7 +81,6 @@ export default function Contact() {
     phone: "",
     message: "",
   });
-  // Honeypot field - hidden from users, bots will fill it
   const [honeypot, setHoneypot] = useState("");
 
   const validateForm = (): string | null => {
@@ -91,7 +90,7 @@ export default function Contact() {
     if (!formData.company.trim() || formData.company.trim().length < 2) {
       return "Please enter your company name";
     }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
     if (!formData.email.trim() || !emailRegex.test(formData.email)) {
       return "Please enter a valid email address";
     }
@@ -132,7 +131,7 @@ export default function Contact() {
             phone: formData.phone.trim(),
             countryCode,
             message: formData.message.trim(),
-            website: honeypot, // Honeypot field
+            website: honeypot,
           }),
         }
       );
@@ -191,7 +190,7 @@ export default function Contact() {
       <Header />
       
       <main className="pt-20">
-        {/* Hero Section - Simple & Calm */}
+        {/* Hero Section */}
         <section className="py-16 md:py-20 bg-cream border-b border-border">
           <div className="container mx-auto px-6 lg:px-8">
             <motion.div
@@ -219,7 +218,7 @@ export default function Contact() {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
               
-              {/* Contact Form - Left Column (3/5) */}
+              {/* Contact Form */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -235,7 +234,7 @@ export default function Contact() {
                   </p>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    {/* Honeypot field - hidden from users */}
+                    {/* Honeypot field */}
                     <div className="absolute left-[-9999px]" aria-hidden="true">
                       <Label htmlFor="website">Website</Label>
                       <Input
@@ -392,7 +391,7 @@ export default function Contact() {
                 </motion.div>
               </motion.div>
 
-              {/* Trust & Contact Info - Right Column (2/5) */}
+              {/* Trust & Contact Info */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -405,14 +404,14 @@ export default function Contact() {
                     <Quote className="w-8 h-8 text-orange flex-shrink-0 rotate-180" />
                   </div>
                   <blockquote className="font-serif text-lg text-primary-foreground/95 leading-relaxed mb-6">
-                    "We understand that vehicle recovery is not just about retrieving an asset — it's about protecting your business relationships, your reputation, and ensuring continuity at every step."
+                    "We understand that vehicle repossession is not just about retrieving an asset — it's about protecting your business relationships, your reputation, and ensuring continuity at every step."
                   </blockquote>
                   <p className="text-primary-foreground/70 text-sm">
                     Every case is handled with the same level of professionalism, discretion, and structured methodology that institutional clients expect from a trusted European partner.
                   </p>
                   <div className="mt-6 pt-6 border-t border-primary-foreground/20">
                     <p className="text-primary-foreground font-medium">Skogsräv Team</p>
-                    <p className="text-primary-foreground/60 text-sm">European Vehicle Recovery Specialists</p>
+                    <p className="text-primary-foreground/60 text-sm">European Vehicle Repossession Specialists</p>
                   </div>
                 </div>
 
@@ -447,31 +446,6 @@ export default function Contact() {
                       </div>
                     </a>
                   </div>
-                </div>
-
-                {/* Why Contact Us */}
-                <div className="bg-cream rounded-xl p-8">
-                  <h3 className="font-semibold text-foreground mb-4">
-                    What to expect
-                  </h3>
-                  <ul className="space-y-3 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-orange mt-2 flex-shrink-0" />
-                      Initial assessment of your case requirements
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-orange mt-2 flex-shrink-0" />
-                      Clear explanation of our methodology and approach
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-orange mt-2 flex-shrink-0" />
-                      Transparent discussion of timelines and success-based pricing
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-orange mt-2 flex-shrink-0" />
-                      No obligation — just professional guidance
-                    </li>
-                  </ul>
                 </div>
               </motion.div>
             </div>

@@ -10,10 +10,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import heroImage from "@/assets/hero-about.jpg";
 
 const faqSEO = {
-  title: "Vehicle Recovery FAQ | Cross-Border Asset Recovery Questions",
-  description: "Expert answers about European vehicle recovery: legal compliance, voluntary handovers, cross-border operations, success-based pricing. For leasing companies and fleet operators.",
+  title: "Vehicle Repossession FAQ | Cross-Border Asset Repossession Questions",
+  description: "Expert answers about European vehicle repossession: legal compliance, voluntary handovers, cross-border operations, success-based pricing. For leasing companies and fleet operators.",
   canonical: "/faq",
-  keywords: "vehicle recovery FAQ, asset recovery questions, cross-border recovery legal, voluntary handover, success-based recovery fees",
+  keywords: "vehicle repossession FAQ, asset repossession questions, cross-border repossession legal, voluntary handover, success-based repossession fees",
   image: "https://skogsrav.com/og-image.png",
   breadcrumbs: [
     { name: "Home", url: "/" },
@@ -22,41 +22,41 @@ const faqSEO = {
 };
 
 const faqItems = [{
-  id: "what-is-vehicle-recovery",
-  question: "What is vehicle recovery?",
-  answer: "Vehicle recovery is a professional service in which Skogsrav retrieves a vehicle or other movable asset from a debtor or lessee and returns it to its rightful owner. Our services are typically required when a client's internal recovery procedures have failed—for example, when a debtor ignores return demands, refuses to cooperate, or unlawfully retains the vehicle."
+  id: "what-is-vehicle-repossession",
+  question: "What is vehicle repossession?",
+  answer: "Vehicle repossession is a professional service in which Skogsrav retrieves a vehicle or other movable asset from a debtor or lessee and returns it to its rightful owner. Our services are typically required when a client's internal repossession procedures have failed—for example, when a debtor ignores return demands, refuses to cooperate, or unlawfully retains the vehicle."
 }, {
-  id: "is-recovery-legal",
-  question: "Is vehicle and asset recovery legal?",
-  answer: "Yes. All recoveries carried out by Skogsrav are conducted in full compliance with applicable laws and regulations. Before accepting any case, our team performs a thorough legal assessment to ensure that the lessor or creditor has a clear and legitimate right to recover the asset. This protects both our clients and Skogsrav from potential legal disputes and safeguards reputational integrity."
+  id: "is-repossession-legal",
+  question: "Is vehicle and asset repossession legal?",
+  answer: "Yes. All repossessions carried out by Skogsrav are conducted in full compliance with applicable laws and regulations. Before accepting any case, our team performs a thorough legal assessment to ensure that the lessor or creditor has a clear and legitimate right to repossess the asset. This protects both our clients and Skogsrav from potential legal disputes and safeguards reputational integrity."
 }, {
   id: "discretion-importance",
-  question: "Why is discretion important in professional vehicle recovery?",
-  answer: "Discretion is a cornerstone of our recovery operations. We recognize that asset recovery is a sensitive situation for all parties involved. Every recovery is conducted with a respectful, professional, and controlled approach—firm where necessary, but never confrontational. We prioritise outcomes over visibility and take active steps to minimise reputational risk for our clients. If a recovery poses excessive reputational exposure, we will suspend the operation and pursue an alternative strategy."
+  question: "Why is discretion important in professional vehicle repossession?",
+  answer: "Discretion is a cornerstone of our repossession operations. We recognize that asset repossession is a sensitive situation for all parties involved. Every repossession is conducted with a respectful, professional, and controlled approach—firm where necessary, but never confrontational. We prioritise outcomes over visibility and take active steps to minimise reputational risk for our clients. If a repossession poses excessive reputational exposure, we will suspend the operation and pursue an alternative strategy."
 }, {
   id: "voluntary-handover",
   question: "What is a voluntary vehicle handover and why is it preferred?",
-  answer: "A voluntary vehicle handover occurs when the debtor or lessee willingly transfers possession of the vehicle to Skogsrav. This includes handing over the keys, any available documentation, and signing a formal handover report. The report documents vehicle condition, mileage, date and location of recovery, and confirms that no personal belongings remain in the vehicle. This approach is preferred as it avoids unnecessary confrontation and provides clear written confirmation of the vehicle's condition at the time of recovery."
+  answer: "A voluntary vehicle handover occurs when the debtor or lessee willingly transfers possession of the vehicle to Skogsrav. This includes handing over the keys, any available documentation, and signing a formal handover report. The report documents vehicle condition, mileage, date and location of repossession, and confirms that no personal belongings remain in the vehicle. This approach is preferred as it avoids unnecessary confrontation and provides clear written confirmation of the vehicle's condition at the time of repossession."
 }, {
-  id: "cross-border-recovery",
-  question: "What is cross-border vehicle recovery?",
-  answer: "Cross-border vehicle recovery refers to the retrieval of vehicles that have crossed international borders within Europe under leasing, rental, or financing agreements. This process requires coordination across multiple jurisdictions with differing legal frameworks. Skogsrav applies a structured methodology involving debtor location, legal jurisdiction analysis, and cooperation with local authorities or partners where required to ensure lawful and efficient recovery."
+  id: "cross-border-repossession",
+  question: "What is cross-border vehicle repossession?",
+  answer: "Cross-border vehicle repossession refers to the retrieval of vehicles that have crossed international borders within Europe under leasing, rental, or financing agreements. This process requires coordination across multiple jurisdictions with differing legal frameworks. Skogsrav applies a structured methodology involving debtor location, legal jurisdiction analysis, and cooperation with local authorities or partners where required to ensure lawful and efficient repossession."
 }, {
   id: "timeline",
-  question: "How long does a typical vehicle recovery take?",
-  answer: "Recovery timelines vary depending on case complexity, debtor cooperation, geographic distances, and volume of cases. For clients providing 10–20 cases per month, recoveries are typically completed within the same month, often averaging one recovered vehicle per day. Timing may also depend on vehicle locations and designated storage facilities."
+  question: "How long does a typical vehicle repossession take?",
+  answer: "Repossession timelines vary depending on case complexity, debtor cooperation, geographic distances, and volume of cases. For clients providing 10–20 cases per month, repossessions are typically completed within the same month, often averaging one repossessed vehicle per day. Timing may also depend on vehicle locations and designated storage facilities."
 }, {
   id: "success-based-pricing",
-  question: "How does success-based recovery work?",
-  answer: "Skogsrav operates on a success-based fee model. Clients are invoiced only after a vehicle has been successfully recovered. Fees are agreed in advance as a fixed amount, providing full cost transparency and eliminating financial risk for unsuccessful cases. This model ensures our interests are fully aligned with those of our clients."
+  question: "How does success-based repossession work?",
+  answer: "Skogsrav operates on a success-based fee model. Clients are invoiced only after a vehicle has been successfully repossessed. Fees are agreed in advance as a fixed amount, providing full cost transparency and eliminating financial risk for unsuccessful cases. This model ensures our interests are fully aligned with those of our clients."
 }, {
   id: "who-can-engage",
-  question: "Who can engage professional vehicle recovery services?",
-  answer: "Skogsrav works exclusively with institutional clients that have a legitimate legal interest in the assets being recovered. These include leasing companies, rental fleet operators, banks and financial institutions, corporate fleet managers, legal professionals, and insolvency practitioners. All engagements require documented proof of ownership or recovery rights, such as lease or financing agreements and evidence of default or termination. We do not provide services to private individuals or accept cases with unclear or disputed legal standing."
+  question: "Who can engage professional vehicle repossession services?",
+  answer: "Skogsrav works exclusively with institutional clients that have a legitimate legal interest in the assets being repossessed. These include leasing companies, rental fleet operators, banks and financial institutions, corporate fleet managers, legal professionals, and insolvency practitioners. All engagements require documented proof of ownership or repossession rights, such as lease or financing agreements and evidence of default or termination. We do not provide services to private individuals or accept cases with unclear or disputed legal standing."
 }, {
   id: "skogsrav-difference",
   question: "How does Skogsrav differ from traditional debt collection or repossession companies?",
-  answer: "Unlike traditional debt collection agencies that focus on payment recovery, Skogsrav specialises in the physical recovery of movable assets across European borders. Our approach prioritises legal compliance, discretion, and voluntary resolution over aggressive tactics. Combined with our success-based fee structure and exclusive focus on institutional clients, we deliver a recovery service designed to protect both assets and reputation."
+  answer: "Unlike traditional debt collection agencies that focus on payment recovery, Skogsrav specialises in the physical repossession of movable assets across European borders. Our approach prioritises legal compliance, discretion, and voluntary resolution over aggressive tactics. Combined with our success-based fee structure and exclusive focus on institutional clients, we deliver a repossession service designed to protect both assets and reputation."
 }];
 export default function FAQ() {
   const {
@@ -72,7 +72,7 @@ export default function FAQ() {
         breadcrumbs={faqSEO.breadcrumbs}
       />
       <Header />
-      <PageHero label="Expert FAQ" title="Cross-Border" titleAccent="Vehicle Recovery" description="Authoritative answers to critical questions about European vehicle recovery operations, legal compliance, and institutional engagement." backgroundImage={heroImage} backgroundAlt="European vehicle recovery expertise" />
+      <PageHero label="Expert FAQ" title="Cross-Border" titleAccent="Vehicle Repossession" description="Authoritative answers to critical questions about European vehicle repossession operations, legal compliance, and institutional engagement." backgroundImage={heroImage} backgroundAlt="European vehicle repossession expertise" />
 
       <TrustStamps />
 
@@ -98,7 +98,7 @@ export default function FAQ() {
               Frequently Asked <span className="text-gradient-orange">Questions</span>
             </h2>
             <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-              Expert guidance on legal, operational, and compliance aspects of professional vehicle recovery across Europe.
+              Expert guidance on legal, operational, and compliance aspects of professional vehicle repossession across Europe.
             </p>
           </motion.div>
 
@@ -157,7 +157,7 @@ export default function FAQ() {
                 Have a specific question about your case?
               </h3>
               <p className="body-medium text-primary-foreground/80 mb-8 max-w-xl mx-auto">
-                Our specialists are available to discuss complex recovery scenarios and provide tailored guidance. 
+                Our specialists are available to discuss complex repossession scenarios and provide tailored guidance. 
               </p>
               <Button variant="corporate" size="lg" onClick={openContactModal} className="shadow-orange">
                 Discuss Your Requirements

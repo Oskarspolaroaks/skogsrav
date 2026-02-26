@@ -75,7 +75,6 @@ export function SEO({
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : undefined;
   const ogImage = image || defaultImage;
 
-  // Combine all JSON-LD schemas
   const schemas: object[] = [organizationSchema];
   if (jsonLd) schemas.push(jsonLd);
   if (breadcrumbs && breadcrumbs.length > 0) {
@@ -88,13 +87,10 @@ export function SEO({
       <meta name="description" content={description} />
       {fullCanonical && <link rel="canonical" href={fullCanonical} />}
       
-      {/* Keywords */}
       {keywords && <meta name="keywords" content={keywords} />}
       
-      {/* Author */}
       <meta name="author" content="Skogsräv" />
       
-      {/* Open Graph */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -102,13 +98,11 @@ export function SEO({
       <meta property="og:site_name" content="Skogsräv" />
       <meta property="og:image" content={ogImage} />
       
-      {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       
-      {/* JSON-LD Structured Data */}
       {schemas.map((schema, index) => (
         <script key={index} type="application/ld+json">
           {JSON.stringify(schema)}

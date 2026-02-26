@@ -52,7 +52,7 @@ export function EuropeanScope() {
             duration: 0.5,
             delay: 0.2
           }} className="body-large text-muted-foreground mb-10">
-              Extensive experience handling vehicle recovery cases across European markets. 
+              Extensive experience handling vehicle repossession cases across European markets. 
             </motion.p>
 
             {/* Markets Grid */}
@@ -114,7 +114,7 @@ export function EuropeanScope() {
                 </div>
                 <div className="bg-white/95 backdrop-blur-sm rounded-lg px-5 py-3 shadow-lg">
                   <div className="text-3xl font-bold text-orange font-serif">2000+ </div>
-                  <div className="text-xs font-semibold text-foreground uppercase tracking-wide">VEHICLES RECOVERED</div>
+                  <div className="text-xs font-semibold text-foreground uppercase tracking-wide">VEHICLES REPOSSESSED</div>
                 </div>
               </div>
             </div>

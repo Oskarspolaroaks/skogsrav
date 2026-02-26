@@ -11,23 +11,23 @@ import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 
 const indexSEO = {
-  title: "Asset Recovery Europe | Cross-Border Vehicle Recovery",
-  description: "European asset recovery for leasing and rental companies. Cross-border vehicle recovery across 8+ markets. Compliance-first. Success-based fees. Discreet operations.",
+  title: "Asset Repossession Europe | Cross-Border Vehicle Repossession",
+  description: "European asset repossession for leasing and rental companies. Cross-border vehicle repossession across 8+ markets. Compliance-first. Success-based fees. Discreet operations.",
   canonical: "/",
-  keywords: "asset recovery Europe, vehicle recovery Europe, leasing asset recovery, cross-border asset recovery, rental vehicle recovery, fleet recovery services",
+  keywords: "asset repossession Europe, vehicle repossession Europe, leasing asset repossession, cross-border asset repossession, rental vehicle repossession, fleet repossession services",
   image: "https://skogsrav.com/og-image.png",
   jsonLd: {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Skogsräv",
-    "description": "European asset recovery services for leasing and rental companies. Cross-border vehicle recovery across 8+ markets.",
+    "description": "European asset repossession services for leasing and rental companies. Cross-border vehicle repossession across 8+ markets.",
     "url": "https://skogsrav.com",
     "logo": "https://skogsrav.com/og-image.png",
     "areaServed": {
       "@type": "Place",
       "name": "Europe"
     },
-    "serviceType": ["Asset Recovery", "Vehicle Recovery", "Cross-Border Recovery", "Leasing Asset Recovery", "Rental Vehicle Recovery"],
+    "serviceType": ["Asset Repossession", "Vehicle Repossession", "Cross-Border Repossession", "Leasing Asset Repossession", "Rental Vehicle Repossession"],
     "audience": {
       "@type": "Audience",
       "audienceType": ["Leasing Companies", "Rental Operators", "Financial Institutions", "Fleet Operators", "Legal Departments"]
