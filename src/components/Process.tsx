@@ -15,7 +15,7 @@ const steps = [{
   description: "Precision tracking. Local expertise. Minimal disruption."
 }, {
   number: "04",
-  title: "Recovery",
+  title: "Repossession",
   description: "Coordinated execution. Full legal compliance."
 }, {
   number: "05",

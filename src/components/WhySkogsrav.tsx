@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { Check } from "lucide-react";
 const differentiators = [{
   title: "Success-Based Fees",
-  description: "No recovery, no invoice. We deliver first."
+  description: "No repossession, no invoice. We deliver first."
 }, {
   title: "Baltic HQ, European Reach",
   description: "Regional expertise. Continental execution."

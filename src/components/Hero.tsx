@@ -75,7 +75,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="inline-block"
             >
-              Vehicle recovery
+              Vehicle repossession
             </motion.span>
             <br />
             <motion.span
@@ -99,7 +99,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="body-large text-white/90 max-w-2xl mb-12 drop-shadow-md"
           >
-            Pan-European cross-border vehicle recovery solutions.{" "}
+            Pan-European cross-border vehicle repossession solutions.{" "}
             <br className="hidden md:block" />
             <span className="text-orange font-bold">
               Discreet. Compliant. Results-driven.
@@ -141,7 +141,7 @@ export function Hero() {
               {[
                 { value: "15+", label: "Years" },
                 { value: "8+", label: "Markets" },
-                { value: "2000+", label: "Recovered" },
+                { value: "2000+", label: "Repossessed" },
                 { value: "Success", label: "Based Fees" },
               ].map((stat, index) => (
                 <motion.div

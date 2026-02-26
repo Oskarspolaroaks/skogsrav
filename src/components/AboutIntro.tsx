@@ -22,26 +22,26 @@ export function AboutIntro() {
 
             {/* Main Heading */}
             <h2 className="heading-section text-foreground">
-              A Recovery Partner Built for Fast-Moving Markets
+              A Repossession Partner Built for Fast-Moving Markets
             </h2>
 
             {/* Content */}
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p className="body-large">
                 Skogsrav was founded by legal and credit specialists with a clear purpose: 
-                to deliver personalised, high-quality recovery solutions tailored to each 
+                to deliver personalised, high-quality repossession solutions tailored to each 
                 client's specific situation.
               </p>
 
               <p>
-                We specialise in the search and recovery of movable assets across Europe, 
+                We specialise in the search and repossession of movable assets across Europe, 
                 with a strong focus on leasing and rental assets. These primarily include 
                 vehicles, commercial trucks, agricultural machinery, and construction equipment.
               </p>
 
               <p>
                 With extensive cross-border experience, Skogsrav has successfully resolved 
-                recovery cases for European partners across multiple jurisdictions — with 
+                repossession cases for European partners across multiple jurisdictions — with 
                 consistency and discretion at every stage.
               </p>
 
@@ -51,7 +51,7 @@ export function AboutIntro() {
                 both for our clients and for Skogsrav itself — in every engagement.
               </p>
 
-              <p>By combining deep legal expertise with modern communication tools, structured coordination, and flexible operational planning, we make complex cross-border recovery processes more efficient, predictable, and accessible for clients.</p>
+              <p>By combining deep legal expertise with modern communication tools, structured coordination, and flexible operational planning, we make complex cross-border repossession processes more efficient, predictable, and accessible for clients.</p>
             </div>
 
             {/* Divider with key differentiators */}

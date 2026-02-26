@@ -12,10 +12,10 @@ import { CheckCircle, Eye, Shield, Users, Target, Lock } from "lucide-react";
 import { storageImages } from "@/lib/storage";
 
 const aboutSEO = {
-  title: "About Skogsräv | European Asset Recovery Specialists",
-  description: "Skogsräv provides professional vehicle recovery services across Europe for leasing companies and financial institutions. Baltic expertise, European reach. Licensed operations.",
+  title: "About Skogsräv | European Asset Repossession Specialists",
+  description: "Skogsräv provides professional vehicle repossession services across Europe for leasing companies and financial institutions. Baltic expertise, European reach. Licensed operations.",
   canonical: "/about",
-  keywords: "about Skogsrav, European asset recovery company, vehicle recovery specialists, Baltic asset recovery, cross-border recovery experts",
+  keywords: "about Skogsrav, European asset repossession company, vehicle repossession specialists, Baltic asset repossession, cross-border repossession experts",
   image: "https://skogsrav.com/og-image.png",
   breadcrumbs: [
     { name: "Home", url: "/" },
@@ -27,7 +27,7 @@ const aboutSEO = {
     "mainEntity": {
       "@type": "ProfessionalService",
       "name": "Skogsräv",
-      "description": "European asset recovery company specializing in cross-border vehicle recovery for leasing companies, rental fleet operators, and financial institutions.",
+      "description": "European asset repossession company specializing in cross-border vehicle repossession for leasing companies, rental fleet operators, and financial institutions.",
       "foundingLocation": {
         "@type": "Place",
         "name": "Riga, Latvia"
@@ -38,18 +38,18 @@ const aboutSEO = {
         "credentialCategory": "license",
         "name": "Detective Activity Licence No. 4/2018"
       },
-      "knowsAbout": ["Asset Recovery", "Vehicle Recovery", "Cross-Border Operations", "Leasing", "Fleet Management"]
+      "knowsAbout": ["Asset Repossession", "Vehicle Repossession", "Cross-Border Operations", "Leasing", "Fleet Management"]
     }
   }
 };
 const whoWeWorkWith = [{
   icon: Users,
   title: "Leasing Companies",
-  description: "Supporting asset recovery for vehicle leasing portfolios across European markets."
+  description: "Supporting asset repossession for vehicle leasing portfolios across European markets."
 }, {
   icon: Target,
   title: "Rental & Fleet Operators",
-  description: "Recovering rental and fleet vehicles with minimal disruption to ongoing operations."
+  description: "Repossessing rental and fleet vehicles with minimal disruption to ongoing operations."
 }, {
   icon: Shield,
   title: "Financial Institutions",
@@ -61,16 +61,16 @@ const whoWeWorkWith = [{
 }];
 const approachPrinciples = [{
   title: "How We Approach Sensitive Cases",
-  description: "Every vehicle recovery case involves legal, reputational, and compliance considerations. These are not afterthoughts — they are integral to our methodology. Before any operational action, we assess the complete picture: contractual position, jurisdictional requirements, and potential sensitivities."
+  description: "Every vehicle repossession case involves legal, reputational, and compliance considerations. These are not afterthoughts — they are integral to our methodology. Before any operational action, we assess the complete picture: contractual position, jurisdictional requirements, and potential sensitivities."
 }, {
   title: "Why Visibility Is Avoided",
   description: "Unnecessary attention creates unnecessary risk. For our clients, this means protecting relationships with customers and partners. For the individuals involved, it means maintaining dignity. Our methods are designed to resolve situations efficiently while preserving discretion for all parties."
 }, {
   title: "Outcome Over Exposure",
-  description: "We measure success by resolution, not by activity. A vehicle recovered quietly and compliantly is more valuable than one recovered visibly. In most cases, our involvement remains known only to the client — and that is precisely the point."
+  description: "We measure success by resolution, not by activity. A vehicle repossessed quietly and compliantly is more valuable than one repossessed visibly. In most cases, our involvement remains known only to the client — and that is precisely the point."
 }];
 function AboutPageHero() {
-  return <PageHero label="About Skogsräv" title="How We Think." titleAccent="How We Operate." description="Skogsräv operates with a clear understanding that vehicle recovery requires more than operational capability. Every case is handled with the same structured approach, discretion, and compliance focus." backgroundImage={storageImages.heroAbout} backgroundAlt="European corporate office with city view at night" />;
+  return <PageHero label="About Skogsräv" title="How We Think." titleAccent="How We Operate." description="Skogsräv operates with a clear understanding that vehicle repossession requires more than operational capability. Every case is handled with the same structured approach, discretion, and compliance focus." backgroundImage={storageImages.heroAbout} backgroundAlt="European corporate office with city view at night" />;
 }
 function WhoWeWorkWith() {
   const ref = useRef(null);
@@ -115,7 +115,7 @@ function WhoWeWorkWith() {
         }} transition={{
           delay: 0.2
         }} className="body-large text-muted-foreground">
-            Skogsrav supports European leasing, rental, and financial companies that require an experienced, discreet partner for vehicle recovery matters. 
+            Skogsrav supports European leasing, rental, and financial companies that require an experienced, discreet partner for vehicle repossession matters. 
           </motion.p>
         </div>
 
@@ -192,7 +192,7 @@ function OurApproach() {
             delay: 0.2
           }} className="p-8 bg-navy-deep rounded-lg">
               <blockquote className="font-serif text-lg text-primary-foreground/90 italic leading-relaxed">
-                "Effective vehicle recovery is measured not by visibility, but by outcome."
+                "Effective vehicle repossession is measured not by visibility, but by outcome."
               </blockquote>
             </motion.div>
           </div>
@@ -258,7 +258,7 @@ function BalticFoundation() {
               <br />
               European Reach
             </h2>
-            <p className="body-large text-muted-foreground mb-6">Based in the Baltics, Skogsrav has built the strongest operational experience in the region. This foundation provides the expertise and local knowledge essential for complex vehicle recovery operations all across Europe.</p>
+            <p className="body-large text-muted-foreground mb-6">Based in the Baltics, Skogsrav has built the strongest operational experience in the region. This foundation provides the expertise and local knowledge essential for complex vehicle repossession operations all across Europe.</p>
             <p className="text-muted-foreground leading-relaxed">
               Our work extends beyond local markets. We support clients throughout 
               Europe, navigating jurisdictional complexities and coordinating across 
