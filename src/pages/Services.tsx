@@ -10,6 +10,7 @@ import { Globe, Building2, Truck, Eye, Shield, MessageSquare, X, CheckCircle, Ar
 import { Button } from "@/components/ui/button";
 import { useContactModal } from "@/contexts/ContactModalContext";
 import { storageImages } from "@/lib/storage";
+import { Link } from "@/lib/router-compat";
 
 export const servicesSEO = {
   title: "Vehicle Repossession Services Europe | Leasing & Fleet Repossession",
@@ -318,6 +319,28 @@ function WhatWeDoNot() {
   );
 }
 
+function MarketFocus() {
+  return (
+    <section className="py-16 bg-background">
+      <div className="container mx-auto px-6 lg:px-8 max-w-3xl">
+        <h2 className="heading-card text-foreground mb-4">Country-specific repossession</h2>
+        <p className="body-large text-muted-foreground">
+          Enforcement rules differ in every jurisdiction. For market-specific guidance on legal
+          frameworks, timelines and coverage, see our{" "}
+          <Link to="/france" className="text-orange font-semibold hover:underline">
+            vehicle repossession in France
+          </Link>{" "}
+          and{" "}
+          <Link to="/netherlands" className="text-orange font-semibold hover:underline">
+            vehicle repossession in the Netherlands
+          </Link>{" "}
+          pages.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 const Services = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -328,6 +351,7 @@ const Services = () => {
         <CoreServices />
         <OperationalPrinciples />
         <WhatWeDoNot />
+        <MarketFocus />
         <Contact />
       </main>
       <Footer />

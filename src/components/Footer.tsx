@@ -10,6 +10,11 @@ const navigationLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
+const marketLinks = [
+  { label: "France", href: "/france" },
+  { label: "Netherlands", href: "/netherlands" },
+];
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
   const { openContactModal } = useContactModal();
@@ -18,7 +23,7 @@ export function Footer() {
     <footer className="bg-background border-t border-border">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Company Information */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -97,6 +102,29 @@ export function Footer() {
                 <p className="text-sm text-foreground">Europe and Baltics</p>
               </div>
             </div>
+          </motion.div>
+
+          {/* Markets */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+          >
+            <h4 className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-5">
+              Markets
+            </h4>
+            <nav className="flex flex-col gap-2">
+              {marketLinks.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
           </motion.div>
 
           {/* Contact & Navigation */}

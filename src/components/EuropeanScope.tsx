@@ -3,7 +3,26 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { storageImages } from "@/lib/storage";
 import { MapPin } from "lucide-react";
-const markets = ["Germany", "France", "Poland", "Netherlands", "Belgium", "Austria", "Czech Republic", "Baltics"];
+import { Link } from "@/lib/router-compat";
+const markets: { name: string; href?: string }[] = [{
+  name: "Germany"
+}, {
+  name: "France",
+  href: "/france"
+}, {
+  name: "Poland"
+}, {
+  name: "Netherlands",
+  href: "/netherlands"
+}, {
+  name: "Belgium"
+}, {
+  name: "Austria"
+}, {
+  name: "Czech Republic"
+}, {
+  name: "Baltics"
+}];
 export function EuropeanScope() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -66,7 +85,7 @@ export function EuropeanScope() {
             duration: 0.5,
             delay: 0.3
           }} className="grid grid-cols-2 gap-3">
-              {markets.map((market, index) => <motion.div key={market} initial={{
+              {markets.map((market, index) => <motion.div key={market.name} initial={{
               opacity: 0,
               x: -20
             }} animate={isInView ? {
@@ -83,7 +102,7 @@ export function EuropeanScope() {
               }
             }} className="flex items-center gap-2 text-foreground font-semibold cursor-default">
                   <MapPin className="w-4 h-4 text-orange flex-shrink-0" />
-                  <span>{market}</span>
+                  {market.href ? <Link to={market.href} className="hover:text-orange transition-colors">{market.name}</Link> : <span>{market.name}</span>}
                 </motion.div>)}
             </motion.div>
           </div>
