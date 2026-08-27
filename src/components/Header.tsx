@@ -96,8 +96,11 @@ export function Header() {
                 Markets
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${marketsOpen ? "rotate-180" : ""}`} />
               </button>
-              {marketsOpen && (
-                <div className="absolute left-0 top-full pt-4">
+              <div
+                className={`absolute left-0 top-full pt-4 transition-opacity duration-150 ${
+                  marketsOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+                }`}
+              >
                   <div className="min-w-[180px] bg-card border border-border rounded-xl shadow-lg py-2">
                     {marketItems.map((item) => (
                       <Link
