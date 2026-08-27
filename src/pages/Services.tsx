@@ -327,12 +327,18 @@ function MarketFocus() {
         <p className="body-large text-muted-foreground">
           Enforcement rules differ in every jurisdiction. For market-specific guidance on legal
           frameworks, timelines and coverage, see our{" "}
+          <Link to="/germany" className="text-orange font-semibold hover:underline">
+            vehicle repossession in Germany
+          </Link>,{" "}
           <Link to="/france" className="text-orange font-semibold hover:underline">
             vehicle repossession in France
-          </Link>{" "}
-          and{" "}
+          </Link>,{" "}
           <Link to="/netherlands" className="text-orange font-semibold hover:underline">
             vehicle repossession in the Netherlands
+          </Link>{" "}
+          and{" "}
+          <Link to="/baltics" className="text-orange font-semibold hover:underline">
+            vehicle repossession in the Baltics
           </Link>{" "}
           pages.
         </p>
