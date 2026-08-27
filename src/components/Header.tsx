@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "@/lib/router-compat";
 import { useContactModal } from "@/contexts/ContactModalContext";
@@ -21,6 +21,7 @@ const marketItems = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [marketsOpen, setMarketsOpen] = useState(false);
   const location = useLocation();
   const { openContactModal } = useContactModal();
 
@@ -160,6 +161,23 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
+              <div className="pt-2 border-t border-border">
+                <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground/70">
+                  Markets
+                </span>
+                <div className="flex flex-col gap-3 mt-3">
+                  {marketItems.map((item) => (
+                    <Link
+                      key={item.label}
+                      to={item.href}
+                      className="text-base font-semibold text-muted-foreground hover:text-foreground transition-colors"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
               <Button
                 variant="corporate"
                 size="lg"
