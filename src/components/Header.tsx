@@ -74,7 +74,50 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
-            {navItems.map(renderNavLink)}
+            {navItems.slice(0, 2).map(renderNavLink)}
+
+            {/* Markets dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setMarketsOpen(true)}
+              onMouseLeave={() => setMarketsOpen(false)}
+            >
+              <button
+                type="button"
+                aria-expanded={marketsOpen}
+                onClick={() => setMarketsOpen((open) => !open)}
+                className={`flex items-center gap-1 text-sm font-semibold transition-colors duration-200 ${
+                  marketItems.some((m) => m.href === location.pathname)
+                    ? "text-orange"
+                    : "text-muted-foreground hover:text-orange"
+                }`}
+              >
+                Markets
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${marketsOpen ? "rotate-180" : ""}`} />
+              </button>
+              {marketsOpen && (
+                <div className="absolute left-0 top-full pt-4">
+                  <div className="min-w-[180px] bg-card border border-border rounded-xl shadow-lg py-2">
+                    {marketItems.map((item) => (
+                      <Link
+                        key={item.label}
+                        to={item.href}
+                        onClick={() => setMarketsOpen(false)}
+                        className={`block px-5 py-2.5 text-sm font-semibold transition-colors duration-200 ${
+                          location.pathname === item.href
+                            ? "text-orange"
+                            : "text-muted-foreground hover:text-orange"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {navItems.slice(2).map(renderNavLink)}
           </div>
 
           {/* Desktop CTA */}
