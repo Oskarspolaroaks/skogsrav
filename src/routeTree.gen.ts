@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FranceRouteImport } from './routes/france'
+import { Route as NetherlandsRouteImport } from './routes/netherlands'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ServicesRouteImport } from './routes/services'
 
@@ -42,6 +43,11 @@ const FranceRoute = FranceRouteImport.update({
   path: '/france',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NetherlandsRoute = NetherlandsRouteImport.update({
+  id: '/netherlands',
+  path: '/netherlands',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   id: '/privacy-policy',
   path: '/privacy-policy',
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/france': typeof FranceRoute
+  '/netherlands': typeof NetherlandsRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/france': typeof FranceRoute
+  '/netherlands': typeof NetherlandsRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/france': typeof FranceRoute
+  '/netherlands': typeof NetherlandsRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/france'
+    | '/netherlands'
     | '/privacy-policy'
     | '/services'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/france'
+    | '/netherlands'
     | '/privacy-policy'
     | '/services'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/france'
+    | '/netherlands'
     | '/privacy-policy'
     | '/services'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
   FranceRoute: typeof FranceRoute
+  NetherlandsRoute: typeof NetherlandsRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ServicesRoute: typeof ServicesRoute
 }
@@ -158,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FranceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/netherlands': {
+      id: '/netherlands'
+      path: '/netherlands'
+      fullPath: '/netherlands'
+      preLoaderRoute: typeof NetherlandsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacy-policy': {
       id: '/privacy-policy'
       path: '/privacy-policy'
@@ -181,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
   FranceRoute: FranceRoute,
+  NetherlandsRoute: NetherlandsRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   ServicesRoute: ServicesRoute,
 }
