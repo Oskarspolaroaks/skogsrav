@@ -22,10 +22,15 @@ export const indexSEO = {
     "description": "European asset repossession services for leasing and rental companies. Cross-border vehicle repossession across 8+ markets.",
     "url": "https://skogsrav.com",
     "logo": "https://skogsrav.com/og-image.png",
-    "areaServed": {
-      "@type": "Place",
-      "name": "Europe"
-    },
+    "areaServed": [
+      { "@type": "Country", "name": "Netherlands" },
+      { "@type": "Country", "name": "Germany" },
+      { "@type": "Country", "name": "Belgium" },
+      { "@type": "Country", "name": "France" },
+      { "@type": "Country", "name": "Poland" },
+      { "@type": "Country", "name": "Austria" },
+      { "@type": "Country", "name": "Czech Republic" }
+    ],
     "serviceType": ["Asset Repossession", "Vehicle Repossession", "Cross-Border Repossession", "Leasing Asset Repossession", "Rental Vehicle Repossession"],
     "audience": {
       "@type": "Audience",

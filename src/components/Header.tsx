@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "@/lib/router-compat";
 import { useContactModal } from "@/contexts/ContactModalContext";
@@ -13,9 +13,15 @@ const navItems = [
   { label: "Contact", href: "/contact" },
 ];
 
+const marketItems = [
+  { label: "France", href: "/france" },
+  { label: "Netherlands", href: "/netherlands" },
+];
+
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [marketsOpen, setMarketsOpen] = useState(false);
   const location = useLocation();
   const { openContactModal } = useContactModal();
 
@@ -69,7 +75,50 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
-            {navItems.map(renderNavLink)}
+            {navItems.slice(0, 2).map(renderNavLink)}
+
+            {/* Markets dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setMarketsOpen(true)}
+              onMouseLeave={() => setMarketsOpen(false)}
+            >
+              <button
+                type="button"
+                aria-expanded={marketsOpen}
+                onClick={() => setMarketsOpen((open) => !open)}
+                className={`flex items-center gap-1 text-sm font-semibold transition-colors duration-200 ${
+                  marketItems.some((m) => m.href === location.pathname)
+                    ? "text-orange"
+                    : "text-muted-foreground hover:text-orange"
+                }`}
+              >
+                Markets
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${marketsOpen ? "rotate-180" : ""}`} />
+              </button>
+              {marketsOpen && (
+                <div className="absolute left-0 top-full pt-4">
+                  <div className="min-w-[180px] bg-card border border-border rounded-xl shadow-lg py-2">
+                    {marketItems.map((item) => (
+                      <Link
+                        key={item.label}
+                        to={item.href}
+                        onClick={() => setMarketsOpen(false)}
+                        className={`block px-5 py-2.5 text-sm font-semibold transition-colors duration-200 ${
+                          location.pathname === item.href
+                            ? "text-orange"
+                            : "text-muted-foreground hover:text-orange"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {navItems.slice(2).map(renderNavLink)}
           </div>
 
           {/* Desktop CTA */}
@@ -112,6 +161,23 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
+              <div className="pt-2 border-t border-border">
+                <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground/70">
+                  Markets
+                </span>
+                <div className="flex flex-col gap-3 mt-3">
+                  {marketItems.map((item) => (
+                    <Link
+                      key={item.label}
+                      to={item.href}
+                      className="text-base font-semibold text-muted-foreground hover:text-foreground transition-colors"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
               <Button
                 variant="corporate"
                 size="lg"
