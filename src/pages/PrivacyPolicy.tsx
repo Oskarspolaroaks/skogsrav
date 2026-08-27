@@ -1,9 +1,8 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 
-const privacyPolicySEO = {
+export const privacyPolicySEO = {
   title: "Privacy Policy | Skogsräv",
   description: "Privacy Policy for Skogsräv asset recovery services. Learn how we collect, process, store and protect your personal data in accordance with GDPR.",
   canonical: "/privacy-policy",
@@ -17,13 +16,6 @@ const privacyPolicySEO = {
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title={privacyPolicySEO.title}
-        description={privacyPolicySEO.description}
-        canonical={privacyPolicySEO.canonical}
-        keywords={privacyPolicySEO.keywords}
-        breadcrumbs={privacyPolicySEO.breadcrumbs}
-      />
       <Header />
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-6 lg:px-8 max-w-4xl">

@@ -7,11 +7,10 @@ import { TrustStamps } from "@/components/TrustStamps";
 import { Contact } from "@/components/Contact";
 import { AboutIntro } from "@/components/AboutIntro";
 import { PageHero } from "@/components/PageHero";
-import { SEO } from "@/components/SEO";
 import { CheckCircle, Eye, Shield, Users, Target, Lock } from "lucide-react";
 import { storageImages } from "@/lib/storage";
 
-const aboutSEO = {
+export const aboutSEO = {
   title: "About Skogsräv | European Asset Repossession Specialists",
   description: "Skogsräv provides professional vehicle repossession services across Europe for leasing companies and financial institutions. Baltic expertise, European reach. Licensed operations.",
   canonical: "/about",
@@ -302,15 +301,6 @@ function BalticFoundation() {
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title={aboutSEO.title}
-        description={aboutSEO.description}
-        canonical={aboutSEO.canonical}
-        keywords={aboutSEO.keywords}
-        image={aboutSEO.image}
-        breadcrumbs={aboutSEO.breadcrumbs}
-        jsonLd={aboutSEO.jsonLd}
-      />
       <Header />
       <main>
         <AboutPageHero />

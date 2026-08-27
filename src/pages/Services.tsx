@@ -6,13 +6,12 @@ import { Footer } from "@/components/Footer";
 import { TrustStamps } from "@/components/TrustStamps";
 import { Contact } from "@/components/Contact";
 import { PageHero } from "@/components/PageHero";
-import { SEO } from "@/components/SEO";
 import { Globe, Building2, Truck, Eye, Shield, MessageSquare, X, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useContactModal } from "@/contexts/ContactModalContext";
 import { storageImages } from "@/lib/storage";
 
-const servicesSEO = {
+export const servicesSEO = {
   title: "Vehicle Repossession Services Europe | Leasing & Fleet Repossession",
   description: "Professional vehicle repossession services for leasing companies and fleet operators. Cross-border asset repossession across Europe. Discreet, compliant, success-based fees.",
   canonical: "/services",
@@ -322,15 +321,6 @@ function WhatWeDoNot() {
 const Services = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title={servicesSEO.title}
-        description={servicesSEO.description}
-        canonical={servicesSEO.canonical}
-        keywords={servicesSEO.keywords}
-        image={servicesSEO.image}
-        breadcrumbs={servicesSEO.breadcrumbs}
-        jsonLd={servicesSEO.jsonLd}
-      />
       <Header />
       <main>
         <ServicesPageHero />

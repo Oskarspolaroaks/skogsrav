@@ -1,0 +1,25 @@
+{
+  "customizations": [
+    { "token": "--background/--foreground/--card/--popover/--primary/--secondary/--muted/--accent/--destructive/--border/--input/--ring (shadcn HSL set)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--radius", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--navy-deep / --navy-medium / --navy-light", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--slate-warm", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--cream / --cream-dark", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--orange / --orange-light / --orange-dark / --orange-glow", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--bronze / --bronze-light / --teal / --teal-light (legacy aliases)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--gradient-hero / --gradient-subtle / --gradient-card / --gradient-accent / --gradient-orange", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--shadow-sm / --shadow-md / --shadow-lg / --shadow-card / --shadow-glow / --shadow-orange", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "sidebar token set", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": ".dark theme overrides", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "base typography (h1-h4, p, nav a, html scroll-behavior, body font-feature-settings)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": ".text-balance / .text-gradient-orange / .border-gradient-orange / .glow-orange", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": ".heading-hero / .heading-page / .heading-section / .heading-card / .section-label / .body-large / .body-medium", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": ".text-reveal / .link-underline / .text-glow-hover / .stagger-char / .slide-up-reveal + keyframes", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "fontFamily sans (Inter) / serif (Playfair Display)", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "fontSize hero/page/section/card", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "colors navy/slate-warm/cream/orange/bronze/teal utility mappings", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "boxShadow card/subtle/elevated/prominent/glow/orange", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "keyframes+animation accordion-down/up, fade-in, fade-in-slow, slide-in-left", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "container center + 2rem padding + 1400px max-width", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" }
+  ]
+}
