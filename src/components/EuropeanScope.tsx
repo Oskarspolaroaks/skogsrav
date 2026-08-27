@@ -3,7 +3,25 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { storageImages } from "@/lib/storage";
 import { MapPin } from "lucide-react";
-const markets = ["Germany", "France", "Poland", "Netherlands", "Belgium", "Austria", "Czech Republic", "Baltics"];
+const markets: { name: string; href?: string }[] = [{
+  name: "Germany"
+}, {
+  name: "France",
+  href: "/france"
+}, {
+  name: "Poland"
+}, {
+  name: "Netherlands",
+  href: "/netherlands"
+}, {
+  name: "Belgium"
+}, {
+  name: "Austria"
+}, {
+  name: "Czech Republic"
+}, {
+  name: "Baltics"
+}];
 export function EuropeanScope() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
