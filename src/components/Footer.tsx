@@ -99,6 +99,29 @@ export function Footer() {
             </div>
           </motion.div>
 
+          {/* Markets */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+          >
+            <h4 className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-5">
+              Markets
+            </h4>
+            <nav className="flex flex-col gap-2">
+              {marketLinks.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </motion.div>
+
           {/* Contact & Navigation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
