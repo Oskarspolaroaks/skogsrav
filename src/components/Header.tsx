@@ -13,6 +13,11 @@ const navItems = [
   { label: "Contact", href: "/contact" },
 ];
 
+const marketItems = [
+  { label: "France", href: "/france" },
+  { label: "Netherlands", href: "/netherlands" },
+];
+
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
