@@ -6,12 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { SEO } from "@/components/SEO";
 import { Mail, Phone, Shield, Clock, Users, Quote } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
-const contactSEO = {
+export const contactSEO = {
   title: "Contact Skogsräv | European Vehicle Repossession Enquiries",
   description: "Contact Skogsräv for professional vehicle repossession services across Europe. Confidential enquiries for leasing companies, rental operators, and financial institutions.",
   canonical: "/contact",
@@ -178,15 +177,6 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title={contactSEO.title}
-        description={contactSEO.description}
-        canonical={contactSEO.canonical}
-        keywords={contactSEO.keywords}
-        image={contactSEO.image}
-        breadcrumbs={contactSEO.breadcrumbs}
-        jsonLd={contactSEO.jsonLd}
-      />
       <Header />
       
       <main className="pt-20">

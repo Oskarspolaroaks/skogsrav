@@ -4,12 +4,11 @@ import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { TrustStamps } from "@/components/TrustStamps";
 import { Button } from "@/components/ui/button";
-import { SEO } from "@/components/SEO";
 import { useContactModal } from "@/contexts/ContactModalContext";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroImage from "@/assets/hero-about.jpg";
 
-const faqSEO = {
+export const faqSEO = {
   title: "Vehicle Repossession FAQ | Cross-Border Asset Repossession Questions",
   description: "Expert answers about European vehicle repossession: legal compliance, voluntary handovers, cross-border operations, success-based pricing. For leasing companies and fleet operators.",
   canonical: "/faq",
@@ -63,14 +62,6 @@ export default function FAQ() {
     openContactModal
   } = useContactModal();
   return <div className="min-h-screen bg-background">
-      <SEO 
-        title={faqSEO.title}
-        description={faqSEO.description}
-        canonical={faqSEO.canonical}
-        keywords={faqSEO.keywords}
-        image={faqSEO.image}
-        breadcrumbs={faqSEO.breadcrumbs}
-      />
       <Header />
       <PageHero label="Expert FAQ" title="Cross-Border" titleAccent="Vehicle Repossession" description="Authoritative answers to critical questions about European vehicle repossession operations, legal compliance, and institutional engagement." backgroundImage={heroImage} backgroundAlt="European vehicle repossession expertise" />
 

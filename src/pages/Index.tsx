@@ -8,9 +8,8 @@ import { Process } from "@/components/Process";
 import { WhySkogsrav } from "@/components/WhySkogsrav";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
 
-const indexSEO = {
+export const indexSEO = {
   title: "Asset Repossession Europe | Cross-Border Vehicle Repossession",
   description: "European asset repossession for leasing and rental companies. Cross-border vehicle repossession across 8+ markets. Compliance-first. Success-based fees. Discreet operations.",
   canonical: "/",
@@ -53,14 +52,6 @@ const indexSEO = {
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title={indexSEO.title}
-        description={indexSEO.description}
-        canonical={indexSEO.canonical}
-        keywords={indexSEO.keywords}
-        image={indexSEO.image}
-        jsonLd={indexSEO.jsonLd}
-      />
       <Header />
       <main>
         <Hero />
