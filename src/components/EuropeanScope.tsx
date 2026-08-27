@@ -22,7 +22,8 @@ const markets: { name: string; href?: string }[] = [{
 }, {
   name: "Czech Republic"
 }, {
-  name: "Baltics"
+  name: "Baltics",
+  href: "/baltics"
 }];
 export function EuropeanScope() {
   const ref = useRef(null);
