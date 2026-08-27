@@ -10,6 +10,7 @@ import { Globe, Building2, Truck, Eye, Shield, MessageSquare, X, CheckCircle, Ar
 import { Button } from "@/components/ui/button";
 import { useContactModal } from "@/contexts/ContactModalContext";
 import { storageImages } from "@/lib/storage";
+import { Link } from "@/lib/router-compat";
 
 export const servicesSEO = {
   title: "Vehicle Repossession Services Europe | Leasing & Fleet Repossession",
@@ -350,6 +351,7 @@ const Services = () => {
         <CoreServices />
         <OperationalPrinciples />
         <WhatWeDoNot />
+        <MarketFocus />
         <Contact />
       </main>
       <Footer />
