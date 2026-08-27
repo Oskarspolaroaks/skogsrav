@@ -101,7 +101,7 @@ export function EuropeanScope() {
               }
             }} className="flex items-center gap-2 text-foreground font-semibold cursor-default">
                   <MapPin className="w-4 h-4 text-orange flex-shrink-0" />
-                  <span>{market}</span>
+                  {market.href ? <Link to={market.href} className="hover:text-orange transition-colors">{market.name}</Link> : <span>{market.name}</span>}
                 </motion.div>)}
             </motion.div>
           </div>
