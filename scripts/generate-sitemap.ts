@@ -7,6 +7,8 @@ const pages = [
   { path: '/about', priority: '0.8', changefreq: 'monthly' },
   { path: '/france', priority: '0.9', changefreq: 'monthly' },
   { path: '/netherlands', priority: '0.9', changefreq: 'monthly' },
+  { path: '/germany', priority: '0.9', changefreq: 'monthly' },
+  { path: '/baltics', priority: '0.9', changefreq: 'monthly' },
   { path: '/faq', priority: '0.7', changefreq: 'monthly' },
   { path: '/contact', priority: '0.8', changefreq: 'monthly' },
   { path: '/privacy-policy', priority: '0.3', changefreq: 'yearly' },
