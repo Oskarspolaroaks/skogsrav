@@ -84,7 +84,7 @@ export function EuropeanScope() {
             duration: 0.5,
             delay: 0.3
           }} className="grid grid-cols-2 gap-3">
-              {markets.map((market, index) => <motion.div key={market} initial={{
+              {markets.map((market, index) => <motion.div key={market.name} initial={{
               opacity: 0,
               x: -20
             }} animate={isInView ? {
