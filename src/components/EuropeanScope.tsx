@@ -5,7 +5,8 @@ import { storageImages } from "@/lib/storage";
 import { MapPin } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 const markets: { name: string; href?: string }[] = [{
-  name: "Germany"
+  name: "Germany",
+  href: "/germany"
 }, {
   name: "France",
   href: "/france"
@@ -21,7 +22,8 @@ const markets: { name: string; href?: string }[] = [{
 }, {
   name: "Czech Republic"
 }, {
-  name: "Baltics"
+  name: "Baltics",
+  href: "/baltics"
 }];
 export function EuropeanScope() {
   const ref = useRef(null);
