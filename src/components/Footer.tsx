@@ -18,7 +18,7 @@ export function Footer() {
     <footer className="bg-background border-t border-border">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Company Information */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
