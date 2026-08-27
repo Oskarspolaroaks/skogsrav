@@ -118,7 +118,6 @@ export function Header() {
                     ))}
                   </div>
                 </div>
-              )}
             </div>
 
             {navItems.slice(2).map(renderNavLink)}
