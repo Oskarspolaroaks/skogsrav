@@ -14,8 +14,10 @@ const navItems = [
 ];
 
 const marketItems = [
+  { label: "Germany", href: "/germany" },
   { label: "France", href: "/france" },
   { label: "Netherlands", href: "/netherlands" },
+  { label: "Baltics", href: "/baltics" },
 ];
 
 export function Header() {
