@@ -10,6 +10,11 @@ const navigationLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
+const marketLinks = [
+  { label: "France", href: "/france" },
+  { label: "Netherlands", href: "/netherlands" },
+];
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
   const { openContactModal } = useContactModal();
