@@ -76,7 +76,7 @@ export function Hero() {
               className="inline-block">
               Vehicle Repossession
 
-            </motion.span>
+            </motion.span>{" "}
             <br />
             <motion.span
               initial={{ opacity: 0, x: -30 }}
