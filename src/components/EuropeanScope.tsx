@@ -16,7 +16,8 @@ const markets: { name: string; href?: string }[] = [{
   name: "Netherlands",
   href: "/netherlands"
 }, {
-  name: "Belgium"
+  name: "Belgium",
+  href: "/belgium"
 }, {
   name: "Austria"
 }, {
