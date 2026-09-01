@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as BalticsRouteImport } from './routes/baltics'
+import { Route as BelgiumRouteImport } from './routes/belgium'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FranceRouteImport } from './routes/france'
@@ -33,6 +34,11 @@ const AboutRoute = AboutRouteImport.update({
 const BalticsRoute = BalticsRouteImport.update({
   id: '/baltics',
   path: '/baltics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BelgiumRoute = BelgiumRouteImport.update({
+  id: '/belgium',
+  path: '/belgium',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -75,6 +81,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/baltics': typeof BalticsRoute
+  '/belgium': typeof BelgiumRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/france': typeof FranceRoute
@@ -87,6 +94,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/baltics': typeof BalticsRoute
+  '/belgium': typeof BelgiumRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/france': typeof FranceRoute
@@ -100,6 +108,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/baltics': typeof BalticsRoute
+  '/belgium': typeof BelgiumRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/france': typeof FranceRoute
@@ -114,6 +123,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/baltics'
+    | '/belgium'
     | '/contact'
     | '/faq'
     | '/france'
@@ -126,6 +136,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/baltics'
+    | '/belgium'
     | '/contact'
     | '/faq'
     | '/france'
@@ -138,6 +149,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/baltics'
+    | '/belgium'
     | '/contact'
     | '/faq'
     | '/france'
@@ -151,6 +163,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BalticsRoute: typeof BalticsRoute
+  BelgiumRoute: typeof BelgiumRoute
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
   FranceRoute: typeof FranceRoute
@@ -181,6 +194,13 @@ declare module '@tanstack/react-router' {
       path: '/baltics'
       fullPath: '/baltics'
       preLoaderRoute: typeof BalticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/belgium': {
+      id: '/belgium'
+      path: '/belgium'
+      fullPath: '/belgium'
+      preLoaderRoute: typeof BelgiumRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -239,6 +259,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BalticsRoute: BalticsRoute,
+  BelgiumRoute: BelgiumRoute,
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
   FranceRoute: FranceRoute,

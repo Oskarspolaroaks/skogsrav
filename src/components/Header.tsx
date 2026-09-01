@@ -17,6 +17,7 @@ const marketItems = [
   { label: "Germany", href: "/germany" },
   { label: "France", href: "/france" },
   { label: "Netherlands", href: "/netherlands" },
+  { label: "Belgium", href: "/belgium" },
   { label: "Baltics", href: "/baltics" },
 ];
 

@@ -335,6 +335,9 @@ function MarketFocus() {
           </Link>,{" "}
           <Link to="/netherlands" className="text-orange font-semibold hover:underline">
             vehicle repossession in the Netherlands
+          </Link>,{" "}
+          <Link to="/belgium" className="text-orange font-semibold hover:underline">
+            vehicle repossession in Belgium
           </Link>{" "}
           and{" "}
           <Link to="/baltics" className="text-orange font-semibold hover:underline">
