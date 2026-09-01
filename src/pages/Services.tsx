@@ -13,8 +13,8 @@ import { storageImages } from "@/lib/storage";
 import { Link } from "@/lib/router-compat";
 
 export const servicesSEO = {
-  title: "Vehicle Repossession Services Europe | Leasing & Fleet Repossession",
-  description: "Professional vehicle repossession services for leasing companies and fleet operators. Cross-border asset repossession across Europe. Discreet, compliant, success-based fees.",
+  title: "Vehicle Repossession Services | Skogsräv",
+  description: "Vehicle repossession services for leasing companies and fleet operators. Cross-border asset repossession across Europe, discreet and success-based.",
   canonical: "/services",
   keywords: "vehicle repossession services, leasing asset repossession, fleet repossession Europe, cross-border vehicle repossession, rental vehicle repossession",
   image: "https://skogsrav.com/og-image.png",

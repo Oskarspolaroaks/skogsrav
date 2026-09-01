@@ -2,9 +2,9 @@ import { CountryPage, type CountryPageData } from "@/components/CountryPage";
 import { storageImages } from "@/lib/storage";
 
 export const franceSEO = {
-  title: "Vehicle Repossession France | Cross-Border Asset Recovery for Leasing Companies",
+  title: "Vehicle Repossession France | Skogsräv",
   description:
-    "Vehicle repossession and asset recovery across France for leasing companies, fleet operators and banks. Compliance-first, success-based fees, voluntary surrender prioritised.",
+    "Vehicle repossession across France for leasing companies, fleet operators and banks. Compliance-first, voluntary surrender first, success-based fees.",
   canonical: "/france",
   keywords:
     "vehicle repossession France, huissier de justice repossession, leasing asset recovery France, fleet repossession Paris, titre executoire vehicle seizure",

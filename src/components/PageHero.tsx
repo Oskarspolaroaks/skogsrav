@@ -94,6 +94,7 @@ export function PageHero({
             </motion.span>
             {titleAccent && (
               <>
+                {" "}
                 <br />
                 <motion.span
                   initial={{ opacity: 0, x: -20 }}

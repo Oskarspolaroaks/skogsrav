@@ -12,7 +12,7 @@ import { useToast } from "@/hooks/use-toast";
 
 export const contactSEO = {
   title: "Contact Skogsräv | European Vehicle Repossession Enquiries",
-  description: "Contact Skogsräv for professional vehicle repossession services across Europe. Confidential enquiries for leasing companies, rental operators, and financial institutions.",
+  description: "Contact Skogsräv for vehicle repossession across Europe. Confidential enquiries from leasing companies, rental operators and financial institutions.",
   canonical: "/contact",
   keywords: "contact Skogsrav, vehicle repossession enquiry, asset repossession contact Europe, leasing repossession services contact",
   image: "https://skogsrav.com/og-image.png",

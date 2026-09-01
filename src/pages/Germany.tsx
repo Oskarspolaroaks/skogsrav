@@ -2,9 +2,9 @@ import { CountryPage, type CountryPageData } from "@/components/CountryPage";
 import { storageImages } from "@/lib/storage";
 
 export const germanySEO = {
-  title: "Vehicle Repossession Germany | Leasing and Fleet Asset Recovery",
+  title: "Vehicle Repossession Germany | Skogsräv",
   description:
-    "Vehicle repossession across Germany for leasing companies, banks and fleet operators. Sicherungsubereignung and leasing recovery, discreet operations, success-based fees.",
+    "Vehicle repossession across Germany for leasing companies, banks and fleet operators. Sicherungsubereignung recovery, discreet work, success-based fees.",
   canonical: "/germany",
   keywords:
     "vehicle repossession Germany, Sicherungsübereignung recovery, leasing asset recovery Germany, Gerichtsvollzieher vehicle seizure, fleet repossession Berlin",

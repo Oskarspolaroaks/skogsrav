@@ -10,8 +10,8 @@ import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
 export const indexSEO = {
-  title: "Asset Repossession Europe | Cross-Border Vehicle Repossession",
-  description: "European asset repossession for leasing and rental companies. Cross-border vehicle repossession across 8+ markets. Compliance-first. Success-based fees. Discreet operations.",
+  title: "Vehicle Repossession Across Europe | Skogsräv",
+  description: "European vehicle repossession for leasing and rental companies. Cross-border recovery across 8+ markets, compliance-first, success-based fees.",
   canonical: "/",
   keywords: "asset repossession Europe, vehicle repossession Europe, leasing asset repossession, cross-border asset repossession, rental vehicle repossession, fleet repossession services",
   image: "https://skogsrav.com/og-image.png",

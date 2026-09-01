@@ -4,7 +4,7 @@ import { storageImages } from "@/lib/storage";
 export const netherlandsSEO = {
   title: "Vehicle Repossession Netherlands | Lease Asset Recovery",
   description:
-    "Lease vehicle repossession across the Netherlands for leasing companies and fleet operators. Retention of title recovery, discreet operations, success-based fees.",
+    "Lease vehicle repossession across the Netherlands for leasing and fleet operators. Retention of title recovery, discreet work, success-based fees.",
   canonical: "/netherlands",
   keywords:
     "vehicle repossession Netherlands, eigendomsvoorbehoud recovery, revindicatie vehicle, lease asset recovery Netherlands, deurwaarder vehicle repossession",
