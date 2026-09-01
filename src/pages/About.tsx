@@ -12,7 +12,7 @@ import { storageImages } from "@/lib/storage";
 
 export const aboutSEO = {
   title: "About Skogsräv | European Asset Repossession Specialists",
-  description: "Skogsräv provides professional vehicle repossession services across Europe for leasing companies and financial institutions. Baltic expertise, European reach. Licensed operations.",
+  description: "Skogsräv delivers vehicle repossession across Europe for leasing companies and financial institutions. Baltic expertise, European reach, licensed.",
   canonical: "/about",
   keywords: "about Skogsrav, European asset repossession company, vehicle repossession specialists, Baltic asset repossession, cross-border repossession experts",
   image: "https://skogsrav.com/og-image.png",

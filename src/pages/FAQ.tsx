@@ -9,8 +9,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import heroImage from "@/assets/hero-about.jpg";
 
 export const faqSEO = {
-  title: "Vehicle Repossession FAQ | Cross-Border Asset Repossession Questions",
-  description: "Expert answers about European vehicle repossession: legal compliance, voluntary handovers, cross-border operations, success-based pricing. For leasing companies and fleet operators.",
+  title: "Vehicle Repossession FAQ | Skogsräv",
+  description: "Answers on European vehicle repossession: legal compliance, voluntary handovers, cross-border operations and success-based pricing for lessors.",
   canonical: "/faq",
   keywords: "vehicle repossession FAQ, asset repossession questions, cross-border repossession legal, voluntary handover, success-based repossession fees",
   image: "https://skogsrav.com/og-image.png",

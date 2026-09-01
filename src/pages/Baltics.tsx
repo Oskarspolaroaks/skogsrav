@@ -2,7 +2,7 @@ import { CountryPage, type CountryPageData } from "@/components/CountryPage";
 import { storageImages } from "@/lib/storage";
 
 export const balticsSEO = {
-  title: "Vehicle Repossession Baltics | Latvia, Lithuania and Estonia Asset Recovery",
+  title: "Vehicle Repossession Baltics | Skogsräv",
   description:
     "Vehicle repossession across Latvia, Lithuania and Estonia for leasing companies and banks. Local presence, cross-border capability, success-based fees.",
   canonical: "/baltics",

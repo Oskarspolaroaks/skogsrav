@@ -2,9 +2,9 @@ import { CountryPage, type CountryPageData } from "@/components/CountryPage";
 import { storageImages } from "@/lib/storage";
 
 export const belgiumSEO = {
-  title: "Vehicle Repossession Belgium | Lease and Fleet Asset Recovery",
+  title: "Vehicle Repossession Belgium | Skogsräv",
   description:
-    "Vehicle repossession and asset recovery across Belgium for leasing companies, fleet operators and banks. Retention of title recovery, federal pledge register checks, success-based fees.",
+    "Vehicle repossession across Belgium for leasing companies and fleet operators. Retention of title recovery, pledge register checks, success-based fees.",
   canonical: "/belgium",
   keywords:
     "vehicle repossession Belgium, gerechtsdeurwaarder vehicle recovery, huissier de justice Belgium, eigendomsvoorbehoud, reserve de propriete, Nationaal Pandregister, fleet repossession Brussels",
