@@ -14,6 +14,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { ContactModalProvider } from "@/contexts/ContactModalContext";
 import { ContactModal } from "@/components/ContactModal";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { Analytics, GA_MEASUREMENT_ID } from "@/components/Analytics";
 import NotFound from "@/pages/NotFound";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 import appCss from "../styles.css?url";
