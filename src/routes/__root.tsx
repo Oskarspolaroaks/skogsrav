@@ -84,6 +84,8 @@ function RootComponent() {
           <Toaster />
           <Sonner />
           <ScrollToTop />
+          <Analytics />
+
           <ContactModal />
           <Outlet />
         </ContactModalProvider>
