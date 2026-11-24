@@ -4,14 +4,8 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "@/lib/router-compat";
 import { useContactModal } from "@/contexts/ContactModalContext";
+import { useLanguage, type Language } from "@/lib/i18n";
 import skogsravLogo from "@/assets/skogsrav-logo.svg";
-
-const navItems = [
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
-];
 
 const marketItems = [
   { label: "Germany", href: "/germany" },
@@ -27,6 +21,14 @@ export function Header() {
   const [marketsOpen, setMarketsOpen] = useState(false);
   const location = useLocation();
   const { openContactModal } = useContactModal();
+  const { language, setLanguage, t } = useLanguage();
+
+  const navItems = [
+    { label: t("nav.about"), href: "/about" },
+    { label: t("nav.services"), href: "/services" },
+    { label: t("nav.blog"), href: "/blog" },
+    { label: t("nav.contact"), href: "/contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,12 +44,12 @@ export function Header() {
     openContactModal();
   };
 
-  const renderNavLink = (item: typeof navItems[0]) => {
+  const renderNavLink = (item: { label: string; href: string }) => {
     const isCurrentPage = location.pathname === item.href;
 
     return (
       <Link
-        key={item.label}
+        key={item.href}
         to={item.href}
         className={`text-sm font-semibold transition-colors duration-200 link-underline ${
           isCurrentPage ? "text-orange" : "text-muted-foreground hover:text-orange"
@@ -55,6 +57,31 @@ export function Header() {
       >
         {item.label}
       </Link>
+    );
+  };
+
+  const LanguageSwitcher = ({ className = "" }: { className?: string }) => {
+    const btn = (lang: Language, label: string) => (
+      <button
+        type="button"
+        aria-label={`Switch language to ${label}`}
+        aria-pressed={language === lang}
+        onClick={() => setLanguage(lang)}
+        className={`px-1 text-xs font-semibold transition-colors duration-150 ${
+          language === lang
+            ? "text-foreground"
+            : "text-muted-foreground hover:text-foreground"
+        }`}
+      >
+        {label}
+      </button>
+    );
+    return (
+      <div className={`flex items-center gap-0.5 select-none ${className}`}>
+        {btn("lv", "LV")}
+        <span className="text-xs text-muted-foreground/50">|</span>
+        {btn("en", "EN")}
+      </div>
     );
   };
 
@@ -96,7 +123,7 @@ export function Header() {
                     : "text-muted-foreground hover:text-orange"
                 }`}
               >
-                Markets
+                {t("nav.markets")}
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${marketsOpen ? "rotate-180" : ""}`} />
               </button>
               <div
@@ -126,10 +153,11 @@ export function Header() {
             {navItems.slice(2).map(renderNavLink)}
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:block">
+          {/* Desktop CTA + language switcher */}
+          <div className="hidden md:flex items-center gap-5">
+            <LanguageSwitcher />
             <Button variant="corporate" size="lg" onClick={handleContactClick}>
-              Enquire Now
+              {t("nav.cta")}
             </Button>
           </div>
 
@@ -158,7 +186,7 @@ export function Header() {
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <Link
-                  key={item.label}
+                  key={item.href}
                   to={item.href}
                   className="text-base font-semibold text-muted-foreground hover:text-foreground transition-colors py-2"
                   onClick={() => setMobileMenuOpen(false)}
@@ -168,7 +196,7 @@ export function Header() {
               ))}
               <div className="pt-2 border-t border-border">
                 <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground/70">
-                  Markets
+                  {t("nav.markets")}
                 </span>
                 <div className="flex flex-col gap-3 mt-3">
                   {marketItems.map((item) => (
@@ -183,14 +211,16 @@ export function Header() {
                   ))}
                 </div>
               </div>
-              <Button
-                variant="corporate"
-                size="lg"
-                className="mt-4"
-                onClick={handleContactClick}
-              >
-                Enquire Now
-              </Button>
+              <div className="pt-4 border-t border-border flex items-center justify-between">
+                <LanguageSwitcher />
+                <Button
+                  variant="corporate"
+                  size="lg"
+                  onClick={handleContactClick}
+                >
+                  {t("nav.cta")}
+                </Button>
+              </div>
             </div>
           </motion.div>
         )}

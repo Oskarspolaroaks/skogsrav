@@ -13,6 +13,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { ContactModalProvider } from "@/contexts/ContactModalContext";
 import { ContactModal } from "@/components/ContactModal";
+import { LanguageProvider } from "@/lib/i18n";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Analytics, GA_MEASUREMENT_ID } from "@/components/Analytics";
 import NotFound from "@/pages/NotFound";
@@ -80,15 +81,17 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <ContactModalProvider>
-          <Toaster />
-          <Sonner />
-          <ScrollToTop />
-          <Analytics />
+        <LanguageProvider>
+          <ContactModalProvider>
+            <Toaster />
+            <Sonner />
+            <ScrollToTop />
+            <Analytics />
 
-          <ContactModal />
-          <Outlet />
-        </ContactModalProvider>
+            <ContactModal />
+            <Outlet />
+          </ContactModalProvider>
+        </LanguageProvider>
       </TooltipProvider>
     </QueryClientProvider>
   );

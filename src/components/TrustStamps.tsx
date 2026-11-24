@@ -1,26 +1,22 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Globe, Shield, Target, EyeOff, FileText, DollarSign, Bold } from "lucide-react";
-const stamps = [{
-  title: "EU Cross-Border",
-  icon: Globe
-}, {
-  title: "Compliance-First",
-  icon: Shield
-}, {
-  title: "Success-Based",
-  icon: Target
-}, {
-  title: "Discreet",
-  icon: EyeOff
-}];
+import { Globe, Shield, Target, EyeOff } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
+
 export function TrustStamps() {
   const ref = useRef(null);
+  const { t } = useLanguage();
   const isInView = useInView(ref, {
     once: true,
     margin: "-50px"
   });
+  const stamps = [
+    { title: t("trustPills.pill1"), icon: Globe },
+    { title: t("trustPills.pill2"), icon: Shield },
+    { title: t("trustPills.pill3"), icon: Target },
+    { title: t("trustPills.pill4"), icon: EyeOff },
+  ];
   return <section className="py-8 lg:py-10 bg-navy-deep border-t border-white/10">
       <div className="container mx-auto px-6 lg:px-8">
         <div ref={ref} className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
