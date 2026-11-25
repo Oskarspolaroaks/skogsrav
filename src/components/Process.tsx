@@ -1,33 +1,22 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-const steps = [{
-  number: "01",
-  title: "Assessment",
-  description: "Contract review. Vehicle details. Strategy formation."
-}, {
-  number: "02",
-  title: "Communication",
-  description: "Direct, professional dialogue. Voluntary resolution prioritized."
-}, {
-  number: "03",
-  title: "Location",
-  description: "Precision tracking. Local expertise. Minimal disruption."
-}, {
-  number: "04",
-  title: "Repossession",
-  description: "Coordinated execution. Full legal compliance."
-}, {
-  number: "05",
-  title: "Handover",
-  description: "Secure return. Complete documentation."
-}];
+import { useLanguage } from "@/lib/i18n";
+
 export function Process() {
   const ref = useRef(null);
+  const { t } = useLanguage();
   const isInView = useInView(ref, {
     once: true,
     margin: "-100px"
   });
+  const steps = [
+    { number: "01", title: t("process.step1Title"), description: t("process.step1Desc") },
+    { number: "02", title: t("process.step2Title"), description: t("process.step2Desc") },
+    { number: "03", title: t("process.step3Title"), description: t("process.step3Desc") },
+    { number: "04", title: t("process.step4Title"), description: t("process.step4Desc") },
+    { number: "05", title: t("process.step5Title"), description: t("process.step5Desc") },
+  ];
   return <section id="process" className="py-24 lg:py-32 bg-navy-deep overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
@@ -42,7 +31,7 @@ export function Process() {
           duration: 0.5
         }} className="section-label mb-4">
             <span className="w-12 h-0.5 bg-orange" />
-            How We Work
+            {t("process.eyebrow")}
           </motion.span>
           <motion.h2 initial={{
           opacity: 0,
@@ -55,8 +44,7 @@ export function Process() {
         }} transition={{
           duration: 0.5,
           delay: 0.1
-        }} className="heading-section text-white mb-6">​Structurizd. Discreet. Efficient.    ​         
-          </motion.h2>
+        }} className="heading-section text-white mb-6">{t("process.heading")}</motion.h2>
           <motion.p initial={{
           opacity: 0,
           y: 20
@@ -68,7 +56,7 @@ export function Process() {
         }} transition={{
           duration: 0.5,
           delay: 0.2
-        }} className="body-large text-white/70">Every case follows a clear methodology. Discretion and efficiency at every step.</motion.p>
+        }} className="body-large text-white/70">{t("process.description")}</motion.p>
         </div>
 
         {/* Process Steps - Horizontal on desktop */}

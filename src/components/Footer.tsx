@@ -2,25 +2,27 @@ import { motion } from "framer-motion";
 import { Link } from "@/lib/router-compat";
 import { useContactModal } from "@/contexts/ContactModalContext";
 import skogsravLogo from "@/assets/skogsrav-logo.svg";
-
-const navigationLinks = [
-  { label: "Services", href: "/services" },
-  { label: "About", href: "/about" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
-];
-
-const marketLinks = [
-  { label: "Germany", href: "/germany" },
-  { label: "France", href: "/france" },
-  { label: "Netherlands", href: "/netherlands" },
-  { label: "Belgium", href: "/belgium" },
-  { label: "Baltics", href: "/baltics" },
-];
+import { useLanguage } from "@/lib/i18n";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
   const { openContactModal } = useContactModal();
+  const { t } = useLanguage();
+
+  const navigationLinks = [
+    { label: t("footer.navServices"), href: "/services" },
+    { label: t("footer.navAbout"),    href: "/about" },
+    { label: t("footer.navBlog"),     href: "/blog" },
+    { label: t("footer.navContact"),  href: "/contact" },
+  ];
+
+  const marketLinks = [
+    { label: t("reach.marketGermany"),     href: "/germany" },
+    { label: t("reach.marketFrance"),      href: "/france" },
+    { label: t("reach.marketNetherlands"), href: "/netherlands" },
+    { label: t("reach.marketBelgium"),     href: "/belgium" },
+    { label: t("reach.marketBaltics"),     href: "/baltics" },
+  ];
 
   return (
     <footer className="bg-background border-t border-border">
@@ -55,23 +57,23 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h4 className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-5">
-              Registration
+              {t("footer.regTitle")}
             </h4>
             <div className="space-y-3">
               <div>
-                <p className="text-xs text-muted-foreground">Company Reg. No.</p>
+                <p className="text-xs text-muted-foreground">{t("footer.regNoLabel")}</p>
                 <p className="text-sm text-foreground">42103071315</p>
               </div>
               <div>
-                <p className="text-xs text-muted-foreground">VAT Number</p>
+                <p className="text-xs text-muted-foreground">{t("footer.vatLabel")}</p>
                 <p className="text-sm text-foreground">LV42103071315</p>
               </div>
               <div>
-                <p className="text-xs text-muted-foreground">Legal Form</p>
-                <p className="text-sm text-foreground">Limited Liability Company (SIA)</p>
+                <p className="text-xs text-muted-foreground">{t("footer.legalFormLabel")}</p>
+                <p className="text-sm text-foreground">{t("footer.legalFormValue")}</p>
               </div>
               <div>
-                <p className="text-xs text-muted-foreground">Registered</p>
+                <p className="text-xs text-muted-foreground">{t("footer.registeredLabel")}</p>
                 <p className="text-sm text-foreground">12.11.2014</p>
               </div>
             </div>
@@ -85,24 +87,24 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h4 className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-5">
-              Business Activities
+              {t("footer.bizTitle")}
             </h4>
             <div className="space-y-3">
               <div>
-                <p className="text-sm text-foreground">Legal Services</p>
+                <p className="text-sm text-foreground">{t("footer.legalServices")}</p>
                 <p className="text-xs text-muted-foreground">NACE 69.10</p>
               </div>
               <div>
-                <p className="text-sm text-foreground">Debt Collection & Credit Bureau</p>
+                <p className="text-sm text-foreground">{t("footer.debtCollection")}</p>
                 <p className="text-xs text-muted-foreground">NACE 82.91</p>
               </div>
               <div className="pt-2">
-                <p className="text-xs text-muted-foreground">Special Permit (Licence)</p>
-                <p className="text-sm text-foreground">Detective Activity: No. 4/2018</p>
+                <p className="text-xs text-muted-foreground">{t("footer.specialPermitLabel")}</p>
+                <p className="text-sm text-foreground">{t("footer.specialPermitValue")}</p>
               </div>
               <div className="pt-2">
-                <p className="text-xs text-muted-foreground">Operational Scope</p>
-                <p className="text-sm text-foreground">Europe and Baltics</p>
+                <p className="text-xs text-muted-foreground">{t("footer.scopeLabel")}</p>
+                <p className="text-sm text-foreground">{t("footer.scopeValue")}</p>
               </div>
             </div>
           </motion.div>
@@ -115,7 +117,7 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.25 }}
           >
             <h4 className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-5">
-              Markets
+              {t("footer.marketsTitle")}
             </h4>
             <nav className="flex flex-col gap-2">
               {marketLinks.map((item) => (
@@ -138,15 +140,15 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <h4 className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-5">
-              Contact
+              {t("footer.contactTitle")}
             </h4>
             <div className="space-y-3 mb-8">
               <div>
                 <a
-                  href="mailto:hello@skogsrav.com"
+                  href="mailto:info@skogsrav.lv"
                   className="text-sm text-foreground hover:text-orange transition-colors"
                 >
-                  hello@skogsrav.com
+                  info@skogsrav.lv
                 </a>
               </div>
               <div>
@@ -170,7 +172,7 @@ export function Footer() {
             </div>
 
             <h4 className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-4">
-              Navigation
+              {t("footer.navTitle")}
             </h4>
             <nav className="flex flex-col gap-2">
               {navigationLinks.map((item) => (
@@ -199,28 +201,28 @@ export function Footer() {
           >
             {/* Compliance Notice */}
             <p className="text-xs text-muted-foreground leading-relaxed max-w-4xl">
-              Skogsrav operates in accordance with applicable Latvian and EU regulations. All services are provided to institutional clients only. Registered in the Commercial Register of Latvia.
+              {t("footer.complianceNotice")}
             </p>
 
             {/* Copyright & Legal Links */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
               <div className="flex items-center gap-4">
                 <p className="text-xs text-muted-foreground">
-                  © {currentYear} SIA "Skogsrav". All rights reserved.
+                  © {currentYear} SIA "Skogsrav". {t("footer.copyrightSuffix")}
                 </p>
-                <Link 
-                  to="/privacy-policy" 
+                <Link
+                  to="/privacy-policy"
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Privacy Policy
+                  {t("footer.privacyPolicy")}
                 </Link>
               </div>
               <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                <span>VAT Registered</span>
+                <span>{t("footer.badgeVat")}</span>
                 <span className="hidden sm:inline">·</span>
-                <span>EU Cross-Border Operations</span>
+                <span>{t("footer.badgeCrossBorder")}</span>
                 <span className="hidden sm:inline">·</span>
-                <span>Compliance-First Partner</span>
+                <span>{t("footer.badgeCompliance")}</span>
               </div>
             </div>
           </motion.div>
