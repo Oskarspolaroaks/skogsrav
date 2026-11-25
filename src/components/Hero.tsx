@@ -160,7 +160,7 @@ export function Hero() {
                 }}
                 className="text-center md:text-left group cursor-default">
 
-                  <div className="text-4xl md:text-5xl font-serif font-bold text-white mb-1 group-hover:text-orange transition-colors duration-300 text-glow-hover">
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-1 group-hover:text-orange transition-colors duration-300 text-glow-hover break-words">
                     {stat.value}
                   </div>
                   <div className="text-sm font-bold text-white/50 tracking-wider uppercase group-hover:text-white/70 transition-colors duration-300">
