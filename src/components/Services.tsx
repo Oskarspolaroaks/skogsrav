@@ -3,21 +3,29 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Shield, MapPin, Truck, FileCheck, ArrowRight } from "lucide-react";
 import { Link } from "@/lib/router-compat";
-import { useLanguage } from "@/lib/i18n";
-
+const services = [{
+  icon: Shield,
+  title: "Discrete Repossession",
+  description: "Professional operations with minimal visibility. Voluntary handover prioritized."
+}, {
+  icon: MapPin,
+  title: "Cross-Border",
+  description: "Pan-European capability. Complex jurisdictions handled seamlessly."
+}, {
+  icon: Truck,
+  title: "Controlled Transport",
+  description: "Specialized equipment. Safe and compliant vehicle relocation."
+}, {
+  icon: FileCheck,
+  title: "Full Compliance",
+  description: "Every assignment follows applicable laws. Authorities informed when required."
+}];
 export function Services() {
   const ref = useRef(null);
-  const { t } = useLanguage();
   const isInView = useInView(ref, {
     once: true,
     margin: "-100px"
   });
-  const services = [
-    { icon: Shield,    title: t("services.item1Title"), description: t("services.item1Desc") },
-    { icon: MapPin,    title: t("services.item2Title"), description: t("services.item2Desc") },
-    { icon: Truck,     title: t("services.item3Title"), description: t("services.item3Desc") },
-    { icon: FileCheck, title: t("services.item4Title"), description: t("services.item4Desc") },
-  ];
   return <section id="services" className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
@@ -33,7 +41,7 @@ export function Services() {
             duration: 0.5
           }} className="section-label mb-4">
               <span className="w-12 h-0.5 bg-orange" />
-              {t("services.eyebrow")}
+              What We Do
             </motion.span>
             <motion.h2 initial={{
             opacity: 0,
@@ -47,7 +55,7 @@ export function Services() {
             duration: 0.5,
             delay: 0.1
           }} className="heading-section text-foreground">
-              {t("services.heading").replace(/\.$/, "")}
+              Vehicle Repossession
               <span className="text-orange">.</span>
             </motion.h2>
           </div>
@@ -65,7 +73,7 @@ export function Services() {
           delay: 0.2
         }}>
             <Link to="/services" className="group inline-flex items-center gap-2 text-lg font-bold text-foreground hover:text-orange transition-colors">
-              {t("services.viewAll")}
+              View All Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>

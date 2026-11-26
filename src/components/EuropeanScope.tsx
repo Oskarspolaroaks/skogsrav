@@ -4,25 +4,34 @@ import { useRef } from "react";
 import { storageImages } from "@/lib/storage";
 import { MapPin } from "lucide-react";
 import { Link } from "@/lib/router-compat";
-import { useLanguage } from "@/lib/i18n";
-
+const markets: { name: string; href?: string }[] = [{
+  name: "Germany",
+  href: "/germany"
+}, {
+  name: "France",
+  href: "/france"
+}, {
+  name: "Poland"
+}, {
+  name: "Netherlands",
+  href: "/netherlands"
+}, {
+  name: "Belgium",
+  href: "/belgium"
+}, {
+  name: "Austria"
+}, {
+  name: "Czech Republic"
+}, {
+  name: "Baltics",
+  href: "/baltics"
+}];
 export function EuropeanScope() {
   const ref = useRef(null);
-  const { t } = useLanguage();
   const isInView = useInView(ref, {
     once: true,
     margin: "-100px"
   });
-  const markets: { name: string; href?: string }[] = [
-    { name: t("reach.marketGermany"),     href: "/germany" },
-    { name: t("reach.marketFrance"),      href: "/france" },
-    { name: t("reach.marketPoland") },
-    { name: t("reach.marketNetherlands"), href: "/netherlands" },
-    { name: t("reach.marketBelgium"),     href: "/belgium" },
-    { name: t("reach.marketAustria") },
-    { name: t("reach.marketCzech") },
-    { name: t("reach.marketBaltics"),     href: "/baltics" },
-  ];
   return <section id="european-scope" className="py-24 lg:py-32 bg-cream overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
@@ -38,7 +47,7 @@ export function EuropeanScope() {
             duration: 0.5
           }} className="section-label mb-4">
               <span className="w-12 h-0.5 bg-orange" />
-              {t("reach.eyebrow")}
+              Our Reach
             </motion.span>
             <motion.h2 initial={{
             opacity: 0,
@@ -51,7 +60,7 @@ export function EuropeanScope() {
           }} transition={{
             duration: 0.5,
             delay: 0.1
-          }} className="heading-section text-foreground mb-6">{t("reach.heading")}<span className="text-orange">.</span>
+          }} className="heading-section text-foreground mb-6">Pan-European<span className="text-orange">.</span>
             </motion.h2>
             <motion.p initial={{
             opacity: 0,
@@ -65,7 +74,7 @@ export function EuropeanScope() {
             duration: 0.5,
             delay: 0.2
           }} className="body-large text-muted-foreground mb-10">
-              {t("reach.description")}
+              Extensive experience handling vehicle repossession cases across European markets. 
             </motion.p>
 
             {/* Markets Grid */}
@@ -123,11 +132,11 @@ export function EuropeanScope() {
               <div className="absolute bottom-6 left-6 right-6 flex justify-between">
                 <div className="bg-white/95 backdrop-blur-sm rounded-lg px-5 py-3 shadow-lg">
                   <div className="text-3xl font-bold text-orange font-serif">8+</div>
-                  <div className="text-xs font-semibold text-foreground uppercase tracking-wide">{t("reach.statMarkets")}</div>
+                  <div className="text-xs font-semibold text-foreground uppercase tracking-wide">Markets</div>
                 </div>
                 <div className="bg-white/95 backdrop-blur-sm rounded-lg px-5 py-3 shadow-lg">
                   <div className="text-3xl font-bold text-orange font-serif">2000+ </div>
-                  <div className="text-xs font-semibold text-foreground uppercase tracking-wide">{t("reach.statRecovered")}</div>
+                  <div className="text-xs font-semibold text-foreground uppercase tracking-wide">VEHICLES REPOSSESSED</div>
                 </div>
               </div>
             </div>

@@ -3,17 +3,20 @@ import lynkCoLogo from "@/assets/partners/lynk-co.png";
 import europcarLogo from "@/assets/partners/europcar.png";
 import avisLogo from "@/assets/partners/avis.svg";
 import mcFinanceLogo from "@/assets/partners/mc-finance.png";
-import { useLanguage } from "@/lib/i18n";
-
-const partners = [
-  { name: "AVIS",        logo: avisLogo },
-  { name: "Europcar",    logo: europcarLogo },
-  { name: "Lynk & Co",   logo: lynkCoLogo },
-  { name: "MC' Finance", logo: mcFinanceLogo },
-];
-
+const partners = [{
+  name: "AVIS",
+  logo: avisLogo
+}, {
+  name: "Europcar",
+  logo: europcarLogo
+}, {
+  name: "Lynk & Co",
+  logo: lynkCoLogo
+}, {
+  name: "MC' Finance",
+  logo: mcFinanceLogo
+}];
 export function TrustedPartners() {
-  const { t } = useLanguage();
   return <section className="py-16 md:py-20 bg-slate-50">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section Label */}
@@ -29,7 +32,7 @@ export function TrustedPartners() {
         duration: 0.5
       }} className="text-center mb-6">
           <span className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground/60">
-            {t("partners.eyebrow")}
+            Trusted Partners
           </span>
         </motion.div>
 
@@ -46,7 +49,7 @@ export function TrustedPartners() {
         duration: 0.5,
         delay: 0.1
       }} className="text-lg md:text-xl font-medium text-foreground/80 text-center mb-12 max-w-2xl mx-auto">
-          {t("partners.heading")}
+          Working with Established European Mobility Brands
         </motion.h2>
 
         {/* Partner Logos */}
@@ -87,7 +90,7 @@ export function TrustedPartners() {
         duration: 0.5,
         delay: 0.6
       }} className="text-center text-xs text-muted-foreground/50 max-w-md mx-auto">
-          {t("partners.microCopy")}
+          Selected clients from the leasing and mobility sector. Client references can be provided upon request.
         </motion.p>
       </div>
     </section>;

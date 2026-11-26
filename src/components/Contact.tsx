@@ -3,11 +3,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { useLanguage } from "@/lib/i18n";
 
 export function Contact() {
   const { toast } = useToast();
-  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -24,11 +22,11 @@ export function Contact() {
 
   const validateForm = (): string | null => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.name.trim()) return t("contact.errName");
-    if (!formData.email.trim()) return t("contact.errEmail");
-    if (!emailRegex.test(formData.email.trim())) return t("contact.errEmailInvalid");
-    if (!formData.message.trim()) return t("contact.errMessage");
-    if (formData.message.trim().length < 10) return t("contact.errMessageShort");
+    if (!formData.name.trim()) return "Please enter your name.";
+    if (!formData.email.trim()) return "Please enter your email.";
+    if (!emailRegex.test(formData.email.trim())) return "Please enter a valid email address.";
+    if (!formData.message.trim()) return "Please enter a message.";
+    if (formData.message.trim().length < 10) return "Message must be at least 10 characters.";
     return null;
   };
 
@@ -38,7 +36,7 @@ export function Contact() {
     const validationError = validateForm();
     if (validationError) {
       toast({
-        title: t("contact.errValidationTitle"),
+        title: "Validation Error",
         description: validationError,
         variant: "destructive",
       });
@@ -72,22 +70,22 @@ export function Contact() {
 
       if (data.success) {
         toast({
-          title: t("contact.successTitle"),
-          description: t("contact.successDesc"),
+          title: "Message Sent",
+          description: "Thank you. We will contact you shortly.",
         });
         setFormData({ name: "", company: "", email: "", message: "" });
         setHoneypot("");
       } else {
         toast({
-          title: t("contact.errSendTitle"),
-          description: data.error || t("contact.errSendDesc"),
+          title: "Unable to Send",
+          description: data.error || "Please try again later.",
           variant: "destructive",
         });
       }
     } catch (error) {
       toast({
-        title: t("contact.errSendTitle"),
-        description: t("contact.errSendDesc"),
+        title: "Unable to Send",
+        description: "Please try again later.",
         variant: "destructive",
       });
     } finally {
@@ -112,7 +110,7 @@ export function Contact() {
               className="section-label mb-4"
             >
               <span className="w-12 h-0.5 bg-orange" />
-              {t("contact.eyebrow")}
+              Contact
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -121,7 +119,7 @@ export function Contact() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="heading-section text-white mb-6"
             >
-              {t("contact.heading")}<span className="text-orange">.</span>
+              Start a Case<span className="text-orange">.</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -130,7 +128,7 @@ export function Contact() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="body-large text-white/70 mb-10"
             >
-              {t("contact.description")}
+              Every enquiry is treated confidentially, with a professional response.
             </motion.p>
 
             {/* Contact Details */}
@@ -146,9 +144,9 @@ export function Contact() {
                   <Mail className="w-5 h-5 text-orange" />
                 </div>
                 <div>
-                  <div className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-1">{t("contact.emailLabel")}</div>
-                  <a href="mailto:info@skogsrav.lv" className="text-white font-medium hover:text-orange transition-colors">
-                    info@skogsrav.lv
+                  <div className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-1">Email</div>
+                  <a href="mailto:hello@skogsrav.com" className="text-white font-medium hover:text-orange transition-colors">
+                    hello@skogsrav.com
                   </a>
                 </div>
               </div>
@@ -158,7 +156,7 @@ export function Contact() {
                   <Phone className="w-5 h-5 text-orange" />
                 </div>
                 <div>
-                  <div className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-1">{t("contact.phoneLabel")}</div>
+                  <div className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-1">Phone</div>
                   <span className="text-white font-medium">+371 26167827 </span>
                 </div>
               </div>
@@ -168,8 +166,8 @@ export function Contact() {
                   <MapPin className="w-5 h-5 text-orange" />
                 </div>
                 <div>
-                  <div className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-1">{t("contact.hqLabel")}</div>
-                  <span className="text-white font-medium">{t("contact.hqValue")}</span>
+                  <div className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-1">HQ</div>
+                  <span className="text-white font-medium">Riga, Latvia </span>
                 </div>
               </div>
             </motion.div>
@@ -184,10 +182,10 @@ export function Contact() {
             className="bg-white rounded-2xl p-8 lg:p-10 shadow-lg"
           >
             <h3 className="heading-card text-foreground mb-2">
-              {t("contact.ctaTitle")}
+              Request Consultation
             </h3>
             <p className="text-muted-foreground font-medium mb-8">
-              {t("contact.ctaDesc")}
+              Reach out — we're ready to help.  
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -208,7 +206,7 @@ export function Contact() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-bold text-foreground mb-2">
-                    {t("contact.fieldName")}
+                    Name *
                   </label>
                   <input
                     type="text"
@@ -223,7 +221,7 @@ export function Contact() {
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-foreground mb-2">
-                    {t("contact.fieldCompany")}
+                    Company
                   </label>
                   <input
                     type="text"
@@ -239,7 +237,7 @@ export function Contact() {
 
               <div>
                 <label className="block text-sm font-bold text-foreground mb-2">
-                  {t("contact.fieldEmail")}
+                  Email *
                 </label>
                 <input
                   type="email"
@@ -255,7 +253,7 @@ export function Contact() {
 
               <div>
                 <label className="block text-sm font-bold text-foreground mb-2">
-                  {t("contact.fieldMessage")}
+                  Message *
                 </label>
                 <textarea
                   name="message"
@@ -276,14 +274,14 @@ export function Contact() {
                 className="w-full group shadow-orange"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? t("contact.submitSending") : t("contact.submit")}
+                {isSubmitting ? "Sending..." : "Send Enquiry"}
                 {!isSubmitting && (
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 )}
               </Button>
 
               <p className="text-xs text-muted-foreground text-center">
-                {t("contact.disclaimer")}
+                Strict confidentiality guaranteed.
               </p>
             </form>
           </motion.div>

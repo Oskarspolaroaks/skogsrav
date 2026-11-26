@@ -2,21 +2,25 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Check } from "lucide-react";
-import { useLanguage } from "@/lib/i18n";
-
+const differentiators = [{
+  title: "Success-Based Fees",
+  description: "No repossession, no invoice. We deliver first."
+}, {
+  title: "Baltic HQ, European Reach",
+  description: "Regional expertise. Continental execution."
+}, {
+  title: "Minimal Visibility",
+  description: "Only the client knows. That's the point."
+}, {
+  title: "Compliance-First",
+  description: "Legal. Reputational. Always."
+}];
 export function WhySkogsrav() {
   const ref = useRef(null);
-  const { t } = useLanguage();
   const isInView = useInView(ref, {
     once: true,
     margin: "-100px"
   });
-  const differentiators = [
-    { title: t("why.item1Title"), description: t("why.item1Desc") },
-    { title: t("why.item2Title"), description: t("why.item2Desc") },
-    { title: t("why.item3Title"), description: t("why.item3Desc") },
-    { title: t("why.item4Title"), description: t("why.item4Desc") },
-  ];
   return <section id="why-skogsrav" className="py-24 lg:py-32 bg-cream">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-20 items-center">
@@ -32,7 +36,7 @@ export function WhySkogsrav() {
             duration: 0.5
           }} className="section-label mb-4">
               <span className="w-12 h-0.5 bg-orange" />
-              {t("why.eyebrow")}
+              Why Us
             </motion.span>
             <motion.h2 initial={{
             opacity: 0,
@@ -46,9 +50,9 @@ export function WhySkogsrav() {
             duration: 0.5,
             delay: 0.1
           }} className="heading-section text-foreground mb-8">
-              {t("why.heading1")}
+              Trusted by
               <br />
-              <span className="text-orange">{t("why.heading2")}</span>
+              <span className="text-orange">Market leaders </span>
             </motion.h2>
 
             {/* Quote Block */}
@@ -68,7 +72,7 @@ export function WhySkogsrav() {
                 <span className="text-white text-2xl font-serif">"</span>
               </div>
               <blockquote className="font-serif text-xl lg:text-2xl text-white italic leading-relaxed">
-                {t("why.quote")}
+                We work quietly. Outcome over exposure.
               </blockquote>
             </motion.div>
           </div>
