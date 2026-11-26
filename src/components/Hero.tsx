@@ -4,18 +4,9 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { useContactModal } from "@/contexts/ContactModalContext";
 import { storageImages } from "@/lib/storage";
-import { useLanguage } from "@/lib/i18n";
 
 export function Hero() {
   const { openContactModal } = useContactModal();
-  const { t } = useLanguage();
-
-  const stats = [
-    { value: t("heroStats.stamp1Pre"), label: t("heroStats.stamp1Post") },
-    { value: t("heroStats.stamp2Pre"), label: t("heroStats.stamp2Post") },
-    { value: t("heroStats.stamp3Pre"), label: t("heroStats.stamp3Post") },
-    { value: t("heroStats.stamp4Pre"), label: t("heroStats.stamp4Post") },
-  ];
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -66,8 +57,8 @@ export function Hero() {
             className="mb-8">
 
             <span className="section-label">
-              <span className="w-12 h-0.5 bg-gradient-to-r from-orange to-orange-light" />
-              {t("hero.eyebrow")}
+              ​<span className="w-12 h-0.5 bg-gradient-to-r from-orange to-orange-light" />
+              ​WE ACT. WE DELIVER.
             </span>
           </motion.div>
 
@@ -83,7 +74,7 @@ export function Hero() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="inline-block">
-              {t("hero.titleLine1")}
+              Vehicle Repossession
 
             </motion.span>{" "}
             <br />
@@ -97,7 +88,7 @@ export function Hero() {
                 "linear-gradient(135deg, hsl(28 90% 58%) 0%, hsl(24 95% 53%) 50%, hsl(20 95% 48%) 100%)"
               }}>
 
-              {t("hero.titleAccent")}
+              Across Europe
             </motion.span>
           </motion.h1>
 
@@ -108,7 +99,11 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="body-large text-white/90 max-w-2xl mb-12 drop-shadow-md">
 
-            {t("hero.subtitle")}
+            Pan-European cross-border vehicle recovery solutions.{" "}
+            <br className="hidden md:block" />
+            <span className="text-orange font-bold">
+              Discreet. Compliant. Results-driven.
+            </span>
           </motion.p>
 
           {/* CTAs */}
@@ -124,12 +119,12 @@ export function Hero() {
               className="group shadow-orange"
               onClick={openContactModal}>
 
-              {t("hero.ctaPrimary")}
+              Start a Case
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="hero-outline" size="xl" className="group" asChild>
               <Link to="/services">
-                {t("hero.ctaSecondary")}
+                How We Operate
                 <ChevronRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
@@ -143,7 +138,12 @@ export function Hero() {
             className="mt-24 pt-10 border-t border-white/20">
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-              {stats.map((stat, index) =>
+              {[
+              { value: "15+", label: "Years" },
+              { value: "8+", label: "Markets" },
+              { value: "2000+", label: "Recovered" },
+              { value: "Success", label: "Based Fees" }].
+              map((stat, index) =>
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20, scale: 0.9 }}
