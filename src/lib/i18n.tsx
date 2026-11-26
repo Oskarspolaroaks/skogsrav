@@ -119,13 +119,16 @@ export const translations: Record<Language, TranslationTree> = {
       item4Title: "Atbilstība pirmajā vietā",
       item4Desc: "Juridiski. Reputācijai. Vienmēr.",
     },
-    reachFull: {
+    reach: {
       eyebrow: "DARBĪBAS TERITORIJA",
       heading1: "Latvijā.",
       heading2: "Visā Eiropā.",
       description:
         "Galvenie uzņēmuma darbības virzieni ir saistīti ar kustamo mantu meklēšanu un atgūšanu — vieglie transportlīdzekļi, komercauto, kravas automašīnas, celtniecības un lauksaimniecības tehnika, iekārtas un aprīkojums.",
       ctaLink: "Par Skogsrav",
+    },
+    partners: {
+      eyebrow: "SADARBĪBAS PARTNERI",
     },
     contactCta: {
       eyebrow: "SAZINIETIES AR MUMS",
@@ -320,13 +323,16 @@ export const translations: Record<Language, TranslationTree> = {
       item4Title: "Compliance-First",
       item4Desc: "Legal. Reputational. Always.",
     },
-    reachFull: {
+    reach: {
       eyebrow: "OPERATIONAL REACH",
       heading1: "Pan-European.",
       heading2: "",
       description:
         "Extensive experience handling vehicle repossession cases across European markets.",
       ctaLink: "About Skogsrav",
+    },
+    partners: {
+      eyebrow: "TRUSTED PARTNERS",
     },
     contactCta: {
       eyebrow: "CONTACT US",
